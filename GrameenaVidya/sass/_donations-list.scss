@@ -1,0 +1,21 @@
+
+	.donations-list{	
+	padding:30px 100px;
+		
+			h1{ margin-bottom:30px;	}
+			.view-school{
+				tr{td{border:1px solid #eee; text-align:center; padding:12px;}}
+				thead{ background:$c1;
+					tr{
+					td{
+						&:nth-child(1) {width:35%;}
+						&:nth-child(2) {width:20%;}
+						&:nth-child(3) {width:15%;}
+						&:nth-child(4) {width:20%;}
+						&:nth-child(5) {width:10%;}
+					}
+					}
+				}
+			}
+	}
+	
