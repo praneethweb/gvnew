@@ -427,7 +427,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <%--<asp:ScriptManager ID="script1" runat="server"></asp:ScriptManager>--%>
     <div class="container">
-        <div class="row">
+        <div class="row d">
             <div class="col-md-3">
                 <div class="row">
                     <!-- How you can help box start -->
