@@ -378,15 +378,14 @@ tr.shown td.details-control {
     <link href="../../CSS/donate.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div class="container-fluid">
+  <div class="container-fluid pr-donate-new">
     <div class="row">
             <div class="col-md-3">
                 <div class="row">
                     <!-- How you can help box start -->
                     <div class="col-md-12">
                         <div class="sidebar-donate-blk">
-                            <h3>
-                                Programs</h3>
+                            <h3>Programs</h3>
                             <ul class="list-style">
                                 <li><i class="fa fa-angle-double-right"></i><a href="Donate.aspx" onclick="Javascript:CheckprogramType(1);">
                                     Adopt-a-School</a></li>
@@ -404,8 +403,7 @@ tr.shown td.details-control {
                     <br />
                     <div class="col-md-12 event-strips">
                         <div class="blk school-metric">
-                            <h2>
-                                School Metrics</h2>
+                            <h3>School Metrics</h3>
                             <marquee height="250" scrolldelay="150" direction="up">
                       <ul>
                       <li>India has <b>1.27 billion</b> people, 74% literacy rate.</li>
@@ -434,7 +432,7 @@ tr.shown td.details-control {
                 </div>
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-9 pr-steps">
         <div class="stepwizard col-md-12">
             <div class="stepwizard-row setup-panel">
                 <div class="stepwizard-step"> <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
@@ -457,7 +455,7 @@ tr.shown td.details-control {
         </div>
         <form role="form" action="" method="post">
             <div class="row setup-content" id="step-1">
-            <div class="col-md-8 col-md-offset-1">
+            <div class="col-md-12">
             <br />
              <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                           <ContentTemplate>
@@ -483,8 +481,10 @@ tr.shown td.details-control {
                                 </div>
                                  </ContentTemplate>
                                   </asp:UpdatePanel>
-                                  
+                           
+                <div class="buttons-panel">
                         <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                    </div>
      </div>
               
             </div>
@@ -493,7 +493,7 @@ tr.shown td.details-control {
                     <div class="col-md-12">
                         
                         <div class="box">
-                            <div class="col-xs-11 col-md-offset-1">
+                            <div class="col-xs-12">
                     <div class="">
                         <div class="row" id="dvschool">
                             <div class="row">
@@ -958,7 +958,7 @@ tr.shown td.details-control {
                 </div>
             </div>
             <div class="row setup-content" id="step-2">
-                <div class="col-xs-10 col-md-offset-1">
+                <div class="col-xs-12">
                     <div>
                       
                         <div >
@@ -981,7 +981,7 @@ tr.shown td.details-control {
 
                     <div class="row">
                      
-                        <div class="col-md-4 col-md-offset-1">
+                        <div class="col-md-4">
                             <asp:TextBox ID="txtDonarname" CssClass="donate-input" Width="100%" runat="server" placeholder="Name"></asp:TextBox>
                         </div>
                         <div class="col-md-4">
@@ -989,7 +989,7 @@ tr.shown td.details-control {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-md-offset-1">
+                        <div class="col-md-4">
                             <asp:TextBox ID="txtDonarAddress" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="Address1"></asp:TextBox>
                         </div>
@@ -999,7 +999,7 @@ tr.shown td.details-control {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-md-offset-1">
+                        <div class="col-md-4">
                         <asp:UpdatePanel ID="Updatepanel8" runat="server">
                            <ContentTemplate>
                             <asp:DropDownList ID="ddlcountry" CssClass="donate-input" runat="server" DataTextField="Countryname" AutoPostBack="true"
@@ -1021,7 +1021,7 @@ tr.shown td.details-control {
                        
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-md-offset-1">
+                        <div class="col-md-4">
                             <asp:TextBox ID="txtDonarPin" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="pincode"></asp:TextBox>
                         </div>
@@ -1038,13 +1038,15 @@ tr.shown td.details-control {
 
                             </div>
                         </div>
+                        <div class="buttons-panel">
                         <button class="btn btn-primary prevBtn btn-lg pull-left" type="button">Previous</button>
                         <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="row setup-content" id="step-4">
-                <div class="col-xs-8 col-md-offset-2">
+                <div class="col-xs-12">
                     <div class="row">
                         <%--<div class="col-md-3 col-md-offset-1">
                             <asp:RadioButton ID="rbdebit" CssClass="radio" runat="server" Text="Debit Card" onchange="javascript:GetDonationmodeID(1);"
@@ -1747,7 +1749,7 @@ tr.shown td.details-control {
 
                     break;
                 case 11:
-                    debugger;
+                    
                     $("#dvNewSchool").hide();
                     $("#dvExistingSchool").show();
                     $.ajax({
@@ -1770,7 +1772,7 @@ tr.shown td.details-control {
 
 
                             }
-                            debugger;
+                            
                             tablestring = tablestring + "</tbody></table>"
                             $("#UserData").append(tablestring);
 
@@ -1829,7 +1831,7 @@ tr.shown td.details-control {
                     });
                     break;
                 case 12:
-                    debugger;
+                    
                     $("#dvNewSchool").hide();
                     $("#dvExistingSchool").hide();
 
@@ -1856,7 +1858,7 @@ tr.shown td.details-control {
                             tablestring = tablestring + "<thead><tr><th></th><th>SchoolID</th><th>SchoolName</th><th>CountryName</th><th>StateName</th><th style='display:none'></th><th style='display:none'></th><th></th></tr></thead><tbody>";
 
                             for (var i = 0; i < Result.d.length; i++) {
-                                debugger;
+                               
                                 tablestring = tablestring + "<tr><td></td><td>" + Result.d[i].SchoolID + "</td><td>" + Result.d[i].SchoolName + "</td><td>" + Result.d[i].CountryName + "</td><td>" + Result.d[i].StateName + "</td><td style='display:none'>" + Result.d[i].DistrictName + "</td><td style='display:none'>" + Result.d[i].LocationName + "</td><td> <div class='checkbox checkbox-primary'> <input id='checkbox_" + Result.d[i].LocationName + "' type='checkbox' checked=''></div></td></tr>";
 
 
@@ -1946,7 +1948,7 @@ tr.shown td.details-control {
                     
                     break;
                 case 2:
-                    debugger;
+                  
                     $(".package").hide();
                     $("#divClassroom").show();
                      
@@ -1971,7 +1973,7 @@ tr.shown td.details-control {
         }
         function GetSelected() {
             var table = $('#example').DataTable();
-            debugger;
+            
             var amount = 500;
             var Total = 0;
             var data = table.rows('.selected').data();
