@@ -39,7 +39,7 @@
         <div class="causes">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-9 adopt-left-block">
                         <!-- progaram detail start -->
                         <h1 class="page-heading">
                             Adopt-a-School
@@ -53,7 +53,8 @@
                         
                         
                         
-<!-- Testimonial slides -->                        
+<!-- Testimonial slides -->   
+<a name="testimonial"></a>
 <div class="container pr-testimonials">
 	<div class="row">
 		<div class="col-sm-12">
@@ -111,7 +112,8 @@
 
 
 
-<!-- Adopt A School Form -->      
+<!-- Adopt A School Form -->     
+                        <a name="form"></a>
 <div class="container sub-form">
     <div class="row">
         <h1>Adopt a School Form</h1>
@@ -232,6 +234,7 @@
 
 
 <!-- School Data -->  
+                        <a name="listofschools"></a>
                         <h2>List of Schools</h2>
 <table class="table table-striped table-bordered">
  <thead> <tr>

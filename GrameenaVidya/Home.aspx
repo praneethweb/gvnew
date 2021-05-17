@@ -176,38 +176,6 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
 
 
 
-
-
-
-<!--  things section start -->
-<div class="gv-modal">
-  <div class="container">
-    <div class="row">
-
-    <div class="col-md-6">
-    <h1>Modal</h1>
-        <img class="img-how-it-works" src="images/grameena-modal.jpg" />
-        <p>The eco-system required is:<br />
-A data center and a web portal
-Any portable device (laptop, tablet or mobile phones along with a projector and basic interactive devices) that can access educational content
-Wired or wireless connections network / broadband (2G, 3G or 4G) to ride the connectivity wave
-Multimedia content and assessments that is curriculum specific and caters to different subjects / classes and vocational software for both teachers and students
-The Sponsors – Individuals, Corporates and Government. </p>
-    
-    </div>
-
-     <div class="col-md-6">
-    <h1>How It Works</h1>
-       <img class="img-how-it-works" src="images/how-it-works.jpg" />
-    </div>
-   
-   <%--   <uc2:Campaign ID="Campaign1" runat="server" />--%>
-    
-    </div>
-  </div>
-</div>
-
-
 <div class="donate-home row">
     <div class="container text-center">
         <img src="images/slide2.png" />
@@ -273,19 +241,23 @@ The Sponsors – Individuals, Corporates and Government. </p>
         <div class="row">
             <div class="col-md-12">
             <h3>Adopted Schools</h3>
-                <div class="pics">
-            <div class="pic"><a><img src="images/photo-gallery/au/3.jpg" class="img-responsive" alt=""/></a></div>
-            <div class="pic"><a><img src="images/photo-gallery/au/3.jpg" class="img-responsive" alt=""/></a></div>
-            <div class="pic"><a><img src="images/photo-gallery/au/3.jpg" class="img-responsive" alt=""/></a></div>
-            </div>       
+                  <marquee direction="up">
+                <span class="name">Hindustan Unilever Ltd</span><br />
+                <span class="name">Godrej Consumer Products Ltd.</span><br />
+                <span class="name">Cisco Systems India Pvt. Ltd.</span><br />
+                <span class="name">Indian Oil Corporation Ltd.</span><br />
+                <span class="name">Tata Consultancy Services Ltd</span>
+             </marquee>     
                 </div>  
             <div class="col-md-12">
             <h3>Adopted Students</h3>
-            <div class="pics">
-            <div class="pic"><a><img src="images/photo-gallery/au/3.jpg" class="img-responsive" alt=""/></a></div>
-            <div class="pic"><a><img src="images/photo-gallery/au/3.jpg" class="img-responsive" alt=""/></a></div>
-            <div class="pic"><a><img src="images/photo-gallery/au/3.jpg" class="img-responsive" alt=""/></a></div>
-            </div>   
+             <marquee direction="up">
+                <span class="name">Hindustan Unilever Ltd</span><br />
+                <span class="name">Godrej Consumer Products Ltd.</span><br />
+                <span class="name">Cisco Systems India Pvt. Ltd.</span><br />
+                <span class="name">Indian Oil Corporation Ltd.</span><br />
+                <span class="name">Tata Consultancy Services Ltd</span>
+             </marquee>   
             </div>
         </div>
        
