@@ -1107,7 +1107,7 @@ navbar-default {
   font-weight: bold;
   text-transform: uppercase;
   border: none;
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
 
 .modal-header2 {
   padding: 0; }
@@ -1458,6 +1458,23 @@ body {
 .mtb-20 {
   margin-bottom: 20px;
   margin-top: 20px; }
+
+.adopt-left-block {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  padding: 25px;
+  padding-top: 75px;
+  margin-bottom: 50px; }
+
+.causes {
+  padding-top: 15px; }
+
+.pr-sidebar-blk a {
+  margin-bottom: 15px;
+  display: block; }
+  .pr-sidebar-blk a h3 {
+    margin-bottom: 0; }
 
 .login-success {
   padding: 100px 20px; }

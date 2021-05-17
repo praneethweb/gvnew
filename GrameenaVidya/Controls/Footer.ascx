@@ -23,7 +23,6 @@
                     <li><a href="../AboutUS/about-mission.aspx" style="color:#ddd9d9 !important">Mission</a></li>
                     <li><a href="../AboutUS/about-model.aspx" style="color:#ddd9d9 !important">Testimonials</a></li>
                      <li><a href="../AboutUS/about-model.aspx" style="color:#ddd9d9 !important">Meida</a></li>
-                     <li><a href="../AboutUS/about-model.aspx" style="color:#ddd9d9 !important">Contact</a></li>
                     
                    
                 </ul>

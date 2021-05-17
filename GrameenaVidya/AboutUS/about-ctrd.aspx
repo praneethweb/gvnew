@@ -16,7 +16,7 @@
         <div class="causes">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-9 adopt-left-block">
                         <!-- progaram detail start -->
                          <h1 class="page-heading">About</h1>
                         <h2>

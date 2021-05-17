@@ -22,9 +22,12 @@
 
           	 <div class="row"> <!-- How you can help box start -->
             <div class="col-md-12">
-              <div class="sidebar-blk">
-                 <a href="../Donate/Donate.aspx"><h3 class="aas">Donate &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
-				<a href="../Programs/adopt-a-village.aspx"><h3 class="aav">Adopt-a-Student  &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
+              <div class="sidebar-blk pr-sidebar-blk">
+                  <a href="../Donate/Donate.aspx"><h3 class="aas">Donate &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
+				  <a href="../Programs/adopt-a-village.aspx"><h3 class="aav">Adopt-a-Student  &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>   
+                  <a href="#testimonial"><h3 class="aav">Testimonials  &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
+                  <a href="#form"><h3 class="aav">Adopt-a-School Form  &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
+                  <a href="#listofschools"><h3 class="aav">List of Schools  &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>                                 
               </div>
             </div>
           </div>
