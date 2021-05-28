@@ -48,11 +48,34 @@
                         <div class="pic">
                             <img src="../images/adopt-a-school.jpg" alt="Alternate Text" class="img-responsive" />
                         </div>
+                         <p>
+                        ADOPT-A-SCHOOL initiative is a Digital / Smart Classroom program. It will help transform regular schools into digital schools and then into data driven schools. It is a combination of computing hardware + broadband + software + curriculum aligned multimedia content + teacher training + continuous support + generating intelligent reports. Our focus is to adopt bottom of the pyramid schools or Government schools.</strong></p>
                         <p>
-                            ADOPT-A-SCHOOL initiative is a smart classroom program. It is a combination of computing hardware + broadband + software + multimedia curriculum aligned content + teacher training + continuous support + generating intelligent reports. This will help transform regular schools into digital schools and then into data driven schools. This in turn will generate measureable improvement in positive outcomes - improving school enrollment, attendance, academic/learning outcomes and increasing school retention and reducing drop-outs.<strong> Sponsoring your own alma meter or Government, or rural or an inner-city school will generate the highest Social Return on Investment. This is Vidya Dhaan.</strong></p>
-                        
-                        
-                        
+                            <b>Benefits:</b> This program will generate measureable improvement and positive outcomes - improving school enrollment, student attendance, quality teaching, improved learning outcomes, reduce academic gaps within the class cohort and increase school retention and reduce school drop-outs. One Smart Classroom can cater to at least 4 grade levels. Sponsoring your own alma meter or Government, or rural or an inner-city school will generate the highest Social Return on Investment. <b>This is Vidya Dhaan</b>.
+
+                        </p>
+                        <p><b>
+                            Individuals or Corporate can Adopt-a-School by sponsoring one or multiple Digital / Smart Classrooms. Each Smart Classroom costs Rs 180000/- (One Lakh Eighty thousand rupees) or USD 2500/- (Two thousand five hundred US dollars based on current exchange rates). This sponsorship (donation) can be paid is full or 4 monthly installments. <a href="../Donate/Donate.aspx" class="btn btn-primary">Donate Now</a> 
+                           </b>
+
+                        </p>
+        <p>
+            This above sponsorship will cover for 3 years of installation and continues support of Smart or Digital Classroom:
+              <ul style="padding-left:50px">
+                <li style="list-style:inherit">	Computing Hardware</li>
+<li style="list-style:inherit">	Computing and Mobile Software</li>
+<li style="list-style:inherit">Broadband</li>
+<li style="list-style:inherit">Multimedia Curriculum Aligned Content for all Grades</li>
+<li style="list-style:inherit"> Training</li>
+<li style="list-style:inherit">Digital Classroom Usage Reports</li>
+<li style="list-style:inherit"> Support of all above for 3 years.</li>
+
+            </ul>
+
+        </p> 
+                      <p>
+                          For additional information about donation please contact us – info@grameenavidya.org or +91 7702444575
+                      </p>
 <!-- Testimonial slides -->   
 <a name="testimonial"></a>
 <div class="container pr-testimonials">
@@ -114,7 +137,7 @@
 
 <!-- Adopt A School Form -->     
                         <a name="form"></a>
-<div class="container sub-form">
+<div class="container sub-form" style="display:none">
     <div class="row">
         <h1>Adopt a School Form</h1>
         <div class="col-md-12">

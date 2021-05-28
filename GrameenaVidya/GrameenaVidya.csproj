@@ -56,6 +56,10 @@
       <HintPath>bin\MCPG.CCA.Util.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -83,6 +87,12 @@
     <Content Include="Benfits\Schools.aspx" />
     <Content Include="Benfits\Sponsers.aspx" />
     <Content Include="Benfits\Students.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\DataAccess.dll" />
+    <Content Include="bin\GrameenaVidya.dll" />
+    <Content Include="bin\GrameenaVidya.pdb" />
+    <Content Include="bin\MCPG.CCA.Util.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
     <Content Include="bnr3.jpg" />
     <Content Include="CampaignsImages\adopt-a-school.jpg" />
     <Content Include="CampaignsImages\campaing2.jpg" />
@@ -100,6 +110,7 @@
     <Content Include="Controls\AsideControl.ascx" />
     <Content Include="Controls\AsideRight.ascx" />
     <Content Include="Controls\AsideRight33.ascx" />
+    <Content Include="Controls\AsideStu_right.ascx" />
     <Content Include="Controls\Aside_right.ascx" />
     <Content Include="Controls\Banner.ascx" />
     <Content Include="Controls\BreadCrumbs.ascx" />
@@ -114,8 +125,11 @@
     <Content Include="Controls\MenuInside.ascx" />
     <Content Include="Controls\MultiCheckCombo.ascx" />
     <Content Include="Controls\MyProfile.ascx" />
+    <Content Include="Controls\NewSchoolForm.ascx" />
+    <Content Include="Controls\NewStudentForm.ascx" />
     <Content Include="Controls\OutSideMenu.ascx" />
     <Content Include="Controls\SocialMedia.ascx" />
+    <Content Include="Controls\StudentsList.ascx" />
     <Content Include="Controls\Testing.ascx" />
     <Content Include="Controls\testmonials.ascx" />
     <Content Include="Controls\ViewSchools.ascx" />
@@ -165,6 +179,8 @@
     <Content Include="images\404.png" />
     <Content Include="images\6.1.jpg" />
     <Content Include="images\ab_pic-1.jpg" />
+    <Content Include="images\adopt-a-school.jpg" />
+    <Content Include="images\adopt-a-student.jpeg" />
     <Content Include="images\artifacts.png" />
     <Content Include="images\a_pic-1.jpg" />
     <Content Include="images\a_pic-2.jpg" />
@@ -174,6 +190,15 @@
     <Content Include="images\a_pic-6.jpg" />
     <Content Include="images\banner-1.jpg" />
     <Content Include="images\bck1.jpg" />
+    <Content Include="images\bck2.jpg" />
+    <Content Include="images\bck3-1.jpg" />
+    <Content Include="images\bck3.jpg" />
+    <Content Include="images\bck4.jpg" />
+    <Content Include="images\bck5.jpg" />
+    <Content Include="images\bck6.jpg" />
+    <Content Include="images\bck7.png" />
+    <Content Include="images\bck8.jpg" />
+    <Content Include="images\bck9.jpg" />
     <Content Include="images\bg-ptrn.jpg" />
     <Content Include="images\blog_pic-1.jpg" />
     <Content Include="images\blog_pic-2.jpg" />
@@ -817,9 +842,12 @@
     <Content Include="Programs\media1\galary\aug2015.aspx" />
     <Content Include="Programs\media1\press clips\pressclipsApr2015.aspx" />
     <Content Include="Programs\media1\press clips\pressclipsAug2015.aspx" />
+    <Content Include="Programs\NewSchool.aspx" />
+    <Content Include="Programs\NewStudent.aspx" />
     <Content Include="Programs\photo-gallery.aspx" />
     <Content Include="Programs\SchoolsDetails.aspx" />
     <Content Include="Programs\Schoolslist.aspx" />
+    <Content Include="Programs\StudentList.aspx" />
     <Content Include="Programs\Testmonials.aspx" />
     <Content Include="Programs\video-gallery.aspx" />
     <Content Include="Programs\Videos.aspx" />
@@ -931,6 +959,7 @@
     <Compile Include="BLL\Donate.cs" />
     <Compile Include="BLL\SchoolDetails.cs" />
     <Compile Include="BLL\Schools.cs" />
+    <Compile Include="BLL\Student.cs" />
     <Compile Include="BLL\StudentDetails.cs" />
     <Compile Include="BLL\Users.cs" />
     <Compile Include="Campaigns\CampaignDetails.aspx.cs">
@@ -1016,6 +1045,13 @@
       <DependentUpon>AsideRight33.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Controls\AsideStu_right.ascx.cs">
+      <DependentUpon>AsideStu_right.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AsideStu_right.ascx.designer.cs">
+      <DependentUpon>AsideStu_right.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Aside_right.ascx.cs">
       <DependentUpon>Aside_right.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1099,6 +1135,20 @@
     <Compile Include="Controls\MyProfile.ascx.designer.cs">
       <DependentUpon>MyProfile.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\NewSchoolForm.ascx.cs">
+      <DependentUpon>NewSchoolForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NewSchoolForm.ascx.designer.cs">
+      <DependentUpon>NewSchoolForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewStudentForm.ascx.cs">
+      <DependentUpon>NewStudentForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NewStudentForm.ascx.designer.cs">
+      <DependentUpon>NewStudentForm.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\OutSideMenu.ascx.cs">
       <DependentUpon>OutSideMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1112,6 +1162,13 @@
     </Compile>
     <Compile Include="Controls\SocialMedia.ascx.designer.cs">
       <DependentUpon>SocialMedia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StudentsList.ascx.cs">
+      <DependentUpon>StudentsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StudentsList.ascx.designer.cs">
+      <DependentUpon>StudentsList.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Testing.ascx.cs">
       <DependentUpon>Testing.ascx</DependentUpon>
@@ -1131,6 +1188,7 @@
     <Compile Include="DAL\Common.cs" />
     <Compile Include="DAL\Cryptography.cs" />
     <Compile Include="DAL\Donate.cs" />
+    <Compile Include="DAL\Packages.cs" />
     <Compile Include="DAL\Schools.cs" />
     <Compile Include="DAL\Users.cs" />
     <Compile Include="Donate\ccavRequestHandler.aspx.cs">
@@ -1223,6 +1281,13 @@
     </Compile>
     <Compile Include="GetInvolved\SiteMap.aspx.designer.cs">
       <DependentUpon>SiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\GVFileHandler.ashx.cs" />
+    <Compile Include="Handlers\GVHandler.ashx.cs">
+      <DependentUpon>GVHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\GVSchoolHandler.ashx.cs">
+      <DependentUpon>GVSchoolHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -1423,6 +1488,20 @@
     <Compile Include="Programs\media1\press clips\pressclipsAug2015.aspx.designer.cs">
       <DependentUpon>pressclipsAug2015.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Programs\NewSchool.aspx.cs">
+      <DependentUpon>NewSchool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Programs\NewSchool.aspx.designer.cs">
+      <DependentUpon>NewSchool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\NewStudent.aspx.cs">
+      <DependentUpon>NewStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Programs\NewStudent.aspx.designer.cs">
+      <DependentUpon>NewStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Programs\photo-gallery.aspx.cs">
       <DependentUpon>photo-gallery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1443,6 +1522,13 @@
     </Compile>
     <Compile Include="Programs\Schoolslist.aspx.designer.cs">
       <DependentUpon>Schoolslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\StudentList.aspx.cs">
+      <DependentUpon>StudentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Programs\StudentList.aspx.designer.cs">
+      <DependentUpon>StudentList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Programs\Testmonials.aspx.cs">
       <DependentUpon>Testmonials.aspx</DependentUpon>
@@ -1559,6 +1645,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\GrameenaVidya.dll.config" />
     <None Include="CSS\custom.css.map" />
     <Content Include="CSS\donate.css.map" />
     <Content Include="scss\donate.scss" />
@@ -1579,6 +1666,8 @@
     <None Include="font\Pe-icon-linef48e.eot" />
     <None Include="font\Pe-icon-linef48e.ttf" />
     <None Include="font\Pe-icon-linef48e.woff" />
+    <Content Include="Handlers\GVHandler.ashx" />
+    <Content Include="Handlers\GVSchoolHandler.ashx" />
     <None Include="images\artifacts.psd" />
     <Content Include="images\SchoolImages\55_1GVMC ps Kancherpalem.zip" />
     <Content Include="images\SchoolImages\56_1GVMC ps Akkayapalem NGO%27s Colony.zip" />
@@ -1591,6 +1680,7 @@
     <Content Include="images\SchoolImages\68_1gvmc hs rp peta.zip" />
     <Content Include="images\SchoolImages\69_1St Peters high school Gnanapuram.zip" />
     <Content Include="images\SchoolImages\81_1Gyanapuram Girls SHHS.zip" />
+    <None Include="images\bck2.webp" />
     <None Include="images\smart-learning2.psd" />
     <Content Include="Master\InsideMaster.master" />
     <Content Include="Master\OutSideMaster.master" />

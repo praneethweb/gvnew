@@ -8,17 +8,19 @@ using System.Data;
 using System.Drawing;
 using GrameenaVidya.AppCode;
 using System.Web.Services;
-using GrameenaVidya.BLL; 
+using GrameenaVidya.BLL;
+using GrameenaVidya.DAL;
 
 namespace GrameenaVidya.Donate
 {
     public partial class Donate : System.Web.UI.Page
     {
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                rbdCountry.Checked = true;
                 if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {
 
@@ -85,80 +87,82 @@ namespace GrameenaVidya.Donate
                         ddlcountry.DataTextField = "CountryName";
                         ddlcountry.DataBind();
                         ddlcountry.Enabled = true;
+                        //  ddlcountry.SelectedItem.Text = rbdCountry.Text;
                     }
                 }
-                
-                
+
+
             }
-            
+
         }
         protected override void OnPreInit(EventArgs e)
         {
             base.OnPreInit(e);
 
 
-            if (HttpContext.Current.User.Identity.IsAuthenticated) 
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 UserDetails ud = new UserDetails();
                 int UserID = Convert.ToInt32(ud.UserID);
                 if (UserID == 0)
                 {
                     MasterPageFile = "~/Master/OutSideMaster.master";
-                    
+
                 }
                 else
                 {
-                   MasterPageFile = "~/Master/InsideMaster.master";
+                    MasterPageFile = "~/Master/InsideMaster.master";
                 }
             }
-                
-             
+
+
         }
-        
+
         private void LoadStudents()
         {
-          //  gvStudents.DataSource = GrameenaVidya.BLL.Donate.GetStudents().Tables[0];
-          //  gvStudents.DataBind();
+            //  gvStudents.DataSource = GrameenaVidya.BLL.Donate.GetStudents().Tables[0];
+            //  gvStudents.DataBind();
         }
 
-        [WebMethod]
-        public static StudentDetails[] BindStudents()
-        {
-            DataSet ds1 =  GrameenaVidya.BLL.Donate.GetStudents();
+        //[WebMethod]
+        //public static StudentDetails[] BindStudents()
+        //{
+        //    DataSet ds1 =  GrameenaVidya.BLL.Donate.GetStudents();
 
-            DataTable dt = ds1.Tables[0];
+        //    DataTable dt = ds1.Tables[0];
 
-            List<StudentDetails> _data = new List<StudentDetails>();
-          
-            int count = dt.Rows.Count;
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                StudentDetails objUser = new StudentDetails();
-                objUser.StudentID = Convert.ToInt32(dt.Rows[i]["StudentID"]);
-                objUser.StudentName = Convert.ToString(dt.Rows[i]["StudentName"]);
-                objUser.Class = Convert.ToString(dt.Rows[i]["Class"]);
-                objUser.Amount = Convert.ToString(dt.Rows[i]["Amount"]);
-              //  objUser.DistrictName = Convert.ToString(dt.Rows[i]["DistrictName"]);
-               // objUser.LocationName = Convert.ToString(dt.Rows[i]["LocationName"]);
-                //objUser.CreatedDate = Convert.ToString(dt.Rows[i]["CreatedDate"]);
-                //objUser.IsActive = Convert.ToString(dt.Rows[i]["IsActive"]);
-                //objUser.StatusID = Convert.ToString(dt.Rows[i]["StatusID"]);
-                //objUser.PackageName = Convert.ToString(dt.Rows[i]["PackageName"]);
-                //objUser.Amount = Convert.ToString(dt.Rows[i]["Amount"]);
-                //objUser.DiscountAmount = Convert.ToString(dt.Rows[i]["DiscountAmount"]);
-                //objUser.CouponCode = Convert.ToString(dt.Rows[i]["CouponCode"]);
-                _data.Add(objUser);
-            }
-            return _data.ToArray();
-        }
-        
+        //    List<StudentDetails> _data = new List<StudentDetails>();
+
+        //    int count = dt.Rows.Count;
+        //    for (int i = 0; i < dt.Rows.Count; i++)
+        //    {
+        //        StudentDetails objUser = new StudentDetails();
+        //        objUser.StudentID = Convert.ToInt32(dt.Rows[i]["StudentID"]);
+        //        objUser.StudentName = Convert.ToString(dt.Rows[i]["StudentName"]);
+        //        objUser.Class = Convert.ToString(dt.Rows[i]["Class"]);
+        //        objUser.Amount = Convert.ToString(dt.Rows[i]["Amount"]);
+        //      //  objUser.DistrictName = Convert.ToString(dt.Rows[i]["DistrictName"]);
+        //       // objUser.LocationName = Convert.ToString(dt.Rows[i]["LocationName"]);
+        //        //objUser.CreatedDate = Convert.ToString(dt.Rows[i]["CreatedDate"]);
+        //        //objUser.IsActive = Convert.ToString(dt.Rows[i]["IsActive"]);
+        //        //objUser.StatusID = Convert.ToString(dt.Rows[i]["StatusID"]);
+        //        //objUser.PackageName = Convert.ToString(dt.Rows[i]["PackageName"]);
+        //        //objUser.Amount = Convert.ToString(dt.Rows[i]["Amount"]);
+        //        //objUser.DiscountAmount = Convert.ToString(dt.Rows[i]["DiscountAmount"]);
+        //        //objUser.CouponCode = Convert.ToString(dt.Rows[i]["CouponCode"]);
+        //        _data.Add(objUser);
+        //    }
+        //    return _data.ToArray();
+        //}
+
         private void LoadCountries()
         {
-            ddlcountry.DataSource = GrameenaVidya.BLL.Donate.GetCountries().Tables[0];
+            ddlcountry.DataSource = GVSchools.DAL.Schools.GetCountry(); //GrameenaVidya.BLL.Donate.GetCountries().Tables[0];
             ddlcountry.DataTextField = "CountryName";
             ddlcountry.DataValueField = "CountryID";
             ddlcountry.DataBind();
-            ddlcountry.Items.Insert(0, new ListItem("Select Country", "0"));
+            //    ddlcountry.SelectedItem.Text = rbdCountry.Text;
+            //   ddlcountry.Items.Insert(0, new ListItem("Select Country", "0"));
         }
 
         private void LoadStates(int CountryID)
@@ -175,7 +179,7 @@ namespace GrameenaVidya.Donate
         {
             LoadStates(Convert.ToInt32(ddlcountry.SelectedValue));
         }
-      
+
 
         private void GetSelectedRecord()
         {
@@ -200,7 +204,7 @@ namespace GrameenaVidya.Donate
             }
         }
 
-        
+
         protected void lbDonate_Click(object sender, EventArgs e)
         {
             //int PackageTypeID = Convert.ToInt32(hfPackageTypeID.Value);
@@ -214,7 +218,7 @@ namespace GrameenaVidya.Donate
             //if (rdbPackage3.Checked) PackageTypeID = 3;
             //if (rdbPackage4.Checked) PackageTypeID = 4;
             //if (rdbPackage5.Checked) PackageTypeID = 5;
-            
+
             string PackageID = "";
             double PackageAmount = 0;
             //if (PackageTypeID == 1)
@@ -264,7 +268,7 @@ namespace GrameenaVidya.Donate
             //        string Pincode = txtDonarPin.Text;
             //        string ContactNumber = txtDonarMobile.Text;
             //        Int32 _UserID = GVSchools.DAL.Schools.InsertDoners(Name, EmailAddress, ContactNumber, CountryID, StateID, Location, Address, Pincode);
-                   
+
 
             //        string Password = "password";
             //        GVSchools.DAL.Schools.CreateUserPassword(_UserID, Password);
@@ -273,8 +277,8 @@ namespace GrameenaVidya.Donate
             //        lblDError.Text = "Successfully  Inserted";
             //      //  this.lblMsg.ForeColor = Color.Green;
             //    }
-                
-                
+
+
             //}
 
             //if (PackageTypeID == 2)
@@ -319,8 +323,8 @@ namespace GrameenaVidya.Donate
             //        lblDError.Text = "Successfully  Inserted";
             //     //   this.lblMsg.ForeColor = Color.Green;
             //    }
-                
-                
+
+
             //}
 
             //if (PackageTypeID == 3)
@@ -340,7 +344,7 @@ namespace GrameenaVidya.Donate
             //            lblDError.Text = "Doner with already exist";
             //          //  this.lblMsg.ForeColor = Color.Red;
             //        }
-                    
+
             //    }
             //    else
             //    {
@@ -425,7 +429,7 @@ namespace GrameenaVidya.Donate
             //            lblDError.Text = "Doner with already exist";
             //           // this.lblMsg.ForeColor = Color.Red;
             //        }
-                    
+
             //    }
             //    else
             //    {
@@ -455,7 +459,7 @@ namespace GrameenaVidya.Donate
             //                 lblStudentsError.Text = "Student with already exist";
             //                 this.lblStudentsError.ForeColor = Color.Red;
             //             }
-                        
+
             //        }
             //        else
             //        {
@@ -470,7 +474,7 @@ namespace GrameenaVidya.Donate
             //            lblStudentsError.Text = "Successfully  Inserted";
             //            this.lblStudentsError.ForeColor = Color.Green;
             //        }
-                   
+
             //}
             //if (PackageTypeID == 5)
             //{
@@ -488,7 +492,7 @@ namespace GrameenaVidya.Donate
             //            lblDError.Text = "Doner with already exist";
             //          //  this.lblMsg.ForeColor = Color.Red;
             //        }
-                    
+
             //    }
             //    else
             //    {
@@ -509,23 +513,23 @@ namespace GrameenaVidya.Donate
             //       // this.lblMsg.ForeColor = Color.Green;
             //    }
             //}
-            string UserIDLast="1";
+            string UserIDLast = "1";
             try
             {
                 UserIDLast = hfUserIDFinal.Value;
-                
+
             }
             catch (Exception ex)
             {
 
                 lblDError.Text = ex.Message;
             }
-            
+
             if (UserIDLast != "")
             {
                 try
                 {
-                    PackageAmount =Convert.ToDouble(hfPackageAmount.Value);
+                    PackageAmount = Convert.ToDouble(hfPackageAmount.Value);
                     string DonationMode = "";
                     if (rbnetbanking.Checked) DonationMode = "Net Banking";
                     if (rbchequee.Checked) DonationMode = "chequee";
@@ -534,7 +538,7 @@ namespace GrameenaVidya.Donate
 
                     int RetVal = GrameenaVidya.BLL.Donate.Insert_Donation(PackageTypeID, PackageID, PackageAmount, Convert.ToInt32(UserIDLast), DonationMode);
 
-                    
+
 
                     if (RetVal > 0)
                     {
@@ -554,17 +558,17 @@ namespace GrameenaVidya.Donate
                 catch (Exception ex)
                 {
 
-                    lblDError.Text = "Error <br/>" + ex.Message ;
+                    lblDError.Text = "Error <br/>" + ex.Message;
                     this.lblDError.ForeColor = Color.Red;
                 }
-                
+
             }
             else
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "ShowPopup();", true);
-                 
+
             }
-            
+
         }
 
 
@@ -574,10 +578,10 @@ namespace GrameenaVidya.Donate
         //    BindStates();
         //    clearTextBoxes();
         //}
-        protected void rdbPackage1_CheckedChanged(object sender, EventArgs e) 
+        protected void rdbPackage1_CheckedChanged(object sender, EventArgs e)
         {
             btnDoners.Visible = true;
-            
+
         }
         protected void rdbPackage2_CheckedChanged(object sender, EventArgs e)
         {
@@ -599,7 +603,7 @@ namespace GrameenaVidya.Donate
         //    btnDoners.Visible = true;
         //    BindSchoolList();
         //    BindStates();
-            
+
 
         //}
         protected void rdbExistingStudent_CheckedChanged(object sender, EventArgs e)
@@ -670,8 +674,8 @@ namespace GrameenaVidya.Donate
 
         private void BindSchoolList()
         {
-           // gvSchoollist.DataSource = GVSchools.DAL.Schools.GetSchoolList().Tables[0];
-          //  gvSchoollist.DataBind();
+            // gvSchoollist.DataSource = GVSchools.DAL.Schools.GetSchoolList().Tables[0];
+            //  gvSchoollist.DataBind();
         }
         protected void btnSelect_Click(object sender, EventArgs e)
         {
@@ -679,9 +683,9 @@ namespace GrameenaVidya.Donate
             hfSchoolIDFinal.Value = SchoolID.ToString();
             if (SchoolID == 0)
             {
-             //   lblMsg.Visible = true;
-             //   lblMsg.Text = "Please Select School";
-             //   this.lblMsg.ForeColor = Color.Red;
+                //   lblMsg.Visible = true;
+                //   lblMsg.Text = "Please Select School";
+                //   this.lblMsg.ForeColor = Color.Red;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal();", true);
             }
             else
@@ -723,7 +727,7 @@ namespace GrameenaVidya.Donate
                     ddlLocations.Enabled = true;
                 }
                 txtname.Text = SchoolName;
-                
+
             }
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "ModalClose();", true);
             btnDoners.Visible = true;
@@ -732,7 +736,7 @@ namespace GrameenaVidya.Donate
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal1();", true);
             BindDoNarsList();
-            
+
         }
 
         private void BindDoNarsList()
@@ -795,18 +799,18 @@ namespace GrameenaVidya.Donate
             int PackageId = 0;
             if (rdbPackage1.Checked) PackageId = 1;
             if (rdbPackage2.Checked) PackageId = 2;
-            if (rdbPackage3.Checked) PackageId = 3;
-            if (rdbPackage4.Checked) PackageId = 4;
+            //  if (rdbPackage3.Checked) PackageId = 3;
+            // if (rdbPackage4.Checked) PackageId = 4;
             if (rdbPackage5.Checked) PackageId = 5;
             hfPackageID.Value = PackageId.ToString();
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "", "SelectPackage("+ PackageId +");", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "", "SelectPackage(" + PackageId + ");", true);
         }
-        protected void btnStudents_Click(object sender, EventArgs e) 
+        protected void btnStudents_Click(object sender, EventArgs e)
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModalStudent();", true);
             LoadStudents();
         }
-        protected void btnStudent_Click(object sender, EventArgs e) 
+        protected void btnStudent_Click(object sender, EventArgs e)
         {
             int StudentID = Convert.ToInt32(Request.Form["hfStudentID"]);
             hfStudentIDFinal.Value = StudentID.ToString();
@@ -837,17 +841,17 @@ namespace GrameenaVidya.Donate
             int PackageId = 0;
             if (rdbPackage1.Checked) PackageId = 1;
             if (rdbPackage2.Checked) PackageId = 2;
-            if (rdbPackage3.Checked) PackageId = 3;
-            if (rdbPackage4.Checked) PackageId = 4;
+            // if (rdbPackage3.Checked) PackageId = 3;
+            //   if (rdbPackage4.Checked) PackageId = 4;
             if (rdbPackage5.Checked) PackageId = 5;
             hfPackageID.Value = PackageId.ToString();
             ScriptManager.RegisterStartupScript(this, this.GetType(), "", "SelectPackage(" + PackageId + ");", true);
         }
 
         [WebMethod]
-        public static SchoolDetails[] BindSchools()
+        public static SchoolDetails[] BindSchools(string Type)
         {
-            DataSet ds1 = GVSchools.DAL.Schools.GetSchoolList();
+            DataSet ds1 = GVSchools.DAL.Schools.GetSchoolList(Type);
 
             DataTable dt = ds1.Tables[0];
 
@@ -874,6 +878,80 @@ namespace GrameenaVidya.Donate
             }
             return _data.ToArray();
         }
-        
+
+        [WebMethod]
+        public static StudentDetails[] BindStudents(string Type)
+        {
+            DataSet ds1 = null;
+
+
+            ds1 = GrameenaVidya.BLL.Donate.GetStudentsView(Type);
+
+            DataTable dt = ds1.Tables[0];
+
+            List<StudentDetails> _data = new List<StudentDetails>();
+
+            int count = dt.Rows.Count;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                StudentDetails objUser = new StudentDetails();
+                objUser.StudentID = Convert.ToInt32(dt.Rows[i]["StudentID"]);
+                objUser.StudentName = Convert.ToString(dt.Rows[i]["StudentName"]);
+                var img = dt.Rows[i]["ImageFile"].ToString();
+                if (img.ToString() == "")
+                {
+                }
+                else
+                {
+                    objUser.ImageFile = (byte[])dt.Rows[i]["ImageFile"];
+                }
+                objUser.StateName = Convert.ToString(dt.Rows[i]["StateName"]);
+                objUser.DistrictName = Convert.ToString(dt.Rows[i]["DistrictName"]);
+                string address = Convert.ToString(dt.Rows[i]["LocationName"]) + "," + Convert.ToString(dt.Rows[i]["NearBy1"]) + "," + Convert.ToString(dt.Rows[i]["NearBy2"]) + "," + Convert.ToString(dt.Rows[i]["Pin"]);
+                objUser.LocationName = address;
+                //objUser.CreatedDate = Convert.ToString(dt.Rows[i]["CreatedDate"]);
+                //objUser.IsActive = Convert.ToString(dt.Rows[i]["IsActive"]);
+                //objUser.StatusID = Convert.ToString(dt.Rows[i]["StatusID"]);
+                //objUser.PackageName = Convert.ToString(dt.Rows[i]["PackageName"]);
+                //objUser.Amount = Convert.ToString(dt.Rows[i]["Amount"]);
+                //objUser.DiscountAmount = Convert.ToString(dt.Rows[i]["DiscountAmount"]);
+                //objUser.CouponCode = Convert.ToString(dt.Rows[i]["CouponCode"]);
+                _data.Add(objUser);
+            }
+            return _data.ToArray();
+        }
+
+
+        [WebMethod]
+        public static Packages[] BindPackages(int SelectedPackage)
+        {
+            DataSet ds1 = GVSchools.DAL.Schools.GetPackages(SelectedPackage);
+
+            DataTable dt = ds1.Tables[0];
+
+            List<Packages> _data = new List<Packages>();
+
+            int count = dt.Rows.Count;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                Packages objUser = new Packages();
+                objUser.ID = Convert.ToInt32(dt.Rows[i]["ID"]);
+                objUser.PackageID = Convert.ToInt32(dt.Rows[i]["PackageID"]);
+                objUser.Text = Convert.ToString(dt.Rows[i]["Text"]);
+
+                objUser.Money = Convert.ToDecimal(dt.Rows[i]["Money"]);
+                //objUser.CreatedDate = Convert.ToString(dt.Rows[i]["CreatedDate"]);
+                //objUser.IsActive = Convert.ToString(dt.Rows[i]["IsActive"]);
+                //objUser.StatusID = Convert.ToString(dt.Rows[i]["StatusID"]);
+                //objUser.PackageName = Convert.ToString(dt.Rows[i]["PackageName"]);
+                //objUser.Amount = Convert.ToString(dt.Rows[i]["Amount"]);
+                //objUser.DiscountAmount = Convert.ToString(dt.Rows[i]["DiscountAmount"]);
+                //objUser.CouponCode = Convert.ToString(dt.Rows[i]["CouponCode"]);
+                _data.Add(objUser);
+            }
+            return _data.ToArray();
+        }
+
+
     }
 }

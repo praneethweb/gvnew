@@ -10,9 +10,10 @@ namespace GrameenaVidya.BLL
 
         public int StudentID { get; set; }
         public string StudentName { get; set; }
-        public string Class { get; set; }
+        public byte[] ImageFile { get; set; }
         public string Amount { get; set; }
-       // public string DistrictName { get; set; }
-        //public string LocationName { get; set; }
+        public string StateName { get; set; }
+        public string DistrictName { get; set; }
+        public string LocationName { get; set; }
     }
 }

@@ -51,3 +51,8 @@ G:\gv\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.csproj.CoreCompileInputs.cache
 G:\gv\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.csproj.CopyComplete
 G:\gv\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.dll
 G:\gv\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.pdb
+D:\dev\git2\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.csprojResolveAssemblyReference.cache
+D:\dev\git2\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.dll
+D:\dev\git2\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.pdb
+D:\dev\git2\gvnew\GrameenaVidya\bin\GrameenaVidya.dll
+D:\dev\git2\gvnew\GrameenaVidya\bin\GrameenaVidya.pdb

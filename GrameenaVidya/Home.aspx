@@ -4,7 +4,6 @@
 <%@ Register src="~/Controls/Campaign.ascx" tagname="Campaign" tagprefix="uc2" %>
 <%@ Register src="~/Controls/SocialMedia.ascx" tagname="SocialMedia" tagprefix="uc3" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -18,6 +17,9 @@
 
     });
     </script>
+    <style>
+       
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
   
@@ -52,9 +54,15 @@
      <div class="row">
       <div class="col-md-12">
         <h1>Welcome to Grameena Vidya</h1>
-        <p class="lead-font">Grameena Vidya’s (Rural school Education) Adopt-a-School and Adopt-a-Village programs provide 21st century technology enabled digital smart classrooms and learning solution for rural India. Students and teachers can access learning and teaching resources anytime and anywhere. It provides curriculum specific quality multimedia learning objects, content presented in multiple formats, vocational and learning skills, variety of assessments, software applications, that can complement and supplement school education and career skills of rural and inner-city children.
-
-Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" text-decoration:underline;" >Center for Training, Research and Development,</a>” (CTRD) a non-profit, non-government organization (NGO).&nbsp;&nbsp;<a href="AboutUS/about-background.aspx" style="font-size:14px; color:#FF9900;" ><u>Read more</u></a></p>
+          <p class="lead-font">
+GRAMEENA VIDYA or rural education is an initiative of “Center for Training, Research and Development” (CTRD) a non-profit NGO. Our primary goal is to REDUCE DIGITAL AND GENDER DIVIDE. The “Digital Divide” is defined as the gap between those with regular, effective access and ability to use digital technologies and those without.</p>
+          <p class="lead-font">
+Digital Divide may be the defining divide between people as the 21st century progresses. Digital divide will continue to perpetuate the vicious cycle of inequalities on race, caste, gender, age, income, employment, urban-rural-local, and educational attainment. Therefore, at Grameena Vidya, we believe, this issue is not just as an economic or social divide, it is a civil and human rights divide as well.</p>
+          <p class="lead-font">
+ADOPT-A-SCHOOL and ADOPT-A-STUDENT are Grameena Vidya’s two flagship programs to “Bridge Digital Divide”. Individual Donors and Corporates thru CSR can sponsor and make a difference. Your VIDYA DHAAN (Donating for Knowledge) will make an immense difference in the beneficiary’s lives.<a href="AboutUS/about-background.aspx" style="font-size:14px; color:#FF9900;"><u>Read more</u></a></p>
+          <p class="lead-font" style="font-weight:bold;text-align:center"><b>
+GIVING FOOD IS A GREAT TYPE OF CHARITY, BUT GIVING OR FACILITATING KNOWLEDGE IS EVEN GREATER, IT LASTS A LIFE TIME.  </b>
+</p>
       </div>
     </div>
     <div class=" service-blk">
@@ -65,8 +73,7 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
                 <div class="text">
                   <h3><a href="Programs/adopt-a-school.aspx">Adopt-a-School</a></h3>
                  <p >
-                      “Adopt-a-School program” is a pioneering initiative of Grameena Vidya. The program
-                      provides existing rural, suburban and inner city schools, .. 
+                     ADOPT-A-SCHOOL initiative is a Digital / Smart Classroom program. It will help transform regular schools into digital schools and then into data driven schools. It is a combination of computing hardware + broadband + software + curriculum aligned multimedia content + teacher training + continuous support + generating intelligent reports. Our focus is to adopt bottom of the pyramid schools or Government schools , .. 
                       <a href="Programs/adopt-a-school.aspx"
                           style="font-size: 14px; color: #FF9900;"><u>Read more</u></a>
                   </p>
@@ -75,8 +82,8 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
         <div class="col-md-6">
            <div class="programs-icon i2"></div>
                 <div class="text">
-            <h3><a href="Programs/adopt-a-village.aspx">Adopt-a-Student</a></h3>
-           <p >Transforming rural areas through digital learning is the focus of Adopt-a-village program. This program will provide academic and vocational ... <a href="Programs/adopt-a-village.aspx" style="font-size:14px; color:#FF9900;"><u>Read more</u></a></p></div>
+            <h3><a href="Programs/adopt-a-student.aspx">Adopt-a-Student</a></h3>
+           <p >ADOPT-A-STUDENT initiative provides Internet-connected Computing Device for each student who are on the wrong side of the digital divide -- disadvantaged due to -- income, education, race, gender, geographic location (urban-rural), age, skills, awareness, political, cultural and psychological attitudes gaps. Our focus is to adopt students at the bottom of the pyramid; especially those identified through government issued socio-economic certification  ... <a href="Programs/adopt-a-student.aspx" style="font-size:14px; color:#FF9900;"><u>Read more</u></a></p></div>
         
         </div>
 
@@ -91,7 +98,7 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
 
 
 
-<div class="donate-home row">
+<div class="donate-home row" style="display:none">
 
       
     <div class="stuA">
@@ -174,9 +181,36 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
     </div>
 
 
+   
+<!--  things section start -->
+<div class="gv-modal" style="display:none">
+  <div class="container">
+    <div class="row">
 
+    <div class="col-md-6">
+    <h1>Modal</h1>
+        <img class="img-how-it-works" src="images/grameena-modal.jpg" />
+        <p>The eco-system required is:<br />
+A data center and a web portal
+Any portable device (laptop, tablet or mobile phones along with a projector and basic interactive devices) that can access educational content
+Wired or wireless connections network / broadband (2G, 3G or 4G) to ride the connectivity wave
+Multimedia content and assessments that is curriculum specific and caters to different subjects / classes and vocational software for both teachers and students
+The Sponsors – Individuals, Corporates and Government. </p>
+    
+    </div>
 
-<div class="donate-home row">
+     <div class="col-md-6">
+    <h1>How It Works</h1>
+       <img class="img-how-it-works" src="images/how-it-works.jpg" />
+    </div>
+   
+   <%--   <uc2:Campaign ID="Campaign1" runat="server" />--%>
+    
+    </div>
+  </div>
+</div>
+
+<div class="donate-home row" >
     <div class="container text-center">
         <img src="images/slide2.png" />
     </div>
@@ -188,26 +222,41 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
     <div class="container">
         <div class="row">
         
-    <div class="col-md-6">
+    <div class="col-md-4">
         <h1>Donors</h1>
         
         <div class="individual">
              <h3>Individual Donors</h3>
             <marquee direction="up">
-            <span class="name">Varun Dev</span>
-        <span class="details">KDPM High School, Pedawaltair, Visakhapatnam</span>
+            <span class="name">Dr. Rama Krishna Dhanekula</span>
+        <span class="details">Doctor, Vijayawada</span>
         
 
-        <span class="name">Varun Dev</span>
-        <span class="details">KDPM High School, Pedawaltair, Visakhapatnam</span>
+        <span class="name">Mr. Bhaskar Vempaty</span>
+        <span class="details">IT Professional, Hyderabad</span>
         
 
-        <span class="name">Varun Dev</span>
-        <span class="details">KDPM High School, Pedawaltair, Visakhapatnam</span>
+        <span class="name">Dr. Usha Vempaty</span>
+        <span class="details">Doctor, Hyderabad</span>
         
 
-        <span class="name">Varun Dev</span>
-        <span class="details">KDPM High School, Pedawaltair, Visakhapatnam</span>
+        <span class="name">Dr. Shaik Suleman</span>
+        <span class="details">Government, New Delhi</span>
+
+ <span class="name">Mr. Radha Krishna Kakkarla</span>
+     <span class="details">IT Professional, Hyderabad</span>
+
+ <span class="name">Ms. Seeta Jagathiani</span>
+        <span class="details">Home Maker, Visakhapatnam</span>
+
+ <span class="name">Ms. Radhika Ponnula</span>
+        <span class="details">IT Professional, Hyderabad</span>
+ <span class="name">Prof. Sarada Devi</span>
+        <span class="details">Retired Professor, Visakhapatnam</span>
+<span class="name">Prof. L.K. Mohana Rao</span>
+        <span class="details">Retired Professor, Vijayawada</span>
+<span class="name">Mr & Mrs. Srinivas Maddala</span>
+         <span class="details">IT Professional, Atlanta, USA</span>
                 </marquee>
         <div class="more">
             <a class="btn btn-info" href="#">More</a>
@@ -220,11 +269,17 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
              <h3>Corporate Donors</h3>
 
              <marquee direction="up">
-                <span class="name">Hindustan Unilever Ltd</span><br />
-                <span class="name">Godrej Consumer Products Ltd.</span><br />
-                <span class="name">Cisco Systems India Pvt. Ltd.</span><br />
-                <span class="name">Indian Oil Corporation Ltd.</span><br />
+                <span class="name">Aurobindo Pharma, Srikakulam</span><br />
+                <span class="name">RINL, Visakhapatnam</span><br />
+                <span class="name">WNS , Visakhapatnam</span><br />
+                <span class="name">Divis Pharmaceuticals, Visakhapatnam / Hyderabad</span><br />
                 <span class="name">Tata Consultancy Services Ltd</span>
+ <span class="name">Cyiant, Visakhapatnam</span><br />
+                <span class="name">Esai, Visakhapatnam</span><br />
+                <span class="name">ONGC, Rajahmundry</span><br />
+                <span class="name">Vishnu Chemicals,  Visakhapatnam</span><br />
+                <span class="name">Varun Group, Visakhapatnam</span><br>
+<span class="name">Naval Dockyard, Visakhapatnam</span>
              </marquee>
         <div class="more">
             <a class="btn btn-info" href="#">More</a>
@@ -235,34 +290,51 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
         
     </div>
    
-    <div class="col-md-6 home-adopted-blocks">
-        <h1>Adopted </h1>
+    <div class="col-md-4 home-adopted-blocks">
+        <h1>Beneficiaries </h1>
        
         <div class="row">
             <div class="col-md-12">
             <h3>Adopted Schools</h3>
                   <marquee direction="up">
-                <span class="name">Hindustan Unilever Ltd</span><br />
+                
+                       <div class="pic"><a><img src="images/photo-gallery/au/3.jpg" class="img-responsive" alt=""></a></div>
                 <span class="name">Godrej Consumer Products Ltd.</span><br />
+                       <div class="pic"><a><img src="images/bck6.jpg" class="img-responsive" alt=""></a></div>
                 <span class="name">Cisco Systems India Pvt. Ltd.</span><br />
+                      
+            <div class="pic"><a><img src="images/bck5.jpg" class="img-responsive" alt=""></a></div>
                 <span class="name">Indian Oil Corporation Ltd.</span><br />
+ <div class="pic"><a><img src="images/GVstu4.jpeg" class="img-responsive" alt=""></a></div>
                 <span class="name">Tata Consultancy Services Ltd</span>
+                     
+           
              </marquee>     
                 </div>  
-            <div class="col-md-12">
-            <h3>Adopted Students</h3>
-             <marquee direction="up">
-                <span class="name">Hindustan Unilever Ltd</span><br />
-                <span class="name">Godrej Consumer Products Ltd.</span><br />
-                <span class="name">Cisco Systems India Pvt. Ltd.</span><br />
-                <span class="name">Indian Oil Corporation Ltd.</span><br />
-                <span class="name">Tata Consultancy Services Ltd</span>
-             </marquee>   
-            </div>
+            
         </div>
+         
        
           
     </div>
+
+            <div class="col-md-4 home-adopted-blocks">
+                 <h1> </h1>
+                <br />
+                <div class="row">
+
+                
+             <div class="col-md-12">
+            <h3>Adopted Students</h3>
+             <marquee direction="up">
+               <div class="pic"><a><img src="images/bck3.jpg" class="img-responsive" alt=""></a></div>
+            <div class="pic"><a><img src="images/p_pic-5.jpg" class="img-responsive" alt=""></a></div>
+            <div class="pic"><a><img src="images/GVstu10.jpeg" class="img-responsive" alt=""></a></div>
+  <div class="pic"><a><img src="images/GVstu7.jpeg" class="img-responsive" alt=""></a></div>
+             </marquee>   
+            </div>
+                    </div>
+             </div>
         </div>
     </div>
 
@@ -342,4 +414,5 @@ Grameena Vidya is an initiative of “<a href="AboutUS/about-ctrd.aspx" style=" 
 
 </script>
 </asp:Content>
+
 

@@ -333,5 +333,19 @@ namespace GrameenaVidya.DAL
             }
             return false;
         }
+
+        public static DataSet GetStudentsView(string Type)
+        {
+            DataSet ds = null;
+            try
+            {
+                ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), "GetStudents_View", Type);
+            }
+            catch (Exception ex)
+            {
+                //TLW.Common.WtiteToLog(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name, System.Reflection.MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+            return ds;
+        }
     }
 }

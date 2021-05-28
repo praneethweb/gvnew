@@ -87,7 +87,7 @@ namespace GVSchools.DAL
             try
             {
                 string Query = "";
-                Query = Query + "Select StateID, StateName from States where IsActive=1";
+                Query = Query + "Select StateID, StateName from States where IsActive=1 and CountryID=" + CountryID;
                 ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), CommandType.Text, Query);
                 //ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), "Schools_SelectStates",CountryID);
             }
@@ -112,7 +112,22 @@ namespace GVSchools.DAL
             }
             return ds;
         }
-
+        public static DataSet GetPackages(int PackageID)
+        {
+            DataSet ds = null;
+            try
+            {
+                string Query = "";
+              //  Query = Query + "Select * from dbo.PackageDetails where PackageID="+ PackageID+ " and Status=1 or  PackageID=" + 5 + "";
+                Query = Query + "Select * from dbo.PackageDetails where Status=1  order by PackageID";
+                ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), CommandType.Text, Query);
+            }
+            catch (Exception ex)
+            {
+                //TLW.Common.WtiteToLog(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name, System.Reflection.MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+            return ds;
+        }
 
         public static bool InsertFeedback(string feedback, string description, string emailid)
         {
@@ -199,13 +214,22 @@ namespace GVSchools.DAL
             return ds;
         }
 
-        public static DataSet GetSchoolList()
+        public static DataSet GetSchoolList(string Type)
         {
             DataSet ds = null;
             try
             {
                 string Query = "";
-                Query = Query + "Select S.SchoolID as SchoolID, S.SchoolName as SchoolName,C.CountryName as CountryName, ST.StateName as StateName, D.DistrictName as DistrictName,L.LocationName as LocationName from Schools S left join dbo.Countries C ON C.CountryID=S.CountryID left join dbo.States ST ON ST.StateID=S.StateID left join dbo.Districts D ON D.DistrictID=S.DistrictID left join dbo.Locations L ON L.LocationID=S.LocationID where S.Status=1 Group by S.SchoolID,S.SchoolName,C.CountryName,ST.StateName,D.DistrictName,L.LocationName";
+                if (Type =="Normal")
+                {
+                    Query = Query + "Select S.SchoolID as SchoolID, S.SchoolName as SchoolName,C.CountryName as CountryName, ST.StateName as StateName, D.DistrictName as DistrictName,L.LocationName as LocationName from Schools S left join dbo.Countries C ON C.CountryID=S.CountryID left join dbo.States ST ON ST.StateID=S.StateID left join dbo.Districts D ON D.DistrictID=S.DistrictID left join dbo.Locations L ON L.LocationID=S.LocationID where S.Status=1 Group by S.SchoolID,S.SchoolName,C.CountryName,ST.StateName,D.DistrictName,L.LocationName order by S.SchoolID";
+                }
+                if (Type=="Random")
+                {
+                    Query = Query + "Select S.SchoolID as SchoolID, S.SchoolName as SchoolName,C.CountryName as CountryName, ST.StateName as StateName, D.DistrictName as DistrictName,L.LocationName as LocationName from Schools S left join dbo.Countries C ON C.CountryID=S.CountryID left join dbo.States ST ON ST.StateID=S.StateID left join dbo.Districts D ON D.DistrictID=S.DistrictID left join dbo.Locations L ON L.LocationID=S.LocationID where S.Status=1 Group by S.SchoolID,S.SchoolName,C.CountryName,ST.StateName,D.DistrictName,L.LocationName order by NEWID()";
+
+                }
+               
                 ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), CommandType.Text, Query);
             }
             catch (Exception ex)
@@ -377,7 +401,7 @@ namespace GVSchools.DAL
             try
             {
                 string Query = "";
-                Query = Query + "Select CountryId, CountryName from dbo.Countries";
+                Query = Query + "Select CountryId, CountryName from dbo.Countries where countryID in (1,41) order by CountryName";
                 ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), CommandType.Text, Query);
             }
             catch (Exception ex)

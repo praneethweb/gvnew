@@ -294,15 +294,6 @@ namespace GrameenaVidya.Donate
         protected global::System.Web.UI.WebControls.Label lblStudentError;
 
         /// <summary>
-        /// btnStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnStudent;
-
-        /// <summary>
         /// Updatepanel58 control.
         /// </summary>
         /// <remarks>
@@ -310,6 +301,24 @@ namespace GrameenaVidya.Donate
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel Updatepanel58;
+
+        /// <summary>
+        /// rbdCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbdCountry;
+
+        /// <summary>
+        /// rbdCountryother control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbdCountryother;
 
         /// <summary>
         /// btnDoners control.
@@ -499,24 +508,6 @@ namespace GrameenaVidya.Donate
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel11;
-
-        /// <summary>
-        /// RadioButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
-
-        /// <summary>
-        /// RadioButton2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
 
         /// <summary>
         /// UpdatePanel5 control.
@@ -796,5 +787,14 @@ namespace GrameenaVidya.Donate
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfUserIDFinal;
+
+        /// <summary>
+        /// hftbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hftbl;
     }
 }

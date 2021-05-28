@@ -40,36 +40,25 @@
                         </h1>
                         <h3>VIDYA DHAAN</h3>
                         <p>
-                            <b>GRAMEENA VIDYA</b> or rural education is an initiative of “Center for Training, Research and Development” (CTRD) 
-                            a non-profit NGO. Our primary goal is to <b>REDUCE DIGITAL AND GENDER DIVIDE</b>. Bridging digital divide in India can
-                            go a long way to solving the problems of poverty and social inequality. The “Digital Divide” is defined as the gap 
-                            between those with regular, effective access and ability to use digital technologies and those without.
-                        </p>
+                            <b>GRAMEENA VIDYA</b> or rural education is an initiative of “Center for Training, Research and Development” (CTRD) a non-profit NGO. Our primary goal is to 
+                            <b>REDUCE DIGITAL AND GENDER DIVIDE</b>. The “Digital Divide” is defined as the gap between those with regular, effective access and ability to use digital technologies and those without. </p>
 
                         <p>
-                            Digital Divide may be the defining divide between people as the 21st century progresses. Far too many Indians do
-                            not have access to technology in their homes or access to affordable high-speed broadband required to succeed in 
-                            today’s economy and in turn impacting India’s competitiveness globally.  Digital divide will continue to perpetuate
-                            the vicious cycle of inequalities on race, caste, gender, age, income, employment, urban-rural-local, and educational 
-                            attainment. Therefore, at Grameena Vidya, we believe, this issue is not just as an economic divide, it is a civil and human
-                            rights divide as well.
+                            Digital Divide may be the defining divide between people as the 21st century progresses. Digital divide will continue to perpetuate the vicious cycle of inequalities on race, caste, gender, age, income, employment, urban-rural-local, and educational attainment. Therefore, at Grameena Vidya, we believe, this issue is not just as an economic or social divide, it is a civil and human rights divide as well.
                         </p>
 
-                        <p>
-                            Covid 19 has shown that bridging digital divide is more than a goal – it is a necessity. 
-                            To navigate in today’s world, access to broadband and computing technology is a basic necessity like food, shelter, clothing, and electricity. 
-                            Basic needs like Education, Healthcare, Government Services, and Employment are now digital. Government alone cannot solve this.
+                        <p><b>ADOPT-A-SCHOOL</b> and <b>ADOPT-A-STUDENT</b> are Grameena Vidya’s two flagship programs to “Bridge Digital Divide”. Individual Donors and Corporates thru CSR can sponsor and make a difference. Your VIDYA DHAAN (Donating for Knowledge) will make an immense difference in the beneficiary’s lives. 
                         </p>
                         <p>
-                            Digital devices and broadband will empower children at the bottom of the pyramid especially girl child to receive quality education - 
-                            bringing the school to the child, acquiring life skills that provide employability, employment, and entrepreneurship, while opening rural 
-                            India and many socially deprived communities to the world, and at the same time bringing the world to them.
+                          <b>GIVING FOOD IS GREAT TYPE OF CHARITY, BUT GIVING OR FACILITATING KNOWLEDGE IS EVEN GREATER, IT LASTS A LIFE TIME.</b>
                         </p>
                         <p>
-                            <b>ADOPT-A-SCHOOL</b> and <b>ADOPT-A-STUDENT</b> are Grameena Vidya’s two flagship programs to “Bridge Digital Divide”. 
-                            Individual Donors and Corporates thru CSR can sponsor and make a difference. Your VIDYA DHAAN will make an immense 
-                            difference in the beneficiary’s lives. Thank you for your kindness. God bless you.
+                          Bridging digital divide in India can go a long way to solving the problems of poverty and social inequality. Far too many Indians do not have access to technology in their homes or access to affordable high-speed broadband required to succeed in today’s economy and in turn impacting India’s competitiveness globally.  
                         </p>
+                        <p>
+                            Covid 19 has shown that bridging digital divide is more than a goal – it is a necessity. To navigate in today’s world, access to broadband and computing technology is a basic necessity like food, shelter, clothing, and electricity. Basic needs like Education, Healthcare, Government Services, and Employment are now digital. Government alone cannot solve this.
+                        </p>
+                        <p>Digital devices and broadband will empower children at the bottom of the pyramid especially girl child to receive quality education - bringing the school to the child, acquiring life skills that provide employability, employment, and entrepreneurship, while opening rural India and many socially deprived communities to the world, and at the same time bringing the world to them.</p>
                         <div class="pic">
                             <img src="../images/donet-pic.jpg" class="img-responsive" alt="">
                             &nbsp;</div>

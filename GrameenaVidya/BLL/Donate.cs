@@ -105,6 +105,10 @@ namespace GrameenaVidya.BLL
         {
             return GrameenaVidya.DAL.Donate.Insert_Enquiry(FirstName, Email, Mobile, EnquiryType, Message);
         }
+        public static DataSet GetStudentsView(string Type)
+        {
+            return GrameenaVidya.DAL.Donate.GetStudentsView(Type);
+        }
     }
 }
 

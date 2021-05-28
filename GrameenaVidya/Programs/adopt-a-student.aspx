@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Master/OutSideMaster.master" CodeBehind="adopt-a-student.aspx.cs" Inherits="GrameenaVidya.Programs.adopt_a_student" %>
 
-<%@ Register src="../Controls/Aside_right.ascx" tagname="Aside_right" tagprefix="uc1" %>
+<%@ Register src="../Controls/AsideStu_right.ascx" tagname="AsideStu_right" tagprefix="uc1" %>
 <%@ Register src="~/Controls/SocialMedia.ascx" tagname="SocialMedia" tagprefix="uc3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -36,22 +36,39 @@
                         <h1 class="page-heading">
                             Adopt-a-Student</h1>
                         <div class="pic">
+                               <img src="../images/adopt-a-student.jpeg" alt="Alternate Text" class="img-responsive" />
                         </div>
+                           <p>
+                      ADOPT-A-STUDENT initiative provides Internet-connected Computing Device for each student who are on the wrong side of the digital divide -- disadvantaged due to -- income, education, race, gender, geographic location (urban-rural), age, skills, awareness, political, cultural and psychological attitudes gaps. Our focus is to adopt students at the bottom of the pyramid; especially those identified through government issued socio-economic certification. 
+                        </p>
                         <p>
-                         ADOPT-A-STUDENT initiative provides Internet-connected device for each student who are on the wrong side of the digital divide
-                            -- disadvantaged due to -- income, education, race, gender, geographic location (urban-rural), age, skills, awareness, political,
-                            cultural and psychological attitudes gaps. This 1:1 student to device program will provide a laptop, tablet, or similar portable 
-                            device to each student to support online learning, differentiated instruction, project-based learning, flipped classrooms, enhances
-                            collaboration, practice communication in multiple formats, acquire life skills and a host of other instructional strategies. Unless students
-                            take devices home, there is little demonstrable impact on learning, since learning mostly continues outside schools.   
+                            This 1:1 student to broadband enabled device program will support: 
+                               <ul style="padding-left:50px">
+                <li style="list-style:inherit">	Online learning </li>
+<li style="list-style:inherit">Differentiated instruction</li>
+<li style="list-style:inherit">Project-based learning</li>
+<li style="list-style:inherit">	Flipped classrooms</li>
+<li style="list-style:inherit"> Enhances collaboration</li>
+<li style="list-style:inherit">Practice communication in multiple formats</li>
+<li style="list-style:inherit"> Acquire life skills </li>
+                                   <li style="list-style:inherit"> A host of other instructional strategies.</li>
+
+            </ul>
+                        </p>
+                        <p>
+                            Unless students take devices home, there is little demonstrable impact on learning, since learning mostly continues outside schools. Your sponsorship will reduce the gaps in literacy, academic achievement, civic opportunity, economic, social and physical disability, especially among those students at the bottom of the pyramid – <b>Your sponsorship alone will help the student more than anything else. This is the greatest form of Vidya Dhaan. </b>
+                        </p>
+                        <p>
+                           <b> Any Individual or Corporate can Adopt-a-Student(s) by sponsoring 1 or multiple students.</b> Every adopted student will be provided a broadband enabled Laptop or Tablet, or similar portable device. Usually Tablets will be given to students below 4th grade and Laptops for students above 4th grade
                         </p>
                         <p>
                             <b>
-                                Your sponsorship will reduce the gaps in literacy, academic achievement, civic opportunity, economic, social and physical disability, 
-                                especially among those students at the bottom of the pyramid – Your sponsorship alone will help the student more than anything else. 
-                                This is the greatest form of Vidya Dhaan.
+                                Adopt-a-student costs Rs 35000/- (Thirty five thousand rupees) or USD 500/- (Five hundred US dollars based on current exchange rates). This sponsorship (donation) can be paid is full or 4 monthly installments . <a href="../Donate/Donate.aspx" class="btn btn-primary">Donate Now</a> 
                             </b>
                         </p>
+                            <p>
+                          For additional information about donation please contact us – info@grameenavidya.org or +91 7702444575
+                      </p>
                        <%-- <p>
                             Therefore, the first step in transforming villages across India is by imparting
                             quality education thru smart classroom and smart schools to the masses in a cost
@@ -545,7 +562,7 @@
 
 
 <!-- Adopt A School Form -->      
-<div class="container sub-form">
+<div class="container sub-form" style="display:none">
     <div class="row">
         <h1>Adopt a Student Form</h1>
         <div class="col-md-12">
@@ -665,8 +682,8 @@
 
 
 <!-- School Data -->  
-                        <h2>List of Students</h2>
-<table class="table table-striped table-bordered">
+                       
+<table class="table table-striped table-bordered" style="display:none">>
  <thead> <tr>
       <td>S.No.</td>
       <td>Student Name</td>
@@ -725,23 +742,13 @@
  </tbody>
 </table>
 
-<div class="container">
-    <div class="row">
-       
-             <div class="form-group row">
-            <div class="offset-4 col-md-8">
-            <a href="/Donate/Donate.aspx" class="btn btn-primary donate-btn">Donate Now</a>
-            </div>
-            </div>
-        
-    </div>
-</div>
+
                         
                         
               
                     </div>
-                    <!-- progaram detail close -->
-                    <uc1:Aside_right ID="Aside_right1" runat="server" />
+                        <!-- progaram detail close -->
+                  <uc1:AsideStu_right ID="AsideStu_right1" runat="server" />
                     <!-- sidebar section dending -->
                 </div>
             </div>

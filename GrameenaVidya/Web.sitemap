@@ -10,8 +10,13 @@
         </siteMapNode>      
         <siteMapNode url="" title="Programs"  description="" >
             <siteMapNode url="~/Programs/adopt-a-school.aspx" title="Adopt A School"  description="" />
-            <siteMapNode url="~/Programs/adopt-a-village.aspx" title="Adopt A Village"  description="" />
+            <siteMapNode url="~/Programs/adopt-a-student.aspx" title="Adopt A Student"  description="" />
+
+          <siteMapNode url="~/Programs/NewStudent.aspx" title="New Student"  description="" />
+          <siteMapNode url="~/Programs/StudentList.aspx" title="Student List"  description="" />
+          
         </siteMapNode>
+      
         <siteMapNode url="" title="GetInvolved"  description="" >
             <siteMapNode url="~/Getinvolved/HowtoDonate.aspx" title="How To Donate"  description="" />
           <siteMapNode url="" title="Sponsors"  description="" >
@@ -59,7 +64,7 @@
 
       <siteMapNode url="~/Programs/AdoptedSchools.aspx" title="Adopted Schools"  description="" />
 
-      <siteMapNode url="~/Donate/Donate_New.aspx" title="Donate"  description="" />
+      <siteMapNode url="~/Donate/Donate.aspx" title="Donate"  description="" />
       
     </siteMapNode>
 </siteMap>

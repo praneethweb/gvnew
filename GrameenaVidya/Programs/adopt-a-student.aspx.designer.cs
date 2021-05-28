@@ -24,12 +24,12 @@ namespace GrameenaVidya.Programs
         protected global::GrameenaVidya.Controls.SocialMedia SocialMedia1;
 
         /// <summary>
-        /// Aside_right1 control.
+        /// AsideStu_right1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GrameenaVidya.Controls.Aside_right Aside_right1;
+        protected global::GrameenaVidya.Controls.AsideStu_right AsideStu_right1;
     }
 }

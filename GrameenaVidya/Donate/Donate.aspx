@@ -443,12 +443,12 @@ tr.shown td.details-control {
                 </div>
                 <div class="stepwizard-step"> <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
                    
-                     <p>Select Beneficiary</p>
+                     <p>Make Payment</p>
                 </div>
                 <div class="stepwizard-step"> <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-                    <p>Make Payment </p>
+                    <p>Preview </p>
                 </div>
-                <div class="stepwizard-step"> <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                <div class="stepwizard-step" style="display:none"> <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
                     <p>Preview</p>
                 </div>
             </div>
@@ -458,8 +458,8 @@ tr.shown td.details-control {
             <div class="col-md-12">
             <br />
              <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                          <ContentTemplate>
-                          <div class="col-xs-6 ">
+                          <ContentTemplate >
+                          <div class="col-xs-6 " style="display:none">
                           
                                 	<div class="frb frb-success">
 						<input type="radio" id="radio-button-2" name="radio-button"  onclick="Javascript:SelectPackage(3);">
@@ -469,7 +469,7 @@ tr.shown td.details-control {
 						</label>
 					</div>
                                </div>  
-                                <div class="col-xs-6 ">
+                                <div class="col-xs-6 " style="display:none">
                            
                                 <div class="frb frb-success">
 						<input type="radio" id="radio1" name="radio-button" onclick="Javascript:SelectPackage(4);">
@@ -481,14 +481,36 @@ tr.shown td.details-control {
                                 </div>
                                  </ContentTemplate>
                                   </asp:UpdatePanel>
-                           
+                <fieldset>
+  <legend>Adopt -a- School :</legend>
+                    
+                           <div class="row" id="dvPackageschool">
+
+                           </div>
+                    </fieldset>
+                 <fieldset>
+  <legend>Adopt -a- Student :</legend>
+                     
+                           <div class="row" id="dvPackagestudent" >
+
+                           </div>
+                    </fieldset>
+                <fieldset>
+  <legend>Other :</legend>
+                     
+                           <div class="row" id="dvPackagesother">
+
+                           </div>
+                    </fieldset>
+                <br />
+                 <div id="selectedforPay1"></div>
                 <div class="buttons-panel">
                         <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
                     </div>
      </div>
               
             </div>
-            <div class="row setup-content" id="step-3">
+            <div class="row setup-content" id="step-6">
                 <div class="col-xs-12">
                     <div class="col-md-12">
                         
@@ -678,7 +700,11 @@ tr.shown td.details-control {
                    <div id="UserData"></div>
                    
                    </div>
-                     <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" onclick="GetSelected()">Next</button>
+                            <div class="row" id="dvRandomSchool" style="display:none;">
+                   <div id="RandomUserData"></div>
+                   
+                   </div>
+                     <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" id="btnScNext" onclick="GetSelected(this)">Next</button>
                     
                         </div>
 
@@ -713,8 +739,8 @@ tr.shown td.details-control {
                          <div class="col-md-4">  
                                 
                                  <div class="frb frb-primary">
-						<input type="radio" id="radio7" name="student"   onclick="Javascript:Select(20);">
-						<label for="radio4">
+						<input type="radio" id="radio7" name="student" onclick="Javascript:Select(20);">
+						<label for="radio7">
 							<span class="frb-title">New GV Beneficiary</span>
 							<span class="frb-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper quam nunc.</span>
 						</label>
@@ -912,7 +938,10 @@ tr.shown td.details-control {
                   </div>
                         
                         <div id="dvExistingStudent" style="display:none">
-                        <div id="gvStudent"></div>
+                        <div id="gvStudent">
+                          
+
+                        </div>
                             <div class="modal-body" style="max-height:500px;overflow:scroll;">
                                      <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                     <ContentTemplate>
@@ -944,9 +973,15 @@ tr.shown td.details-control {
                     <div class="modal-footer">
                          <asp:Label ID="lblStudentError" runat="server" Text="" Visible="false" ></asp:Label>
                        
-                        <asp:Button ID="btnStudent" runat="server" Text="Send" CssClass="btn btn-default" OnClick="btnStudent_Click"/>
+                        
                     </div>
                         </div>
+
+                            <div id="dvRandomStudents" style="display:none; margin-top:100px">
+                                
+
+                            </div>
+                             <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" id="btnStNext" onclick="GetSelected(this)">Next</button>
                         </div>
                       
                       
@@ -968,10 +1003,15 @@ tr.shown td.details-control {
                    
                          <div class="row">
                         <div class="col-md-12">
+                              <label class="donate-label">
+                               <span style="color:Green; margin-right:5px;"></span>Select Citizenship </label>
                            <asp:UpdatePanel ID="Updatepanel58" runat="server">
                            <ContentTemplate>
                             
-                           
+                            <div class="col-md-6">  <asp:RadioButton ID="rbdCountry" CssClass="radio" runat="server" Text="India"
+                                onclick="Javascript:SelectCountry(41);" GroupName="Package1"/></div>
+                         <div class="col-md-6"> <asp:RadioButton ID="rbdCountryother" CssClass="radio" runat="server" Text="United States"
+                                onclick="Javascript:SelectCountry(1);" GroupName="Package1"/></div>
                                  
                       <asp:Button ID="btnDoners" class="btn btn-primary" style="float:right;margin-top: 27px;" runat="server" Text="Existing Donars List" OnClick="btnDoners_Click" Visible="false"/>
                      </ContentTemplate>
@@ -980,22 +1020,28 @@ tr.shown td.details-control {
                     </div>
 
                     <div class="row">
-                     
+                      
                         <div class="col-md-4">
                             <asp:TextBox ID="txtDonarname" CssClass="donate-input" Width="100%" runat="server" placeholder="Name"></asp:TextBox>
+                            <label class="error" id="errDonarname" style="display:none">Name Should Not Empty</label>
                         </div>
                         <div class="col-md-4">
                             <asp:TextBox ID="txtDonarEmail" CssClass="donate-input" Width="100%" runat="server" placeholder="Email Address"></asp:TextBox>
-                        </div>
+                       <label class="error" id="errDonarEmail" style="display:none">Email Should Not Empty</label>
+                        </div> 
+                            </div>
+                            
                     </div>
                     <div class="row">
                         <div class="col-md-4">
                             <asp:TextBox ID="txtDonarAddress" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="Address1"></asp:TextBox>
+                             <label class="error" id="errDonarAddress" style="display:none">Address Should Not Empty</label>
                         </div>
                         <div class="col-md-4">
                             <asp:TextBox ID="txtDonarLocation" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="Address2"></asp:TextBox>
+                             <label class="error" id="errDonarLocation" style="display:none">Location Should Not Empty</label>
                         </div>
                     </div>
                     <div class="row">
@@ -1024,17 +1070,19 @@ tr.shown td.details-control {
                         <div class="col-md-4">
                             <asp:TextBox ID="txtDonarPin" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="pincode"></asp:TextBox>
+                            <label class="error" id="errDonarPin" style="display:none">DonarPin Should Not Empty</label>
                         </div>
                         <div class="col-md-4">
                             <asp:TextBox ID="txtDonarMobile" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="MobileNumber"></asp:TextBox>
+                             <label class="error" id="errDonarMobile" style="display:none">MobileNumber Should Not Empty</label>
                         </div>
                     </div>
 
                     
                   
                     
-                    </div>
+                  
 
                             </div>
                         </div>
@@ -1045,7 +1093,7 @@ tr.shown td.details-control {
                     </div>
                 </div>
             </div>
-            <div class="row setup-content" id="step-4">
+            <div class="row setup-content" id="step-3">
                 <div class="col-xs-12">
                     <div class="row">
                         <%--<div class="col-md-3 col-md-offset-1">
@@ -1081,7 +1129,7 @@ tr.shown td.details-control {
                         <div class="col-md-12 col-md-offset-1">
                            
                             <asp:LinkButton ID="lbDonate" runat="server" CssClass="btn btn-info btn-lg" 
-                                Text="Pay Now" onclick="lbDonate_Click"
+                                Text="Donate Now" onclick="lbDonate_Click"
                                 ></asp:LinkButton>
                         </div>
                         <asp:Label ID="lblDError" runat="server" Text="" Visible="false"></asp:Label>
@@ -1208,6 +1256,64 @@ tr.shown td.details-control {
                     , curInputs = curStep.find("input[type='text'],input[type='url']")
                     , isValid = true;
                 $(".form-group").removeClass("has-error");
+                if (curStepBtn == "step-2") {
+
+                    var txtDonarname = $("#<%=txtDonarname.ClientID%>").val();
+                    var txtDonarEmail = $("#<%=txtDonarEmail.ClientID%>").val();
+                    var txtDonarAddress = $("#<%=txtDonarAddress.ClientID%>").val();
+                    var txtDonarLocation = $("#<%=txtDonarLocation.ClientID%>").val();
+                    var txtDonarPin = $("#<%=txtDonarPin.ClientID%>").val();
+                    var txtDonarMobile = $("#<%=txtDonarMobile.ClientID%>").val();
+                    if (txtDonarname == "") {
+                        $("#errDonarname").show();
+                        return;
+                    }
+                    else {
+                        $("#errDonarname").hide();
+
+                    }
+                    if (txtDonarEmail == "") {
+                        $("#errDonarEmail").show();
+                        return;
+                    }
+                    else {
+                        $("#errDonarEmail").hide();
+
+                    }
+                    if (txtDonarAddress == "") {
+                        $("#errDonarAddress").show();
+                        return;
+                    }
+                    else {
+                        $("#errDonarAddress").hide();
+
+                    }
+                    if (txtDonarLocation == "") {
+                        $("#errDonarLocation").show();
+                        return;
+                    }
+                    else {
+                        $("#errDonarLocation").hide();
+
+                    }
+                    if (txtDonarPin == "") {
+                        $("#errDonarPin").show();
+                        return;
+                    }
+                    else {
+                        $("#errDonarPin").hide();
+
+                    }
+                    if (txtDonarMobile == "") {
+                        $("#errDonarMobile").show();
+                        return;
+                    }
+                    else {
+                        $("#errDonarMobile").hide();
+
+                    }
+
+                }
                 for (var i = 0; i < curInputs.length; i++) {
                     if (!curInputs[i].validity.valid) {
                         isValid = false;
@@ -1222,7 +1328,7 @@ tr.shown td.details-control {
             toggle: false
         });
         $(function () {
-           
+
         });
     </script>
 
@@ -1297,10 +1403,7 @@ tr.shown td.details-control {
                         <div class="col-md-12">
                           <asp:UpdatePanel ID="UpdatePanel11" runat="server">
                           <ContentTemplate>
-                         <div class="col-md-6">  <asp:RadioButton ID="RadioButton1" CssClass="radio" runat="server" Text="INDIA"
-                                onclick="Javascript:SelectPackage(33);" GroupName="Package1" /></div>
-                         <div class="col-md-6"> <asp:RadioButton ID="RadioButton2" CssClass="radio" runat="server" Text="USA"
-                                onclick="Javascript:SelectPackage(30);" GroupName="Package1"/></div>
+                        
                           
                                  
                            
@@ -1666,6 +1769,7 @@ tr.shown td.details-control {
     <asp:HiddenField ID="hfStudentIDFinal" runat="server" />
     <asp:HiddenField ID="hfUserIDFinal" runat="server" Value="1" />
     <input type="hidden" id="hfID" />
+     <asp:HiddenField ID="hftbl" runat="server" />
     
   <script src="../js/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="../js/bootstrap.js" type="text/javascript"></script>
@@ -1691,233 +1795,313 @@ tr.shown td.details-control {
 </script>--%>
 
 <script type = "text/javascript">
-//    function RadioCheckSchool(rb) {
-//       
-//        var rbs = gv.getElementsByTagName("input");
+    //    function RadioCheckSchool(rb) {
+    //       
+    //        var rbs = gv.getElementsByTagName("input");
 
-//        var row = rb.parentNode.parentNode;
-//        for (var i = 0; i < rbs.length; i++) {
-//            if (rbs[i].type == "radio") {
-//                if (rbs[i].checked && rbs[i] != rb) {
-//                    rbs[i].checked = false;
-//                    break;
-//                }
-//            }
-//        }
-//    }
+    //        var row = rb.parentNode.parentNode;
+    //        for (var i = 0; i < rbs.length; i++) {
+    //            if (rbs[i].type == "radio") {
+    //                if (rbs[i].checked && rbs[i] != rb) {
+    //                    rbs[i].checked = false;
+    //                    break;
+    //                }
+    //            }
+    //        }
+    //    }
 
     function openModal() {
-      $('#myModal').modal('show');
-  }
-  function openModal1() {
-      $('#ModalDonars').modal('show');
-  }
-  function ModalClose() {
-       SelectPackage(3); 
-   }
-   $("#myModal").on('hidden.bs.modal', function () {
+        $('#myModal').modal('show');
+    }
+    function openModal1() {
+        $('#ModalDonars').modal('show');
+    }
+    function ModalClose() {
         SelectPackage(3);
-   })
-   $("#ModalDonars").on('hidden.bs.modal', function () {
-      var PackageId = $("#hfID").val();         
-      SelectPackage(PackageId);
-  })
-  function openModalStudent() {
-      $('#modalStudentList').modal('show');
-  }
+    }
+    $("#myModal").on('hidden.bs.modal', function () {
+        SelectPackage(3);
+    })
+    $("#ModalDonars").on('hidden.bs.modal', function () {
+        var PackageId = $("#hfID").val();
+        SelectPackage(PackageId);
+    })
+    function openModalStudent() {
+        $('#modalStudentList').modal('show');
+    }
 
-  $("#modalStudentList").on('hidden.bs.modal', function () {
-      var PackageId = $("#hfID").val();
-      SelectPackage(PackageId);
-  })
-   
-        function ShowPopup() {
+    $("#modalStudentList").on('hidden.bs.modal', function () {
+        var PackageId = $("#hfID").val();
+        SelectPackage(PackageId);
+    })
+
+    function ShowPopup() {
         $('#myModalError').modal('show');
-       
-        }
-   
+
+    }
+
 </script>
     <script type="text/javascript">
         $(".package").hide();
+        $(function () {
+            bindPackages(3);
+        });
         function Select(ID) {
 
             switch (ID) {
                 case 10:
-                   // $(".package").hide();
-                    $("#dvNewSchool").show();
+                    // $(".package").hide();
+                    $("#dvNewSchool").hide();
                     $("#dvExistingSchool").hide();
+                    $("#dvRandomStudents").hide();
+                    window.location = "/Programs/NewSchool.aspx";
 
                     break;
                 case 11:
-                    
+
                     $("#dvNewSchool").hide();
                     $("#dvExistingSchool").show();
-                    $.ajax({
-                        type: "POST",
-                        contentType: "application/json; charset=utf-8",
-                        url: "Donate.aspx/BindSchools",
-                        data: "{}",
-                        dataType: "json",
-                        success: function (Result) {
-                            $("#UserData").empty();
-                            var tablestring = "";
-
-                            tablestring = tablestring + "<table id='example' class='table table-striped table-bordered' role='grid' aria-describedby='example_info'>";
-
-                            tablestring = tablestring + "<thead><tr><th></th><th>SchoolID</th><th>SchoolName</th><th>CountryName</th><th>StateName</th><th style='display:none'></th><th style='display:none'></th><th></th></tr></thead><tbody>";
-
-                            for (var i = 0; i < Result.d.length; i++) {
-
-                                tablestring = tablestring + "<tr><td></td><td>" + Result.d[i].SchoolID + "</td><td>" + Result.d[i].SchoolName + "</td><td>" + Result.d[i].CountryName + "</td><td>" + Result.d[i].StateName + "</td><td style='display:none'>" + Result.d[i].DistrictName + "</td><td style='display:none'>" + Result.d[i].LocationName + "</td><td></td></tr>";
-
-
-                            }
-                            
-                            tablestring = tablestring + "</tbody></table>"
-                            $("#UserData").append(tablestring);
-
-                            var table = $('#example').DataTable({
-                              select: true,
-                                "columns": [
-                                             {
-                                                "className": 'details-control',
-                                                "orderable": false,
-                                                "data": null,
-               
-                                                "defaultContent": ''
-                                            },
-            
-                                            { "data": "SchoolID" },
-                                            { "data": "SchoolName" },
-                                            { "data": "CountryName" },
-                                            { "data": "StateName" },
-                                              { "data": "DistrictName" },
-                                                { "data": "LocationName" },
-                                                {
-                                                "orderable": false,
-                                                "className": 'select-checkbox',
-                                                "targets":   6
-                                            } ,
-                                        ],
-                                            "select": {
-                                                "style": 'multi',
-                                                "selector": 'td:last-child'
-                                            },
-                                "order": [[1, 'asc']]
-                            });
-
-                            // Add event listener for opening and closing details
-                            $('#example tbody').on('click', 'td.details-control', function () {
-                                var tr = $(this).closest('tr');
-                                var row = table.row(tr);
-
-                                if (row.child.isShown()) {
-                                    // This row is already open - close it
-                                    row.child.hide();
-                                    tr.removeClass('shown');
-                                }
-                                else {
-                                    // Open this row
-                                    row.child(format(row.data())).show();
-                                    tr.addClass('shown');
-                                }
-                            });
-
-                        },
-                        error: function (result) {
-                            alert("Error");
-                        }
-
-                    });
+                    $("#dvRandomSchool").hide();
+                    var Type = "Normal";
+                    BindSchoolTables(Type, "example");
+                    $("#<%=hftbl.ClientID%>").val("example");
                     break;
                 case 12:
-                    
+
                     $("#dvNewSchool").hide();
                     $("#dvExistingSchool").hide();
+                    $("#dvRandomSchool").show();
+                    var Type = "Random";
+                    BindSchoolTables(Type, "example1");
 
+                    $("#<%=hftbl.ClientID%>").val("example1");
                     break;
                 case 20:
-                    $("#dvNewStudent").show();
+                    $("#dvNewStudent").hide();
+                    $("#dvRandomStudents").hide();
+                    window.location = "/Programs/NewStudent.aspx";
                     $("#dvExistingStudent").hide();
                     break;
                 case 21:
                     $("#dvNewStudent").hide();
                     $("#dvExistingStudent").show();
-                    $.ajax({
-                        type: "POST",
-                        contentType: "application/json; charset=utf-8",
-                        url: "Donate.aspx/BindStudents",
-                        data: "{}",
-                        dataType: "json",
-                        success: function (Result) {
-                            $("#UserData").empty();
-                            var tablestring = "";
+                    $("#dvRandomStudents").hide();
+                    var Type = "Normal";
+                    BindStudentTables(Type, "item");
+                    $("#btnStNext").attr("source", "student");
 
-                            tablestring = tablestring + "<table id='example' class='table table-striped table-bordered' role='grid' aria-describedby='example_info'>";
+                    $("#<%=hftbl.ClientID%>").val("item");
 
-                            tablestring = tablestring + "<thead><tr><th></th><th>SchoolID</th><th>SchoolName</th><th>CountryName</th><th>StateName</th><th style='display:none'></th><th style='display:none'></th><th></th></tr></thead><tbody>";
-
-                            for (var i = 0; i < Result.d.length; i++) {
-                               
-                                tablestring = tablestring + "<tr><td></td><td>" + Result.d[i].SchoolID + "</td><td>" + Result.d[i].SchoolName + "</td><td>" + Result.d[i].CountryName + "</td><td>" + Result.d[i].StateName + "</td><td style='display:none'>" + Result.d[i].DistrictName + "</td><td style='display:none'>" + Result.d[i].LocationName + "</td><td> <div class='checkbox checkbox-primary'> <input id='checkbox_" + Result.d[i].LocationName + "' type='checkbox' checked=''></div></td></tr>";
-
-
-                            }
-
-                            tablestring = tablestring + "</tbody></table>"
-                            $("#UserData").append(tablestring);
-
-                            var table = $('#example').DataTable({
-
-                                "columns": [
-            {
-                "className": 'details-control',
-                "orderable": false,
-                "data": null,
-                "defaultContent": ''
-            },
-            { "data": "SchoolID" },
-            { "data": "SchoolName" },
-            { "data": "CountryName" },
-            { "data": "StateName" },
-              { "data": "DistrictName" },
-                { "data": "LocationName" }
-        ],
-                                "order": [[1, 'asc']]
-                            });
-
-                            // Add event listener for opening and closing details
-                            $('#example tbody').on('click', 'td.details-control', function () {
-                                var tr = $(this).closest('tr');
-                                var row = table.row(tr);
-
-                                if (row.child.isShown()) {
-                                    // This row is already open - close it
-                                    row.child.hide();
-                                    tr.removeClass('shown');
-                                }
-                                else {
-                                    // Open this row
-                                    row.child(format(row.data())).show();
-                                    tr.addClass('shown');
-                                }
-                            });
-
-                        },
-                        error: function (result) {
-                            alert("Error");
-                        }
-
-                    });
                     break;
                 case 22:
+                    var Type = "Random";
                     $("#dvNewStudent").hide();
                     $("#dvExistingStudent").hide();
+                    $("#dvRandomStudents").show();
+                    BindStudentTables(Type, "item1");
+                    $("#btnStNext").attr("source", "student");
+                    $("#<%=hftbl.ClientID%>").val("item1");
                     break;
                
             }
 
 
+        }
+
+        function SelectCountry(ID) {
+
+            switch (ID) {
+                case 41:
+                    // $(".package").hide();
+                   
+                    $("#<%=ddlcountry.ClientID%>").val(ID);
+                    break;
+                case 1:
+
+                    
+                    $("#<%=ddlcountry.ClientID%>").val(ID);
+                    break;
+              
+
+             }
+
+
+         }
+        function BindSchoolTables(Type, TableName) {
+
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "Donate.aspx/BindSchools",
+                data: '{Type: "' + Type + '"}',
+                dataType: "json",
+                success: function (Result) {
+                    var tablestring = "";
+                    if (Type == "Random") {
+                        tablestring = tablestring + "<table name='example1' id='example1' ";
+                    }
+                    if (Type == "Normal") {
+                        tablestring = tablestring + "<table name='example' id='example' ";
+                    }
+                   tablestring = tablestring + "class='table table-striped table-bordered' role='grid' aria-describedby='example_info'>";
+
+                    tablestring = tablestring + "<thead><tr><th></th><th>SchoolID</th><th>SchoolName</th><th>CountryName</th><th>StateName</th><th style='display:none'></th><th style='display:none'></th><th></th></tr></thead><tbody>";
+
+                    for (var i = 0; i < Result.d.length; i++) {
+
+                        tablestring = tablestring + "<tr><td></td><td>" + Result.d[i].SchoolID + "</td><td>" + Result.d[i].SchoolName + "</td><td>" + Result.d[i].CountryName + "</td><td>" + Result.d[i].StateName + "</td><td style='display:none'>" + Result.d[i].DistrictName + "</td><td style='display:none'>" + Result.d[i].LocationName + "</td><td></td></tr>";
+
+
+                    }
+
+                    tablestring = tablestring + "</tbody></table>"
+                    if (Type == "Random") {
+                        $("#RandomUserData").html(tablestring);
+                    }
+                    if (Type == "Normal") {
+                        $("#UserData").html(tablestring);
+                    }
+
+                    var table = $('#' + TableName).DataTable({
+                        select: true,
+                        "columns": [
+                            {
+                                "className": 'details-control',
+                                "orderable": false,
+                                "data": null,
+
+                                "defaultContent": ''
+                            },
+
+                            { "data": "SchoolID" },
+                            { "data": "SchoolName" },
+                            { "data": "CountryName" },
+                            { "data": "StateName" },
+                            { "data": "DistrictName" },
+                            { "data": "LocationName" },
+                            {
+                                "orderable": false,
+                                "className": 'select-checkbox',
+                                "targets": 6
+                            },
+                        ],
+                        "select": {
+                            "style": 'multi',
+                            "selector": 'td:last-child'
+                        }
+
+                    });
+
+                    // Add event listener for opening and closing details
+                    $('#' + TableName +' tbody').on('click', 'td.details - control', function () {
+                        var tr = $(this).closest('tr');
+                        var row = table.row(tr);
+
+                        if (row.child.isShown()) {
+                            // This row is already open - close it
+                            row.child.hide();
+                            tr.removeClass('shown');
+                        }
+                        else {
+                            // Open this row
+                            row.child(format(row.data())).show();
+                            tr.addClass('shown');
+                        }
+                    });
+
+                },
+                error: function (result) {
+                    alert("Error");
+                }
+
+            });
+
+
+
+        }
+
+        function BindStudentTables(Type,TableName) {
+
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "Donate.aspx/BindStudents",
+                data: '{Type: "' + Type + '"}',
+                dataType: "json",
+                success: function (Result) {
+                    var tablestring = "";
+                    if (Type == "Random") {
+                        tablestring = tablestring + "<table name='item1' id='item1' ";
+                    }
+                    if (Type == "Normal") {
+                        tablestring = tablestring + "<table name='item' id='item' ";
+                    }
+                    tablestring = tablestring + "  class='table table - striped table - bordered' width='100 % ' cellspacing='0'>";
+                        tablestring=tablestring +"<thead> <tr><th></th><th>StudentID</th><th>StudentName</th><th>StateName</th><th>DistrictName</th><th>LocationName</th><th></th></tr></thead><tbody>";
+                     for (var i = 0; i < Result.d.length; i++) {
+
+                        tablestring = tablestring + "<tr id='tr_" + Result.d[i].StudentID + "'><td></td><td>" + Result.d[i].StudentID + "</td><td>" + Result.d[i].StudentName + "</td><td>" + Result.d[i].StateName + "</td><td>" + Result.d[i].DistrictName + "</td><td>" + Result.d[i].LocationName + "</td><td></td></tr>";
+                    }
+                    tablestring = tablestring + "</tbody></table>";
+                    if (Type=="Random") {
+                        $("#dvRandomStudents").html(tablestring);
+                    }
+                    if (Type == "Normal") {
+                        $("#gvStudent").html(tablestring);
+                    }
+
+                    var otable = $('#' + TableName).DataTable({
+                        select: true,
+                        "columns": [
+                            {
+                                "className": 'details-control',
+                                "orderable": false,
+                                "data": null,
+
+                                "defaultContent": ''
+                            },
+
+                            { "data": "StudentID" },
+                            { "data": "StudentName" },
+                            { "data": "StateName" },
+                            { "data": "DistrictName" },
+                            { "data": "LocationName" },
+                            {
+                                "orderable": false,
+                                "className": 'select-checkbox',
+                                "targets": 5
+                            },
+                        ],
+                        "select": {
+                            "style": 'multi',
+                            "selector": 'td:last-child'
+                        }
+
+                    });
+
+                    // Add event listener for opening and closing details
+                    $('#' + TableName+' tbody').on('click', 'td.details-control', function () {
+                        var tr = $(this).closest('tr');
+                        var row = table.row(tr);
+
+                        if (row.child.isShown()) {
+                            // This row is already open - close it
+                            row.child.hide();
+                            tr.removeClass('shown');
+                        }
+                        else {
+                            // Open this row
+                            row.child(format(row.data())).show();
+                            tr.addClass('shown');
+                        }
+                    });
+
+                },
+                error: function (result) {
+                    alert("Error");
+                }
+
+            });
         }
         function format(d) {
             // `d` is the original data object for the row
@@ -1951,16 +2135,18 @@ tr.shown td.details-control {
                   
                     $(".package").hide();
                     $("#divClassroom").show();
+                 
                      
                     break;
                 case 3:
                     $("#dvschool").show();
                     $("#dvstudent").hide();
+                    bindPackages(3);
                     break;
                 case 4:
                     $("#dvschool").hide();
                     $("#dvstudent").show();
-                   
+                    bindPackages(4);
                     break;
                 case 5:
                     $(".package").hide();
@@ -1971,16 +2157,91 @@ tr.shown td.details-control {
 
 
         }
-        function GetSelected() {
-            var table = $('#example').DataTable();
+        function bindPackages(SelectedPackage) {
+            
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "Donate.aspx/BindPackages",
+                data: '{SelectedPackage: ' + SelectedPackage + '}',
+                dataType: "json",
+                success: function (Result) {
+                    var tablestring = " <div class='col-md-4'>";
+                    var tablestring1 = " <div class='col-md-4'>";
+                    var tablestring2 = "";
+                    $("#dvPackagestudent").empty();
+                    $("#dvPackageschool").empty();
+                    $("#dvPackagesother").empty();
+                    var j = 0;
+                  
+                    for (var i = 0; i < Result.d.length; i++) {
+                        if (Result.d[i].PackageID == 3) {
+
+                        
+                            if (i == 3 || i == 6 || i == 9 || i == 12 || i == 15) {
+                            tablestring = tablestring +"</div> <div class='col-md-4'>"
+
+                        }
+                            tablestring = tablestring + "<input type='radio' class='rbd'  id='radio_" + Result.d[i].ID + "' onclick='Javascript: Package(" + Result.d[i].ID + "," + Result.d[i].Money + ")' name='group' value='" + Result.d[i].Money + "' rbdtext='" + Result.d[i].Text + "'><label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + "Rs: " + Result.d[i].Money+" </label><br>";
+                        }
+                        if (Result.d[i].PackageID == 4) {
+
+
+                            if (j == 3 || j == 6 || j== 9 || j==12 || j==15) {
+                                tablestring1 = tablestring1 + "</div> <div class='col-md-4'>"
+
+                            }
+                            tablestring1 = tablestring1 + "<input type='radio' class='rbd' id='radio_" + Result.d[i].ID + "' onclick='Javascript: Package(" + Result.d[i].ID + "," + Result.d[i].Money + ")' name='group1' value='" + Result.d[i].Money + "' rbdtext='" + Result.d[i].Text + "'><label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + " Rs: " + Result.d[i].Money + " </label><br>";
+                            j = j + 1;
+                        }
+                        if (Result.d[i].PackageID == 5) {
+
+
+                          
+                            tablestring2 = tablestring2 + "<input type = 'radio' class='rbd' id = 'radio_" + Result.d[i].ID + "'  name = 'group2' value = '" + Result.d[i].Money + "' rbdtext = '" + Result.d[i].Text + "' > <label for='" + Result.d[i].ID + "'> " + Result.d[i].Text +  " </label><br><input type='text' id='txtOther' class='col-md-2 form - control' value='0' /><br>";
+                        }
+                        }
+                    tablestring = tablestring + "</div>";
+                    tablestring1 = tablestring1 + "</div>";
+                   
+                    $("#dvPackageschool").html(tablestring);
+                    $("#dvPackagestudent").html(tablestring1);
+                    $("#dvPackagesother").html(tablestring2);
+                   
+                },
+                error: function (result) {
+                    alert("Error");
+                }
+
+            });
+
+
+        }
+        function GetSelected(obj) {
+            debugger;
+            var tabl = "example";
             
             var amount = 500;
+            if (obj.id == "btnScNext") {
+                amount = 1000;
+                tabl = $("#<%=hftbl.ClientID%>").val();
+            }
+            if (obj.id == "btnStNext") {
+                tabl = $("#<%=hftbl.ClientID%>").val();
+            }
             var Total = 0;
+            var table = $('#' + tabl).DataTable();
             var data = table.rows('.selected').data();
             var table = "<table class='table table-bordered table-striped'><thead><tr><th>SNo</th><th>Name</th><th>Amount</th></tr></thead><tbody>";
             $('#selectedforPay').html('');
             for (var i = 0; i < data.length; i++) {
-                table = table + "<tr><td>"+(i+1)+"</td><td>"+data[i].SchoolName+"</td><td>"+amount+"</td><tr>";
+                if (obj.id == "btnScNext") {
+                    table = table + "<tr><td>" + (i + 1) + "</td><td>" + data[i].SchoolName + "</td><td>" + amount + "</td><tr>";
+                }
+                else {
+                    table = table + "<tr><td>" + (i + 1) + "</td><td>" + data[i].StudentName + "</td><td>" + amount + "</td><tr>";
+                }
+               
                 Total = Total + amount;
             }
             table = table + "<tr><td></td><td>Total</td><td>" + Total + "</td></tr>";
@@ -1995,6 +2256,87 @@ tr.shown td.details-control {
             alert(document.getElementById("<%=hfPackageID.ClientID%>").Value)
             alert(document.getElementById("<%=hfPackageAmount.ClientID%>").Value)
 
+        }
+
+        $('#step-1').on('click', '.rbd', function () {
+            debugger;
+            var r = this;
+            $('#selectedforPay1').html('');
+            var total = 0;
+            var i = 1;
+            var table = "<table class='table table-bordered table-striped'><thead><tr><th>SNo</th><th>Name</th><th>Amount</th></tr></thead><tbody>";
+            $(".rbd:checked").each(function () {
+                var chk = this.checked;
+                var ids = this.id;
+                var id = ids.split("_");
+                if (chk == true) {
+
+                    if (id[1] != "13") {
+                        table = table + "<tr><td>" + i + "</td><td>" + $(this).attr("rbdtext") + "</td><td>" + $(this).val() + "</td></tr>";
+                        i = i + 1;
+                        total = total + parseInt($(this).val());
+                    }
+                    else {
+                        if ($("#txtOther").val() !="0") {
+                        table = table + "<tr><td>" + i + "</td><td>" + $(this).attr("rbdtext") + "</td><td>" + $(this).val() + "</td></tr>";
+                        i = i + 1;
+                            total = total + parseInt($(this).val());
+                        }
+                    }
+                }
+            });
+           
+          
+
+          
+            //if ($("#txtOther").val() != "0") {
+            //    table = table + "<tr><td></td><td>Other</td><td>" + $("#txtOther").val() + "</td></tr>";
+            //    total = total + parseInt($("#txtOther").val());
+            //}
+
+
+            table = table + "<tr><td></td><td>Total</td><td>" + total + "</td></tr>";
+            table = table + "</tbody></table>";
+           
+            $('#selectedforPay1').html(table);
+            $('#selectedforPay').html('');
+            $('#selectedforPay').html(table);
+
+        });
+
+      
+
+        function Package(id,Money) {
+          
+
+            if (id == 13) {
+
+               // $("#txtOther").show();
+               
+                $("#<%=hfPackageAmount.ClientID%>").val($("#txtOther").val());
+            }
+            else {
+              //  $("#txtOther").hide();
+                $("#<%=hfPackageAmount.ClientID%>").val(Money);
+            }
+
+            var tabl = "example";
+
+            var amount = 500;
+           
+            var table = $('#' + tabl).DataTable();
+            var data = table.rows('.selected').data();
+            var table = "<table class='table table-bordered table-striped'><thead><tr><th>SNo</th><th>Name</th><th>Amount</th></tr></thead><tbody>";
+            $('#selectedforPay').html('');
+
+            table = table + "<tr><td>1</td><td>" + $("#" + id).val() + "</td><td>" + Money + "</td><tr>";
+              
+               
+            
+            table = table + "<tr><td></td><td>Total</td><td>" + Money + "</td></tr>";
+            table = table + "</tbody></table>";
+            $("#<%=hfPackageAmount.ClientID%>").val(Money);
+            $('#selectedforPay').html(table);
         }
     </script>
 

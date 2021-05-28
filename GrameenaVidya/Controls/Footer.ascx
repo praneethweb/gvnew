@@ -5,12 +5,13 @@
         <div class="row">
             <div class="col-md-3 about2">
                 <h2>
-                   About Us</h2>
-                <p style="color:#ddd9d9">
-                    Grameena Vidya is a 21st century technology enabled learning solution available to
-                    rural users anytime, anywhere on your own place. Grameena Vidya is an Intiative of Center for Training, Research and Development(CTRD).
-                </p>
+                   About CTRD</h2>
+                 <p style="color:#ddd9d9">
+                   <b>GRAMEENA VIDYA </b>is an initiative of <b>“Centre for Training Research and Development (CTRD)” </b>a non-profit NGO registered under the Societies Registration Act XXI of 1860 vide Society Registration number 45 of 1987 dated 1st April of 1987 at Srikakulam and operating from Visakhapatnam, India.
               
+           <p style="color:#ddd9d9">
+             <b>  CTRD has 12-A and 80-G tax exemption certificates and is approved under the Foreign Certification Regulation Act (FCRA).</b>
+                 </p>   
             </div>
             <div class="col-md-offset-1 col-md-2 help">
                 <!-- help start -->
@@ -18,11 +19,14 @@
                     Main Menu
                 </h2>
                 <ul class="list-style">
-                    <li><a href="../Programs/adopt-a-school.aspx" style="color:#ddd9d9 !important">Adopt-a-School</a></li>
-                    <li><a href="../Programs/adopt-a-village.aspx" style="color:#ddd9d9 !important">Adopt-a-Village</a></li>
-                    <li><a href="../AboutUS/about-mission.aspx" style="color:#ddd9d9 !important">Mission</a></li>
-                    <li><a href="../AboutUS/about-model.aspx" style="color:#ddd9d9 !important">Testimonials</a></li>
-                     <li><a href="../AboutUS/about-model.aspx" style="color:#ddd9d9 !important">Meida</a></li>
+                   
+                    <li><a href="#" style="color:#ddd9d9 !important">Testimonials</a></li>
+                    <li><a href="#" style="color:#ddd9d9 !important">Photo Gallery</a></li>
+                    <li><a href="#" style="color:#ddd9d9 !important">Blog</a></li>
+                     <li><a href="#" style="color:#ddd9d9 !important">Volunteers – Enrollment Form</a></li>
+                    <li><a href="Programs/NewSchoolForm.aspx" style="color:#ddd9d9 !important">School – Enrollment Form</a></li>
+                    <li><a href="Programs/NewStudentForm.aspx" style="color:#ddd9d9 !important">Student – Enrollment Form</a></li>
+                     <li><a href="#" style="color:#ddd9d9 !important">Tax Exemption Certificate for Donors</a></li>
                     
                    
                 </ul>
@@ -40,7 +44,7 @@
 			Vinayagar Heights,<br>Sampth Vinayaka Road (Opp.Side of Temple), <br>
             Visakhapatnam 530003, India.</li>
                     <li style="color:#ddd9d9 !important"><i class="fa fa-phone-square"></i>&nbsp;&nbsp;+91 7702444575 </li>
-                    <li style="color:#ddd9d9 !important">  <i class="fi-mail i-right"></i><a href="mailto:santoshs@grameenavidya.org" class="morelink" style="color:#ddd9d9 !important">santoshs@grameenavidya.org</a></li>
+                    <li style="color:#ddd9d9 !important">  <i class="fi-mail i-right"></i><a href="mailto:info@grameenavidya.org" class="morelink" style="color:#ddd9d9 !important">info@grameenavidya.org</a></li>
                     
                   
                <%--     <li>Registered charity number 123456.</li>--%>

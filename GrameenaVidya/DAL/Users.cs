@@ -5,6 +5,8 @@ using System.Web;
 using System.Data;
 using DataAccess;
 using System.Data.SqlClient;
+using UskyAdmin.DAL;
+using GrameenaVidya.BLL;
 
 namespace GrameenaVidya.DAL
 {
@@ -257,6 +259,25 @@ namespace GrameenaVidya.DAL
             int RetVal = 0;
             RetVal = Convert.ToInt32(DataAccess.SqlHelper.ExecuteNonQuery(DataAccess.DSN.Connection("GVConnectionString"), CommandType.Text, Query));
             return true;
+        }
+
+        public static DataTable UploadStudent(Student student)
+        {
+            DataTable dt = null;
+            dt = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), "InsertStudent_Info", student.studentName, student.dob, student.grade, student.gender, student.Caste,
+                student.Relegion, student.motherName, student.motheroccupation, student.fatherName, student.fatheroccupation, student.monthlyincome, student.familysize, student.address,
+               student.school, student.hm, student.refer1, student.refer2, student.ImageFile, student.PdfFile,student.StateID,student.DistrictID,student.LocationID).Tables[0];
+            return dt;
+        }
+
+
+        public static DataTable UploadSchool(SchoolDetails school)
+        {
+            DataTable dt = null;
+            dt = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), "InsertSchool_Info", school.SchoolName, school.DecisionMaker,school.dmakerContact, school.Address, school.Email, school.Curriculum,
+                school.Strength, school.Nogirls, school.NoTeachers, school.SchoolType, school.Avgschoolfee, school.Socio, school.Nosmart, school.Nocomputers,
+                school.ImageFile, school.PdfFile, school.StateID, school.DistrictID, school.LocationID).Tables[0];
+            return dt;
         }
     }
 }
