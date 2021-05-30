@@ -906,6 +906,12 @@ navbar-default {
   padding-bottom: 0px; }
   .service .service-blk {
     margin-top: 10px; }
+    .service .service-blk .programs-icon {
+      height: 200px;
+      background-size: cover;
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 0; }
 
 .things {
   padding-top: 40px;
@@ -1048,8 +1054,20 @@ navbar-default {
   padding-bottom: 10px; }
 
 .gv-gallery .more {
-  padding-top: 20px;
+  padding-top: 0px;
   text-align: right; }
+  .gv-gallery .more a {
+    border: none;
+    border-radius: 0; }
+
+.gv-gallery marquee {
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 20px; }
+.gv-gallery .individual marquee {
+  height: 200px; }
+.gv-gallery .home-adopted-blocks marquee {
+  height: 400px; }
 
 .testimonials-gv {
   background: #f2f2f2;
@@ -1108,6 +1126,14 @@ navbar-default {
   text-transform: uppercase;
   border: none;
   margin-bottom: 20px; }
+
+.pr-highlight {
+  text-align: center;
+  padding: 12px;
+  font-style: italic;
+  color: #f47b3a;
+  font-size: 18px;
+  margin-bottom: 50px; }
 
 .modal-header2 {
   padding: 0; }
