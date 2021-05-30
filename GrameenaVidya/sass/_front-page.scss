@@ -1478,8 +1478,17 @@ navbar-default {
 .pr-testimonials{
     background-color:#eee;
     width:100%;
-    padding:35px;
+    padding:20px;
     margin:35px 0;
+    h3{
+        margin-bottom: 0;
+    }
+    .testimonial_subtitle{
+        margin-bottom: 0;
+    }
+    .testimonial_para{
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -1505,4 +1514,12 @@ navbar-default {
     color: #f47b3a;
     font-size: 18px;
     margin-bottom: 50px;
+}
+
+.adopt-left-block{
+    .btn-link{
+    font-weight:700;
+    font-size: 17px;
+        padding-left: 0;
+    }
 }

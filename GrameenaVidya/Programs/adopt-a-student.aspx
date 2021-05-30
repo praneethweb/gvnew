@@ -63,7 +63,7 @@
                         </p>
                         <p>
                             <b>
-                                Adopt-a-student costs Rs 35000/- (Thirty five thousand rupees) or USD 500/- (Five hundred US dollars based on current exchange rates). This sponsorship (donation) can be paid is full or 4 monthly installments . <a href="../Donate/Donate.aspx" class="btn btn-primary">Donate Now</a> 
+                                Adopt-a-student costs Rs 35000/- (Thirty five thousand rupees) or USD 500/- (Five hundred US dollars based on current exchange rates). This sponsorship (donation) can be paid is full or 4 monthly installments . <a href="../Donate/Donate.aspx" class="btn btn-link">Donate Now</a> 
                             </b>
                         </p>
                             <p>
@@ -513,7 +513,7 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
                 <div class="item active">
-                  <div class="row" style="padding: 20px">
+                  <div class="row" style="padding: 20px 20px 0 20px">
                     <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
                     <p class="testimonial_para">Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo en.</p><br>
                     <div class="row">
@@ -530,7 +530,7 @@
                   </div>
                 </div>
                <div class="item">
-                   <div class="row" style="padding: 20px">
+                   <div class="row" style="padding: 20px 20px 0 20px">
                     <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
                     <p class="testimonial_para">Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo en.</p><br>
                     <div class="row">

@@ -1111,8 +1111,14 @@ navbar-default {
 .pr-testimonials {
   background-color: #eee;
   width: 100%;
-  padding: 35px;
+  padding: 20px;
   margin: 35px 0; }
+  .pr-testimonials h3 {
+    margin-bottom: 0; }
+  .pr-testimonials .testimonial_subtitle {
+    margin-bottom: 0; }
+  .pr-testimonials .testimonial_para {
+    margin-bottom: 10px; }
 
 .sub-form {
   width: 100%;
@@ -1134,6 +1140,11 @@ navbar-default {
   color: #f47b3a;
   font-size: 18px;
   margin-bottom: 50px; }
+
+.adopt-left-block .btn-link {
+  font-weight: 700;
+  font-size: 17px;
+  padding-left: 0; }
 
 .modal-header2 {
   padding: 0; }
@@ -1300,6 +1311,28 @@ navbar-default {
     padding: 10px !important;
     border-radius: 0 !important;
     height: auto; }
+  .pr-steps fieldset {
+    margin-bottom: 30px; }
+    .pr-steps fieldset label {
+      margin-left: 10px; }
+  .pr-steps .divDonarDetails {
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px; }
+    .pr-steps .divDonarDetails .row {
+      width: 60%; }
+  .pr-steps .error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 13px; }
 
 .stepwizard-step p {
   margin-top: 10px; }
@@ -1330,7 +1363,7 @@ navbar-default {
   display: table-cell;
   text-align: center;
   position: relative;
-  width: 20%; }
+  width: 25%; }
   .stepwizard-step p {
     color: #000;
     font-size: 14px;
