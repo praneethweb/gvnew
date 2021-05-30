@@ -1192,6 +1192,13 @@ navbar-default {
     padding-bottom: 0px;
     .service-blk {
         margin-top: 10px;
+        .programs-icon{
+            height: 200px;
+            background-size: cover;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 0;
+        }
     }
 }
 
@@ -1384,10 +1391,32 @@ navbar-default {
 }
 
 .gv-gallery .more {
-    padding-top: 20px;
+    padding-top: 0px;
     text-align: right;
+    a{
+        border: none;
+        border-radius: 0;
+    }
 }
 
+.gv-gallery{
+    
+    marquee{
+        background: #f2f2f2;
+        border: 1px solid #ddd;
+        padding: 20px;
+    }
+    .individual{
+        marquee{
+        height: 200px;
+        }
+    }
+    .home-adopted-blocks{
+        marquee{
+        height: 400px;
+        }
+    }
+}
 .testimonials-gv {
     background: #f2f2f2;
     padding: 30px 0;
@@ -1467,4 +1496,13 @@ navbar-default {
     text-transform:uppercase;
     border:none;
     margin-bottom:20px;
+}
+
+.pr-highlight{
+    text-align: center;
+    padding: 12px;
+    font-style: italic;
+    color: #f47b3a;
+    font-size: 18px;
+    margin-bottom: 50px;
 }

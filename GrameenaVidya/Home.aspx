@@ -60,18 +60,19 @@ GRAMEENA VIDYA or rural education is an initiative of “Center for Training, Re
 Digital Divide may be the defining divide between people as the 21st century progresses. Digital divide will continue to perpetuate the vicious cycle of inequalities on race, caste, gender, age, income, employment, urban-rural-local, and educational attainment. Therefore, at Grameena Vidya, we believe, this issue is not just as an economic or social divide, it is a civil and human rights divide as well.</p>
           <p class="lead-font">
 ADOPT-A-SCHOOL and ADOPT-A-STUDENT are Grameena Vidya’s two flagship programs to “Bridge Digital Divide”. Individual Donors and Corporates thru CSR can sponsor and make a difference. Your VIDYA DHAAN (Donating for Knowledge) will make an immense difference in the beneficiary’s lives.<a href="AboutUS/about-background.aspx" style="font-size:14px; color:#FF9900;"><u>Read more</u></a></p>
-          <p class="lead-font" style="font-weight:bold;text-align:center"><b>
-GIVING FOOD IS A GREAT TYPE OF CHARITY, BUT GIVING OR FACILITATING KNOWLEDGE IS EVEN GREATER, IT LASTS A LIFE TIME.  </b>
+          <p class="lead-font" style="font-weight:bold;text-align:center"><div class="pr-highlight"><b>
+GIVING FOOD IS A GREAT TYPE OF CHARITY, BUT GIVING OR FACILITATING KNOWLEDGE IS EVEN GREATER, IT LASTS A LIFE TIME.  </b></div>
 </p>
       </div>
     </div>
-    <div class=" service-blk">
+    <div class="service-blk">
        <h1>Programs</h1>
       <div class="row">
           <div class="col-md-6">
-              <div class="programs-icon i1"></div>
+             
                 <div class="text">
                   <h3><a href="Programs/adopt-a-school.aspx">Adopt-a-School</a></h3>
+                     <div class="programs-icon i1"></div>
                  <p >
                      ADOPT-A-SCHOOL initiative is a Digital / Smart Classroom program. It will help transform regular schools into digital schools and then into data driven schools. It is a combination of computing hardware + broadband + software + curriculum aligned multimedia content + teacher training + continuous support + generating intelligent reports. Our focus is to adopt bottom of the pyramid schools or Government schools , .. 
                       <a href="Programs/adopt-a-school.aspx"
@@ -80,9 +81,10 @@ GIVING FOOD IS A GREAT TYPE OF CHARITY, BUT GIVING OR FACILITATING KNOWLEDGE IS 
               </div>
           </div>
         <div class="col-md-6">
-           <div class="programs-icon i2"></div>
+           
                 <div class="text">
             <h3><a href="Programs/adopt-a-student.aspx">Adopt-a-Student</a></h3>
+                    <div class="programs-icon i2"></div>
            <p >ADOPT-A-STUDENT initiative provides Internet-connected Computing Device for each student who are on the wrong side of the digital divide -- disadvantaged due to -- income, education, race, gender, geographic location (urban-rural), age, skills, awareness, political, cultural and psychological attitudes gaps. Our focus is to adopt students at the bottom of the pyramid; especially those identified through government issued socio-economic certification  ... <a href="Programs/adopt-a-student.aspx" style="font-size:14px; color:#FF9900;"><u>Read more</u></a></p></div>
         
         </div>
@@ -290,11 +292,11 @@ The Sponsors – Individuals, Corporates and Government. </p>
         
     </div>
    
-    <div class="col-md-4 home-adopted-blocks">
+    <div class="col-md-8 home-adopted-blocks">
         <h1>Beneficiaries </h1>
        
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
             <h3>Adopted Schools</h3>
                   <marquee direction="up">
                 
@@ -311,20 +313,10 @@ The Sponsors – Individuals, Corporates and Government. </p>
            
              </marquee>     
                 </div>  
-            
-        </div>
-         
-       
-          
-    </div>
-
-            <div class="col-md-4 home-adopted-blocks">
-                 <h1> </h1>
-                <br />
-                <div class="row">
+     
 
                 
-             <div class="col-md-12">
+             <div class="col-md-6">
             <h3>Adopted Students</h3>
              <marquee direction="up">
                <div class="pic"><a><img src="images/bck3.jpg" class="img-responsive" alt=""></a></div>
@@ -334,7 +326,10 @@ The Sponsors – Individuals, Corporates and Government. </p>
              </marquee>   
             </div>
                     </div>
-             </div>
+          
+    </div>
+
+          
         </div>
     </div>
 
