@@ -507,7 +507,7 @@
 <div class="container pr-testimonials">
 	<div class="row">
 		<div class="col-sm-12">
-        <h3><strong>Testimonial</strong></h3>
+        <h3><strong>Testimonials</strong></h3>
         <div class="seprator"></div>
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
               <!-- Wrapper for slides -->
