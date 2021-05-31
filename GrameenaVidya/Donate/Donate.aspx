@@ -498,7 +498,7 @@ tr.shown td.details-control {
                 <fieldset>
   <legend>Other :</legend>
                      
-                           <div class="row" id="dvPackagesother">
+                           <div id="dvPackagesother">
 
                            </div>
                     </fieldset>
@@ -1021,31 +1021,31 @@ tr.shown td.details-control {
 
                     <div class="row">
                       
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <asp:TextBox ID="txtDonarname" CssClass="donate-input" Width="100%" runat="server" placeholder="Name"></asp:TextBox>
                             <label class="error" id="errDonarname" style="display:none">Name Should Not Empty</label>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <asp:TextBox ID="txtDonarEmail" CssClass="donate-input" Width="100%" runat="server" placeholder="Email Address"></asp:TextBox>
                        <label class="error" id="errDonarEmail" style="display:none">Email Should Not Empty</label>
                         </div> 
                             </div>
                             
-                    </div>
+                   
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <asp:TextBox ID="txtDonarAddress" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="Address1"></asp:TextBox>
                              <label class="error" id="errDonarAddress" style="display:none">Address Should Not Empty</label>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <asp:TextBox ID="txtDonarLocation" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="Address2"></asp:TextBox>
                              <label class="error" id="errDonarLocation" style="display:none">Location Should Not Empty</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                         <asp:UpdatePanel ID="Updatepanel8" runat="server">
                            <ContentTemplate>
                             <asp:DropDownList ID="ddlcountry" CssClass="donate-input" runat="server" DataTextField="Countryname" AutoPostBack="true"
@@ -1055,7 +1055,7 @@ tr.shown td.details-control {
                             </asp:UpdatePanel>
                            <%-- <asp:TextBox ID="txtDonarCountry" CssClass="donate-input" placeholder="Country Name" runat="server"></asp:TextBox>--%>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                           <asp:UpdatePanel ID="Updatepanel9" runat="server">
                            <ContentTemplate>
                             <asp:DropDownList ID="ddlState1" CssClass="donate-input" runat="server" Width="100%" AutoPostBack="true"  onchange="BindDonarStateID();">
@@ -1064,20 +1064,21 @@ tr.shown td.details-control {
                              </asp:UpdatePanel>
                             <%--<asp:TextBox ID="txtDonarState" CssClass="donate-input" placeholder="State Name" runat="server"></asp:TextBox>--%>
                         </div>
-                       
-                    </div>
+                        </div>
+                    
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <asp:TextBox ID="txtDonarPin" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="pincode"></asp:TextBox>
                             <label class="error" id="errDonarPin" style="display:none">DonarPin Should Not Empty</label>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <asp:TextBox ID="txtDonarMobile" CssClass="donate-input" Width="100%" runat="server"
                                 placeholder="MobileNumber"></asp:TextBox>
                              <label class="error" id="errDonarMobile" style="display:none">MobileNumber Should Not Empty</label>
                         </div>
                     </div>
+                        </div>
 
                     
                   
