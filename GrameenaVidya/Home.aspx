@@ -219,6 +219,57 @@ The Sponsors – Individuals, Corporates and Government. </p>
 </div>
 
 
+    <div class="pr-list-tables">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <table>
+                        <thead>
+                            <tr><td>STUDENTS ADOPTED</td></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>14258 Students</td></tr>
+                            <tr><td>9891 Girl Child</td></tr>
+                            <tr><td>8757 laptops</td></tr>
+                            <tr><td>5501 Tablets</td></tr>
+                            <tr><td>156000 Students given Curriculum Aligned Multimedia Content</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                 <div class="col-md-4">
+                    <table>
+                        <thead>
+                            <tr><td>SCHOOLS ADOPTED</td></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Adopted 5600 Schools</td></tr>
+                            <tr><td>Provided 4600 Smart classrooms with Hardware</td></tr>
+                            <tr><td>Provided 5600 Schools with Curriculum Aligned Multimedia Content</td></tr>
+                            <tr><td>Trained over 40000 Teachers</td></tr>
+                            <tr><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                 <div class="col-md-4">
+                    <table>
+                        <thead>
+                            <tr><td>AWAITING TO BE ADOPTED</td></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>6200 Students</td></tr>                            
+                            <tr><td>4332 Girl Child</td></tr>
+                            <tr><td>290 Schools</td></tr>
+                            <tr><td></td></tr>
+                            <tr><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 <div class="gv-gallery">
     <div class="container">
