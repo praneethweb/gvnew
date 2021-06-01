@@ -1360,7 +1360,7 @@ navbar-default {
 
 .gv-gallery {
     background: #fff url("../images/map.png") repeat-x scroll left center padding-box;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .gv-gallery img {
@@ -1393,18 +1393,33 @@ navbar-default {
 .gv-gallery .more {
     padding-top: 0px;
     text-align: right;
+    margin-top: -20px;
+    margin-right: 15px;
+    z-index: 999;
+    position: relative;    
     a{
         border: none;
         border-radius: 0;
+        border-radius: 999px;
     }
 }
 
 .gv-gallery{
     
     marquee{
-        background: #f2f2f2;
+        background: #fff;
         border: 1px solid #ddd;
         padding: 20px;
+        box-shadow: 2px 2px 5px #ddd;
+        .name{
+            color: #000 !important;
+            display: block;
+            font-weight: 600;
+        }
+        .details{
+            color: #555 !important;
+            display: block;
+        }
     }
     .individual{
         marquee{
@@ -1413,7 +1428,12 @@ navbar-default {
     }
     .home-adopted-blocks{
         marquee{
-        height: 400px;
+        height: 450px;
+            .pic{
+                img{
+                    
+                }
+            }
         }
     }
 }
@@ -1521,5 +1541,64 @@ navbar-default {
     font-weight:700;
     font-size: 17px;
         padding-left: 0;
+    }
+}
+
+
+.pr-list-tables{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    table{
+        min-height: 400px;
+        width: 100%;
+            box-shadow: 2px 2px 5px #ddd;
+        tr{
+            td{
+                padding: 15px;
+                border: 1px solid #eee;
+                height: 80px;
+                text-align: center;
+                font-weight: 500;
+            }
+        }
+        
+        thead{
+            background-color: #f00;
+            td{
+                height: 60px; 
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                
+            }
+        }
+        tbody{
+            background-color: #fff;            
+        }
+    }
+    
+    .col-md-4{
+        &:nth-of-type(1){ table{
+            thead{
+                td{
+                    background-color: #ffab09;
+                }
+            }
+            } }
+        &:nth-of-type(2){ table{
+            thead{
+                td{
+                    background-color: #166caf;
+                }
+            }
+            } }
+        &:nth-of-type(3){ table{
+            thead{
+                td{
+                    background-color: #8ca754;
+                }
+            }
+            } }
+                
     }
 }
