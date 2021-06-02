@@ -181,9 +181,10 @@ namespace GrameenaVidya.DAL
             try
             {
                 string Query = "";
-                Query = Query + "Select S.SchoolName as SchoolName,PackageAmount,StateName,D.DonationDate as Transaction_Date from Donations D left join  dbo.SchoolDonarsDetails Sd On SD.UserID=D.UserID left join dbo.Schools S ON S.SchoolID=SD.SchoolID left join dbo.States ST On ST.StateID=Sd.StateID where D.UserID=" + UserID + "";
-                //ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), "GetDonationDetails_ByDonar", UserID);
-                ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), CommandType.Text, Query);
+               // Query = Query + "Select S.SchoolName as SchoolName,PackageAmount,StateName,D.DonationDate as Transaction_Date from Donations D left join  dbo.SchoolDonarsDetails Sd On SD.UserID=D.UserID left join dbo.Schools S ON S.SchoolID=SD.SchoolID left join dbo.States ST On ST.StateID=Sd.StateID where D.UserID=" + UserID + "";
+                ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), "GetDonationDetails_ByDonar", UserID);
+
+                //ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), CommandType.Text, Query);
             }
             catch (Exception ex)
             {

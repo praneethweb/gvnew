@@ -357,6 +357,7 @@
     </div>
 
     <script>
+        $("#<%=hfDCPage.ClientID%>").val("3");
 			var hash = window.location.hash,
 				current = 0,
 				demos = Array.prototype.slice.call( document.querySelectorAll( '#codrops-demos > a' ) );
@@ -384,5 +385,6 @@
 <script src="../js/bootstrap.js"></script>
 <script src="../js/script.js"></script> 
 <script src="../js/owl.carousel.js"></script>
+   <asp:HiddenField ID="hfDCPage" runat="server" Value="3" />
 </asp:Content>
 

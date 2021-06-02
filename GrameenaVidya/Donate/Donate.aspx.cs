@@ -530,14 +530,29 @@ namespace GrameenaVidya.Donate
                 try
                 {
                     PackageAmount = Convert.ToDouble(hfPackageAmount.Value);
+                    PackageID = hfPackageID.Value;
+                    string PackageType = hfPackageTypeID.Value;
+                    string packs2 = PackageType.TrimEnd('_');
+                    string[] packsmain = packs2.Split('_');
+                    string packs1=PackageID.TrimEnd('_');
+                    string[] packs = packs1.Split('_');
                     string DonationMode = "";
                     if (rbnetbanking.Checked) DonationMode = "Net Banking";
                     if (rbchequee.Checked) DonationMode = "chequee";
+                    int RetVal = 0;
 
                     lblDError.Text = "RetVal==" + PackageTypeID + "," + PackageID + "," + PackageAmount + "," + UserIDLast + "," + DonationMode;
-
-                    int RetVal = GrameenaVidya.BLL.Donate.Insert_Donation(PackageTypeID, PackageID, PackageAmount, Convert.ToInt32(UserIDLast), DonationMode);
-
+                    if (packs.Length == 1)
+                    {
+                        RetVal = GrameenaVidya.BLL.Donate.Insert_Donation(Convert.ToInt32(packsmain[0]), packs[0], PackageAmount, Convert.ToInt32(UserIDLast), DonationMode);
+                    }
+                    else {
+                        for (int i = 0; i < packs.Length;i++ )
+                        {
+                            RetVal = GrameenaVidya.BLL.Donate.Insert_Donation(Convert.ToInt32(packsmain[i]), packs[i], PackageAmount, Convert.ToInt32(UserIDLast), DonationMode);
+                        }
+                    
+                    }
 
 
                     if (RetVal > 0)

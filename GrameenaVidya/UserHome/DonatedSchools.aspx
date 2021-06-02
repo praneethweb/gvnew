@@ -14,21 +14,33 @@
                             <div class="col-md-offset-1 col-md-11 edited-table2" id="divSchoolsDonated" runat="server" visible="false">
                                 <asp:GridView ID="gvSchoolDonarList" runat="server"  AutoGenerateColumns="False" Width="90%" BorderWidth="0" CssClass="theader">
                                     <Columns>
-                                        <asp:BoundField  DataField="SchoolName" HeaderText="SchoolName">
+                                     <asp:BoundField  DataField="PackageTypeName" HeaderText="Type of Donation">
                                             <ItemStyle></ItemStyle>
                                         </asp:BoundField>
-                                        <asp:BoundField  DataField="PackageAmount" HeaderText="Amount">
+                                        <asp:BoundField  DataField="SchoolName" HeaderText="Beneficiery Name">
+                                            <ItemStyle></ItemStyle>
+                                        </asp:BoundField>
+                                        <asp:BoundField  DataField="PackageAmount" HeaderText="Amount Donated">
                                             <ItemStyle ></ItemStyle>
                                         </asp:BoundField>
-                                        <asp:BoundField  DataField="StateName" HeaderText="State">
-                                            <ItemStyle ></ItemStyle>
-                                        </asp:BoundField>
+                                        
                                         <asp:BoundField DataField="Transaction_Date" HeaderText="Transaction_Date">
                                             <ItemStyle></ItemStyle>
                                         </asp:BoundField> 
+                                      
                                                                        
-                                            
+                                             <asp:TemplateField  HeaderText="Printable Tax Exemption Certificate">
+                                           
+                                            <ItemTemplate><a href="#">80 G Tax Exemption</a></ItemTemplate>
+                                        </asp:TemplateField>
                                           
+                                                                       
+                                             <asp:TemplateField  HeaderText="Thank You Letters From Beneficiaries ">
+                                            <ItemTemplate><a href="#">Thank You Letters From </a></ItemTemplate>
+                                        </asp:TemplateField>
+                                          <asp:TemplateField  HeaderText=" Beneficiary Pictures ">
+                                            <ItemTemplate></ItemTemplate>
+                                        </asp:TemplateField>
                                     </Columns>
                                 </asp:GridView>
                                 <br />

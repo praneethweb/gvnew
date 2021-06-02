@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GrameenaVidya.Programs
-{
-
-
-    public partial class adopt_a_student
-    {
-
+namespace GrameenaVidya.Programs {
+    
+    
+    public partial class adopt_a_student {
+        
         /// <summary>
         /// SocialMedia1 control.
         /// </summary>
@@ -22,14 +20,23 @@ namespace GrameenaVidya.Programs
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::GrameenaVidya.Controls.SocialMedia SocialMedia1;
-
+        
         /// <summary>
-        /// AsideStu_right1 control.
+        /// DonateControl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GrameenaVidya.Controls.AsideStu_right AsideStu_right1;
+        protected global::GrameenaVidya.Controls.DonateControl DonateControl1;
+        
+        /// <summary>
+        /// hfDCPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        public global::System.Web.UI.WebControls.HiddenField hfDCPage;
     }
 }

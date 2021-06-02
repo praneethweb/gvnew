@@ -2183,7 +2183,7 @@ tr.shown td.details-control {
                             tablestring = tablestring +"</div> <div class='col-md-4'>"
 
                         }
-                            tablestring = tablestring + "<input type='radio' class='rbd'  id='radio_" + Result.d[i].ID + "' onclick='Javascript: Package(" + Result.d[i].ID + "," + Result.d[i].Money + ")' name='group' value='" + Result.d[i].Money + "' rbdtext='" + Result.d[i].Text + "'><label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + "Rs: " + Result.d[i].Money+" </label><br>";
+                        tablestring = tablestring + "<input type='radio' class='rbd'  id='radio_" + Result.d[i].ID + "' onclick='Javascript: Package(" + Result.d[i].ID + "," + Result.d[i].Money + ")' name='group' value='" + Result.d[i].Money + "' rbdtext='" + Result.d[i].Text + "' rbdMainPack='" + Result.d[i].PackageID + "'><label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + "Rs: " + Result.d[i].Money + " </label><br>";
                         }
                         if (Result.d[i].PackageID == 4) {
 
@@ -2192,14 +2192,14 @@ tr.shown td.details-control {
                                 tablestring1 = tablestring1 + "</div> <div class='col-md-4'>"
 
                             }
-                            tablestring1 = tablestring1 + "<input type='radio' class='rbd' id='radio_" + Result.d[i].ID + "' onclick='Javascript: Package(" + Result.d[i].ID + "," + Result.d[i].Money + ")' name='group1' value='" + Result.d[i].Money + "' rbdtext='" + Result.d[i].Text + "'><label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + " Rs: " + Result.d[i].Money + " </label><br>";
+                            tablestring1 = tablestring1 + "<input type='radio' class='rbd' id='radio_" + Result.d[i].ID + "' onclick='Javascript: Package(" + Result.d[i].ID + "," + Result.d[i].Money + ")' name='group1' value='" + Result.d[i].Money + "' rbdtext='" + Result.d[i].Text + "' rbdMainPack='" + Result.d[i].PackageID + "'><label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + " Rs: " + Result.d[i].Money + " </label><br>";
                             j = j + 1;
                         }
                         if (Result.d[i].PackageID == 5) {
 
 
-                          
-                            tablestring2 = tablestring2 + "<input type = 'radio' class='rbd' id = 'radio_" + Result.d[i].ID + "'  name = 'group2' value = '" + Result.d[i].Money + "' rbdtext = '" + Result.d[i].Text + "' > <label for='" + Result.d[i].ID + "'> " + Result.d[i].Text +  " </label><br><input type='text' id='txtOther' class='col-md-2 form - control' value='0' /><br>";
+
+                            tablestring2 = tablestring2 + "<input type = 'radio' class='rbd' id = 'radio_" + Result.d[i].ID + "'  name = 'group2' value = '" + Result.d[i].Money + "' rbdtext = '" + Result.d[i].Text + "' rbdMainPack='" + Result.d[i].PackageID + "' > <label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + " </label><br><input type='text' id='txtOther' class='col-md-2 form - control' value='0' /><br>";
                         }
                         }
                     tablestring = tablestring + "</div>";
@@ -2265,11 +2265,15 @@ tr.shown td.details-control {
             $('#selectedforPay1').html('');
             var total = 0;
             var i = 1;
+            var selectedPacks = "";
+            var selectedPackMain = "";
             var table = "<table class='table table-bordered table-striped'><thead><tr><th>SNo</th><th>Name</th><th>Amount</th></tr></thead><tbody>";
             $(".rbd:checked").each(function () {
                 var chk = this.checked;
                 var ids = this.id;
                 var id = ids.split("_");
+                selectedPacks = id[1] + "_";
+                selectedPackMain = $(this).attr("rbdMainPack") + "_";
                 if (chk == true) {
 
                     if (id[1] != "13") {
@@ -2278,18 +2282,18 @@ tr.shown td.details-control {
                         total = total + parseInt($(this).val());
                     }
                     else {
-                        if ($("#txtOther").val() !="0") {
-                        table = table + "<tr><td>" + i + "</td><td>" + $(this).attr("rbdtext") + "</td><td>" + $(this).val() + "</td></tr>";
-                        i = i + 1;
+                        if ($("#txtOther").val() != "0") {
+                            table = table + "<tr><td>" + i + "</td><td>" + $(this).attr("rbdtext") + "</td><td>" + $(this).val() + "</td></tr>";
+                            i = i + 1;
                             total = total + parseInt($(this).val());
                         }
                     }
                 }
             });
-           
-          
 
-          
+
+
+
             //if ($("#txtOther").val() != "0") {
             //    table = table + "<tr><td></td><td>Other</td><td>" + $("#txtOther").val() + "</td></tr>";
             //    total = total + parseInt($("#txtOther").val());
@@ -2298,10 +2302,14 @@ tr.shown td.details-control {
 
             table = table + "<tr><td></td><td>Total</td><td>" + total + "</td></tr>";
             table = table + "</tbody></table>";
-           
+
             $('#selectedforPay1').html(table);
             $('#selectedforPay').html('');
             $('#selectedforPay').html(table);
+            $("#<%=hfPackageID.ClientID%>").val(selectedPacks);
+            $("#<%=hfPackageTypeID.ClientID%>").val(selectedPackMain);
+
+            
 
         });
 
