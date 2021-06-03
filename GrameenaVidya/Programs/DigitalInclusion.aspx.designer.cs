@@ -10,7 +10,7 @@
 namespace GrameenaVidya.Programs {
     
     
-    public partial class adopt_a_student {
+    public partial class DigitalInclusion {
         
         /// <summary>
         /// SocialMedia1 control.
@@ -22,21 +22,12 @@ namespace GrameenaVidya.Programs {
         protected global::GrameenaVidya.Controls.SocialMedia SocialMedia1;
         
         /// <summary>
-        /// DonateControl1 control.
+        /// DigitalInclusion_right1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GrameenaVidya.Controls.DonateControl DonateControl1;
-        
-        /// <summary>
-        /// hfDCPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        public global::System.Web.UI.WebControls.HiddenField hfDCPage;
+        protected global::GrameenaVidya.Controls.DigitalInclusion_right DigitalInclusion_right1;
     }
 }

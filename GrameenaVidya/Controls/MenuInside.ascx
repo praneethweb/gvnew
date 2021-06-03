@@ -5,7 +5,7 @@
 <div class="top-header">
    
 <div class="container">
-	<i class="fa fa-phone top-icon"></i> +91 891 271 3724 
+<%--	<i class="fa fa-phone top-icon"></i> +91 891 271 3724 --%>
 	<div class="top-header-right" align="right">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         Welcome <asp:Label ID="lblUsername" runat="server"></asp:Label>

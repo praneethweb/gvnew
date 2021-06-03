@@ -2,6 +2,8 @@
 
 <%@ Register src="../Controls/AsideStu_right.ascx" tagname="AsideStu_right" tagprefix="uc1" %>
 <%@ Register src="~/Controls/SocialMedia.ascx" tagname="SocialMedia" tagprefix="uc3" %>
+<%@ Register src="~/Controls/DonateControl.ascx" tagname="DonateControl" tagprefix="uc4" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
@@ -29,9 +31,9 @@
   <div class="">
         <!--  Main-container section -->
         <div class="causes">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9 adopt-left-block">
+            <div class="container-fluid">
+                <div class=" ">
+                    <div class="col-md-7 adopt-left-block">
                         <!-- progaram detail start -->
                         <h1 class="page-heading">
                             Adopt-a-Student</h1>
@@ -743,13 +745,16 @@
 </table>
 
 
-                        
+                  
                         
               
                     </div>
+                    <div class="col-md-5 right-sidebar" id="divaside">
+                    <uc4:DonateControl ID="DonateControl1" runat="server" />
+     </div>  
+                   
                         <!-- progaram detail close -->
-                  <uc1:AsideStu_right ID="AsideStu_right1" runat="server" />
-                    <!-- sidebar section dending -->
+                
                 </div>
             </div>
         </div>
@@ -757,6 +762,8 @@
  
         
     <script>
+        $("#<%=hfDCPage.ClientID%>").val("4");
+        
         var hash = window.location.hash,
 				current = 0,
 				demos = Array.prototype.slice.call(document.querySelectorAll('#codrops-demos > a'));
@@ -783,5 +790,6 @@
 <script src="../js/bootstrap.js"></script>
 <script src="../js/script.js"></script> 
 <script src="../js/owl.carousel.js"></script>
+     <asp:HiddenField ID="hfDCPage" runat="server" Value="4" />
 </asp:Content>
 

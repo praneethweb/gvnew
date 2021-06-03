@@ -116,6 +116,8 @@
     <Content Include="Controls\BreadCrumbs.ascx" />
     <Content Include="Controls\Campaign.ascx" />
     <Content Include="Controls\ChangePassword.ascx" />
+    <Content Include="Controls\DigitalInclusion_right.ascx" />
+    <Content Include="Controls\DonateControl.ascx" />
     <Content Include="Controls\EnqueryForm.ascx" />
     <Content Include="Controls\Footer.ascx" />
     <Content Include="Controls\FooterScriptsControl.ascx" />
@@ -123,6 +125,8 @@
     <Content Include="Controls\LatestAdoptedSchools.ascx" />
     <Content Include="Controls\MediaControl.ascx" />
     <Content Include="Controls\MenuInside.ascx" />
+    <Content Include="Controls\MenuInsideNew.ascx" />
+    <Content Include="Controls\MenuOutsideNew.ascx" />
     <Content Include="Controls\MultiCheckCombo.ascx" />
     <Content Include="Controls\MyProfile.ascx" />
     <Content Include="Controls\NewSchoolForm.ascx" />
@@ -226,6 +230,7 @@
     <Content Include="images\details_close.png" />
     <Content Include="images\details_open.png" />
     <Content Include="images\digital-library.png" />
+    <Content Include="images\DigitalInclusion.PNG" />
     <Content Include="images\donate-buttone.png" />
     <Content Include="images\donet-pic.jpg" />
     <Content Include="images\d_team-1.jpg" />
@@ -851,6 +856,7 @@
     <Content Include="Programs\Testmonials.aspx" />
     <Content Include="Programs\video-gallery.aspx" />
     <Content Include="Programs\Videos.aspx" />
+    <Content Include="Programs\DigitalInclusion.aspx" />
     <Content Include="SchoolData\100.html" />
     <Content Include="SchoolData\103.html" />
     <Content Include="SchoolData\121.html" />
@@ -1081,6 +1087,20 @@
     <Compile Include="Controls\ChangePassword.ascx.designer.cs">
       <DependentUpon>ChangePassword.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\DigitalInclusion_right.ascx.cs">
+      <DependentUpon>DigitalInclusion_right.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DigitalInclusion_right.ascx.designer.cs">
+      <DependentUpon>DigitalInclusion_right.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DonateControl.ascx.cs">
+      <DependentUpon>DonateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DonateControl.ascx.designer.cs">
+      <DependentUpon>DonateControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\EnqueryForm.ascx.cs">
       <DependentUpon>EnqueryForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1120,6 +1140,20 @@
     </Compile>
     <Compile Include="Controls\MenuInside.ascx.designer.cs">
       <DependentUpon>MenuInside.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuInsideNew.ascx.cs">
+      <DependentUpon>MenuInsideNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuInsideNew.ascx.designer.cs">
+      <DependentUpon>MenuInsideNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuOutsideNew.ascx.cs">
+      <DependentUpon>MenuOutsideNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuOutsideNew.ascx.designer.cs">
+      <DependentUpon>MenuOutsideNew.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\MultiCheckCombo.ascx.cs">
       <DependentUpon>MultiCheckCombo.ascx</DependentUpon>
@@ -1550,6 +1584,13 @@
     </Compile>
     <Compile Include="Programs\Videos.aspx.designer.cs">
       <DependentUpon>Videos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\DigitalInclusion.aspx.cs">
+      <DependentUpon>DigitalInclusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Programs\DigitalInclusion.aspx.designer.cs">
+      <DependentUpon>DigitalInclusion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sponsers\Corparate.aspx.cs">

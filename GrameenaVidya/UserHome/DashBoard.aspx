@@ -175,7 +175,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfe5d7', end
     <div class="col-md-offset-1 col-md-3">
         <div class="future-box donated-box">
             <div class="panel-body">
-                <img src="../../images/schools.png" /><br />&nbsp;
+                <img src="../../images/schools.png" style="height:65px;" /><br />&nbsp;
                 <h3>
                     <a href="DonatedSchools.aspx?ID=1" runat="server">Donated Schools</a> </h3>
             </div>

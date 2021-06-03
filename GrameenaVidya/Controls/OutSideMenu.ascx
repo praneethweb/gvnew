@@ -215,6 +215,7 @@
           <li id="lbHome" ><a id="A1"  href="~/Home.aspx"  runat="server">HOME</a></li>         
             <li><a id="A7" href="../Programs/adopt-a-school.aspx" runat="server">Adopt-a-School</a></li>							
 			 <li><a href="../Programs/adopt-a-student.aspx">Adopt-a-Student</a></li>
+              <li><a href="../Programs/DigitalInclusion.aspx">Digital Inclusion</a></li>
        
          <%-- <li id="lbSponsors" class="dropdown"> <a  href="event.html" class="dropdown-toggle" data-toggle="dropdown">Sponsors<b class="caret"></b></a>
             <ul class="dropdown-menu">
