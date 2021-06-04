@@ -828,6 +828,7 @@
     <Content Include="Programs\adopt-a-student.aspx" />
     <Content Include="Programs\adopt-a-village.aspx" />
     <Content Include="Programs\AdoptedSchools.aspx" />
+    <Content Include="Programs\LaptopDonation.aspx" />
     <Content Include="Programs\DonatedSchools.aspx" />
     <Content Include="Programs\donationlist.aspx" />
     <Content Include="Programs\Gallery.aspx" />
@@ -852,6 +853,7 @@
     <Content Include="Programs\photo-gallery.aspx" />
     <Content Include="Programs\SchoolsDetails.aspx" />
     <Content Include="Programs\Schoolslist.aspx" />
+    <Content Include="Programs\SmartphoneDonation.aspx" />
     <Content Include="Programs\StudentList.aspx" />
     <Content Include="Programs\Testmonials.aspx" />
     <Content Include="Programs\video-gallery.aspx" />
@@ -1392,6 +1394,13 @@
     <Compile Include="Programs\AdoptedSchools.aspx.designer.cs">
       <DependentUpon>AdoptedSchools.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Programs\LaptopDonation.aspx.cs">
+      <DependentUpon>LaptopDonation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Programs\LaptopDonation.aspx.designer.cs">
+      <DependentUpon>LaptopDonation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Programs\DonatedSchools.aspx.cs">
       <DependentUpon>DonatedSchools.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1556,6 +1565,13 @@
     </Compile>
     <Compile Include="Programs\Schoolslist.aspx.designer.cs">
       <DependentUpon>Schoolslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\SmartphoneDonation.aspx.cs">
+      <DependentUpon>SmartphoneDonation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Programs\SmartphoneDonation.aspx.designer.cs">
+      <DependentUpon>SmartphoneDonation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Programs\StudentList.aspx.cs">
       <DependentUpon>StudentList.aspx</DependentUpon>
