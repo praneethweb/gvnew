@@ -45,14 +45,11 @@ font-size: 13px;
 <section class="about">
 <div class="">
 <h1>Donate</h1>
-<div class="row our-features">
+<div class="row our-features pr-inner-donate">
         <div class="col-md-12 b-right  b-left b-bottom b-top">
-            <div class="col-md-2">
-                <img src="Images/dt-test.png">
-                <br />
-                STEP 1 :
-            </div>
-            <div class="col-md-10" id="step-1">
+           
+            <div class="col-md-12" id="step-1">
+                <h5 class="step-heading">STEP 1 </h5>
                 <h3>Choose Donation Type</h3>
                 
               <div class="row" >
@@ -86,12 +83,9 @@ font-size: 13px;
         </div>
 
         <div class="col-md-12 b-bottom b-left b-right">
-            <div class="col-md-2">
-                <img src="Images/portal.png">
-                <br />
-                STEP 2 :
-            </div>
-            <div class="col-md-10">
+         
+            <div class="col-md-12">
+                  <h5 class="step-heading">STEP 2 </h5>
                 <h3>Donar Contact Info</h3>
                  <div class="row setup-content" id="step-2">
                 <div class="col-xs-12">
@@ -209,13 +203,9 @@ font-size: 13px;
 
 
         <div class="col-md-12 b-right b-bottom b-left">
-            <div class="col-md-2">
-                <img src="Images/plp.png">
-                <br />
-                STEP 3 :
-
-            </div>
-            <div class="col-md-10">
+            
+            <div class="col-md-12">
+                  <h5 class="step-heading">STEP 3 </h5>
             <div id="dvMakePayment" style="display:none">
                 <h3>Make Payment</h3>
                              <div id="selectedforPay"></div>
@@ -260,13 +250,9 @@ font-size: 13px;
 
 
 
-        <div class="col-md-12  b-bottom b-left b-right">
-            <div class="col-md-2">
-                <img src="Images/analytics.png">
-                <br />
-                STEP 4 :
-            </div>
-            <div class="col-md-10">
+        <div class="col-md-12  b-bottom b-left b-right">           
+            <div class="col-md-12">
+                  <h5 class="step-heading">STEP 4 </h5>
                 <h3>Print</h3>
                 <p>Student Progress will be messured as Level-Wise upon scoring <b>70%</b> in each worksheet. Student will <b>WIN</b> by finishing <b>Five</b> worksheets in Level-1, <b>Four</b> worksheets in Level-2, and <b>Three</b> worksheets in Level-3</p>
                 

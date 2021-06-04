@@ -1577,6 +1577,48 @@ body {
   .pr-sidebar-blk a h3 {
     margin-bottom: 0; }
 
+.pr-inner-donate {
+  padding: 20px; }
+  .pr-inner-donate .col-md-12 {
+    padding: 0; }
+  .pr-inner-donate h5, .pr-inner-donate h3 {
+    display: inline-block;
+    margin: 0;
+    height: 40px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    float: left; }
+  .pr-inner-donate h5 {
+    background-color: #428bca;
+    width: 20%;
+    text-align: center;
+    color: white; }
+  .pr-inner-donate h3 {
+    background-color: #f2f2f2;
+    width: 80%;
+    padding-left: 20px; }
+  .pr-inner-donate fieldset, .pr-inner-donate #dvPackageschool {
+    padding: 25px; }
+  .pr-inner-donate input[type=radio] {
+    margin-right: 10px; }
+  .pr-inner-donate p {
+    padding: 25px;
+    margin: 0; }
+  .pr-inner-donate #dvPackageschool .col-md-6 {
+    height: 120px; }
+  .pr-inner-donate #selectedforPay1 {
+    width: 90%;
+    margin: 0 auto; }
+  .pr-inner-donate #dvPackagestudent + fieldset {
+    width: 95%;
+    margin: 0 auto; }
+  .pr-inner-donate .b-left {
+    margin-bottom: 20px;
+    border: 1px solid #c5c5c5; }
+  .pr-inner-donate .setup-content .form-horizontal form {
+    width: 75%;
+    margin: 0 auto; }
+
 .login-success {
   padding: 100px 20px; }
   .login-success h2 {
