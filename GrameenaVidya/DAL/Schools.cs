@@ -401,7 +401,8 @@ namespace GVSchools.DAL
             try
             {
                 string Query = "";
-                Query = Query + "Select CountryId, CountryName from dbo.Countries where countryID in (1,41) order by CountryName";
+              //  Query = Query + "Select CountryId, CountryName from dbo.Countries where countryID in (1,41) order by CountryName";
+                Query = Query + "Select CountryId, CountryName from dbo.Countries  order by CountryName";
                 ds = SqlHelper.ExecuteDataset(DSN.Connection("GVConnectionString"), CommandType.Text, Query);
             }
             catch (Exception ex)
@@ -412,13 +413,13 @@ namespace GVSchools.DAL
         }
 
 
-        public static int InsertDoners(string Name, string EmailAddress, string ContactNumber, int CountryID, int StateID, string Location, string Address, string Pincode)
+        public static int InsertDoners(string Name, string EmailAddress, string ContactNumber, int CountryID, int StateID, string Location, string Address, string Pincode,string PAN)
         {
             int UserID;
             try
             {
 
-                UserID = Convert.ToInt32(SqlHelper.ExecuteScalar(DSN.Connection("GVConnectionString"), "Users_InsertUsersRow", Name, EmailAddress, ContactNumber, CountryID, StateID, Location, Address, Pincode));
+                UserID = Convert.ToInt32(SqlHelper.ExecuteScalar(DSN.Connection("GVConnectionString"), "Users_InsertUsersRow", Name, EmailAddress, ContactNumber, CountryID, StateID, Location, Address, Pincode,PAN));
             }
             catch (Exception ex)
             {

@@ -159,6 +159,7 @@
     <Content Include="Donate\Default1.aspx" />
     <Content Include="Donate\Donate.aspx" />
     <Content Include="Donate\DonateDetails.aspx" />
+    <Content Include="Donate\Donate_.aspx" />
     <Content Include="Donate\Donate_New.aspx" />
     <Content Include="Donate\PaymentStatus.aspx" />
     <Content Include="Donate\PurchaseOrder.aspx" />
@@ -1261,6 +1262,13 @@
     </Compile>
     <Compile Include="Donate\DonateDetails.aspx.designer.cs">
       <DependentUpon>DonateDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donate\Donate_.aspx.cs">
+      <DependentUpon>Donate_.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donate\Donate_.aspx.designer.cs">
+      <DependentUpon>Donate_.aspx</DependentUpon>
     </Compile>
     <Compile Include="Donate\Donate_New.aspx.cs">
       <DependentUpon>Donate_New.aspx</DependentUpon>

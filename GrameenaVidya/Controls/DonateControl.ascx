@@ -45,14 +45,11 @@ font-size: 13px;
 <section class="about">
 <div class="">
 <h1>Donate</h1>
-<div class="row our-features">
+<div class="row our-features pr-inner-donate">
         <div class="col-md-12 b-right  b-left b-bottom b-top">
-            <div class="col-md-2">
-                <img src="Images/dt-test.png">
-                <br />
-                STEP 1 :
-            </div>
-            <div class="col-md-10" id="step-1">
+           
+            <div class="col-md-12" id="step-1">
+                <h5 class="step-heading">STEP 1 </h5>
                 <h3>Choose Donation Type</h3>
                 
               <div class="row" >
@@ -86,12 +83,9 @@ font-size: 13px;
         </div>
 
         <div class="col-md-12 b-bottom b-left b-right">
-            <div class="col-md-2">
-                <img src="Images/portal.png">
-                <br />
-                STEP 2 :
-            </div>
-            <div class="col-md-10">
+         
+            <div class="col-md-12">
+                  <h5 class="step-heading">STEP 2 </h5>
                 <h3>Donar Contact Info</h3>
                  <div class="row setup-content" id="step-2">
                 <div class="col-xs-12">
@@ -110,7 +104,7 @@ font-size: 13px;
                             
                             <div class="col-sm-6">  <asp:RadioButton ID="rbdCountry" runat="server" Text="India"
                                 onclick="Javascript:SelectCountry(41);" GroupName="Package1"/></div>
-                         <div class="col-sm-6"> <asp:RadioButton ID="rbdCountryother"  runat="server" Text="United States"
+                         <div class="col-sm-6"> <asp:RadioButton ID="rbdCountryother"  runat="server" Text="OutSide India"
                                 onclick="Javascript:SelectCountry(1);" GroupName="Package1"/></div>
                                  
                   
@@ -133,7 +127,7 @@ font-size: 13px;
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="col-sm-3 control-label" for="card-number">Primary Phone Number</label>
+                            <label class="col-sm-3 control-label" for="card-number">Phone Number</label>
                             <div class="col-sm-9">
                               <asp:TextBox ID="txtDonarMobile" CssClass="form-control" Width="100%" runat="server"
                                 placeholder="MobileNumber"></asp:TextBox>
@@ -151,7 +145,7 @@ font-size: 13px;
                        
                                <div class="form-group">
                                     <label class="col-sm-3 control-label" for="card-number">Location</label>
-                                    <div class="col-sm-9" style="padding-left:8px">
+                                    <div class="col-sm-9">
                                        <asp:TextBox ID="txtDonarLocation" CssClass="form-control" Width="100%" runat="server"
                                 placeholder="Address2"></asp:TextBox>
                              <label class="error" id="errDonarLocation" style="display:none">Location Should Not Empty</label>
@@ -165,7 +159,7 @@ font-size: 13px;
                             <div class="col-sm-9">
                               <asp:UpdatePanel ID="Updatepanel8" runat="server">
                            <ContentTemplate>
-                            <asp:DropDownList ID="ddlcountry" CssClass="form-control" runat="server" DataTextField="Countryname" AutoPostBack="true"
+                            <asp:DropDownList ID="ddlcountry" CssClass="form-control" runat="server" DataTextField="Countryname" AutoPostBack="false"
                                 DataValueField="CountryID" Width="100%" onselectedindexchanged="ddlcountry_SelectedIndexChanged">
                             </asp:DropDownList>
                             </ContentTemplate>
@@ -174,7 +168,7 @@ font-size: 13px;
                           </div>
                           
                            
-                          <div class="form-group">
+                          <div class="form-group" style="display:none">
                             <label class="col-sm-3 control-label" for="card-number">State</label>
                             <div class="col-sm-9">
                                <asp:UpdatePanel ID="Updatepanel9" runat="server">
@@ -183,21 +177,32 @@ font-size: 13px;
                             </asp:DropDownList>
                              </ContentTemplate>
                              </asp:UpdatePanel>
+                              <label class="error" id="errCountry" style="display:none">Country Should Not Empty</label>
                             </div>
                           </div>
                          
                         <div class="form-group">
                                     <label class="col-sm-3 control-label" for="card-number">PIN</label>
-                                    <div class="col-sm-9" style="padding-left:8px">
+                                    <div class="col-sm-9">
                                       <asp:TextBox ID="txtDonarPin" CssClass="form-control" Width="100%" runat="server"
                                 placeholder="pincode"></asp:TextBox>
                             <label class="error" id="errDonarPin" style="display:none">DonarPin Should Not Empty</label>
                                     </div>
                                   </div>
+                                    
+                        <div class="form-group" id="dvPAN">
+                                    <label class="col-sm-3 control-label" for="card-number">PAN</label>
+                                    <div class="col-sm-9">
+                                      <asp:TextBox ID="txtPAN" CssClass="form-control" Width="100%" runat="server"
+                                placeholder="PAN"></asp:TextBox>
+                            <label class="error" id="errPAN" style="display:none">PAN Should Not Empty</label>
+                                    </div>
+                                  </div>
                                                     
                     </form>
                 </div>
-                           <button class="btn btn-primary nextBtn btn-lg pull-right" onclick="MakePayment()" type="button">Proceed To Pay</button>
+                  <label class="error" id="errorDonar" style="display:none">User EmailAddress Is Already Exist. Try With Other One.</label>
+                           <button class="btn btn-warning nextBtn btn-lg pull-right" onclick="MakePayment()" type="button">Confirm Details</button>
                         </div>
                        
                     </div>
@@ -209,13 +214,9 @@ font-size: 13px;
 
 
         <div class="col-md-12 b-right b-bottom b-left">
-            <div class="col-md-2">
-                <img src="Images/plp.png">
-                <br />
-                STEP 3 :
-
-            </div>
-            <div class="col-md-10">
+            
+            <div class="col-md-12">
+                  <h5 class="step-heading">STEP 3 </h5>
             <div id="dvMakePayment" style="display:none">
                 <h3>Make Payment</h3>
                              <div id="selectedforPay"></div>
@@ -242,7 +243,7 @@ font-size: 13px;
                     </div>
                     <br />
                          <div class="row">
-                        <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-12 col-md-offset-5">
                            
                             <asp:LinkButton ID="lbDonate" runat="server" CssClass="btn btn-info btn-lg" 
                                 Text="Donate Now" onclick="lbDonate_Click" 
@@ -260,15 +261,11 @@ font-size: 13px;
 
 
 
-        <div class="col-md-12  b-bottom b-left b-right">
-            <div class="col-md-2">
-                <img src="Images/analytics.png">
-                <br />
-                STEP 4 :
-            </div>
-            <div class="col-md-10">
+        <div class="col-md-12  b-bottom b-left b-right">           
+            <div class="col-md-12">
+                  <h5 class="step-heading">STEP 4 </h5>
                 <h3>Print</h3>
-                <p>Student Progress will be messured as Level-Wise upon scoring <b>70%</b> in each worksheet. Student will <b>WIN</b> by finishing <b>Five</b> worksheets in Level-1, <b>Four</b> worksheets in Level-2, and <b>Three</b> worksheets in Level-3</p>
+                
                 
             </div>            
         </div>
@@ -298,12 +295,16 @@ font-size: 13px;
                   $("#errorPack").hide();
                }
 
+               var Donar = {};
               var txtDonarname = $("#<%=txtDonarname.ClientID%>").val();
               var txtDonarEmail = $("#<%=txtDonarEmail.ClientID%>").val();
               var txtDonarAddress = $("#<%=txtDonarAddress.ClientID%>").val();
               var txtDonarLocation = $("#<%=txtDonarLocation.ClientID%>").val();
               var txtDonarPin = $("#<%=txtDonarPin.ClientID%>").val();
               var txtDonarMobile = $("#<%=txtDonarMobile.ClientID%>").val();
+              var txtPAN = $("#<%=txtPAN.ClientID%>").val();
+            
+            var CountryID=$("#<%=ddlcountry.ClientID%>").val();
               if (txtDonarname == "") {
                   $("#errDonarname").show();
                   errors = 1;
@@ -322,33 +323,54 @@ font-size: 13px;
                   $("#errDonarEmail").hide();
 
               }
-              if (txtDonarAddress == "") {
-                  $("#errDonarAddress").show();
+              if (CountryID == 0 || CountryID=="") {
+               $("#errCountry").show();
                   errors = 1;
                   return;
+              
               }
-              else {
-                  $("#errDonarAddress").hide();
+              else{
+               $("#errCountry").hide();
+              
+              }
+//              if (txtDonarAddress == "") {
+//                  $("#errDonarAddress").show();
+//                  errors = 1;
+//                  return;
+//              }
+//              else {
+//                  $("#errDonarAddress").hide();
 
-              }
-              if (txtDonarLocation == "") {
-                  $("#errDonarLocation").show();
-                  errors = 1;
-                  return;
-              }
-              else {
-                  $("#errDonarLocation").hide();
+//              }
+//              if (txtDonarLocation == "") {
+//                  $("#errDonarLocation").show();
+//                  errors = 1;
+//                  return;
+//              }
+//              else {
+//                  $("#errDonarLocation").hide();
 
-              }
-              if (txtDonarPin == "") {
-                  $("#errDonarPin").show();
-                  errors = 1;
-                  return;
-              }
-              else {
-                  $("#errDonarPin").hide();
+//              }
+//              if (txtDonarPin == "") {
+//                  $("#errDonarPin").show();
+//                  errors = 1;
+//                  return;
+//              }
+//              else {
+//                  $("#errDonarPin").hide();
 
-              }
+              //              }
+              if ($("#<%=hfOutSideIndia.ClientID%>").val() == 41) { 
+                            if (txtPAN == "") {
+                                $("#errPAN").show();
+                                errors = 1;
+                                return;
+                            }
+                            else {
+                                $("#errPAN").hide();
+
+                            }
+                        }
               if (txtDonarMobile == "") {
                   $("#errDonarMobile").show();
                   errors = 1;
@@ -359,13 +381,47 @@ font-size: 13px;
 
               }
               if (errors == 0) {
+                  if ($("#<%=hfUserIDFinal.ClientID%>").val() == "") {
+                      Donar.Name = txtDonarname;
+                      Donar.EmailAddress = txtDonarEmail;
+                      Donar.Address = txtDonarAddress;
+                      Donar.Location = txtDonarLocation;
+                      Donar.Pincode = txtDonarPin;
+                      Donar.ContactNumber = txtDonarMobile;
+                      Donar.PAN = txtPAN;
+                      Donar.CountryID = $("#<%=ddlcountry.ClientID%>").val();
+                      $.ajax({
+                          type: "POST",
+                          contentType: "application/json; charset=utf-8",
+                          url: "../Donate/Donate.aspx/InsertDonar",
+                          data: JSON.stringify({ Donars: Donar }),
+                          dataType: "json",
+                          success: function (Result) {
 
-                  $("#dvMakePayment").show();
+                              if (Result.d == -1) {
+
+                                  $("#dvMakePayment").hide();
+                                  $("#errorDonar").show();
+                              }
+                              else {
+                                  $("#<%=hfUserIDFinal.ClientID%>").val(Result.d);
+                                  $("#errorDonar").hide();
+                                  $("#dvMakePayment").show();
+
+                              }
+                          },
+                          error: function (result) {
+                              alert("Error");
+                          }
+
+                      });
+                  }
+                  else {
+                      $("#dvMakePayment").show();
+                   }
+                 
               }
-              else {
-                  $("#dvMakePayment").hide();
-              
-               }
+             
               
           }
           $(function () {
@@ -420,6 +476,7 @@ font-size: 13px;
                   $('#selectedforPay1').html(table);
                   $('#selectedforPay').html('');
                   $('#selectedforPay').html(table);
+                  $("#<%=hfPackageAmount.ClientID%>").val(total);
                   $("#<%=hfPackageID.ClientID%>").val(selectedPacks);
                   $("#<%=hfPackageTypeID.ClientID%>").val(selectedPackMain);
 
@@ -510,11 +567,13 @@ font-size: 13px;
                       // $(".package").hide();
 
                       $("#<%=ddlcountry.ClientID%>").val(ID);
+                      $("#<%=hfOutSideIndia.ClientID%>").val(ID);
+                      $("#dvPAN").show();
                       break;
                   case 1:
-
-
-                      $("#<%=ddlcountry.ClientID%>").val(ID);
+                      $("#<%=hfOutSideIndia.ClientID%>").val(ID);
+                      $("#dvPAN").hide();
+                   //   $("#<%=ddlcountry.ClientID%>").val(ID);
                       break;
 
 
@@ -526,6 +585,7 @@ font-size: 13px;
  <asp:HiddenField ID="hfPackageTypeID" runat="server"  />
     <asp:HiddenField ID="hfPackageID" runat="server"/>
     <asp:HiddenField ID="hfPackageAmount" runat="server" />
-    <asp:HiddenField ID="hfUserIDFinal" runat="server" Value="1" />
+    <asp:HiddenField ID="hfUserIDFinal" runat="server" Value="" />
        <asp:HiddenField ID="hfStatusID" runat="server" Value="1" />
          <asp:HiddenField ID="hfDCPage1" runat="server" Value="0" />
+    <asp:HiddenField ID="hfOutSideIndia" runat="server" Value="1" />

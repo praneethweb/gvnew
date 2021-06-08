@@ -504,7 +504,7 @@ namespace GrameenaVidya.Donate
             //        int StateID = Convert.ToInt32(ddlState1.SelectedItem.Value);
             //        string Pincode = txtDonarPin.Text;
             //        string ContactNumber = txtDonarMobile.Text;
-            //        Int32 _UserID = GVSchools.DAL.Schools.InsertDoners(Name, EmailAddress, ContactNumber, CountryID, StateID, Location, Address, Pincode);
+               //     Int32 _UserID = GVSchools.DAL.Schools.InsertDoners(Name, EmailAddress, ContactNumber, CountryID, StateID, Location, Address, Pincode);
             //        string Password = "password";
             //        GVSchools.DAL.Schools.CreateUserPassword(_UserID, Password);
             //        hfUserIDFinal.Value = _UserID.ToString();
@@ -861,6 +861,38 @@ namespace GrameenaVidya.Donate
             if (rdbPackage5.Checked) PackageId = 5;
             hfPackageID.Value = PackageId.ToString();
             ScriptManager.RegisterStartupScript(this, this.GetType(), "", "SelectPackage(" + PackageId + ");", true);
+        }
+
+
+        [WebMethod]
+        public static int InsertDonar(GrameenaVidya.BLL.Users Donars)
+        {
+            string Name = Donars.Name;
+            string EmailAddress = Donars.EmailAddress;
+            string Address = Donars.Address;
+            string Location = Donars.Location;
+            int CountryID = Convert.ToInt32(Donars.CountryID);
+            int StateID = 0;// Convert.ToInt32(ddlState1.SelectedItem.Value);
+            string Pincode = Donars.Pincode;
+            string ContactNumber = Donars.ContactNumber;
+            string PAN = Donars.PAN;
+            bool UserExist = GrameenaVidya.BLL.Users.CheckUserExists(EmailAddress);
+            if (UserExist)
+            {
+                return -1;
+
+            }
+            else
+            {
+                Int32 _UserID = GVSchools.DAL.Schools.InsertDoners(Name, EmailAddress, ContactNumber, CountryID, StateID, Location, Address, Pincode,PAN);
+                string Password = "password";
+                GVSchools.DAL.Schools.CreateUserPassword(_UserID, Password);
+                //hfUserIDFinal.Value = _UserID.ToString();
+                //lblDError.Visible = true;
+                //lblDError.Text = "Successfully  Inserted Doner";
+
+                return _UserID;
+            }
         }
 
         [WebMethod]

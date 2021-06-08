@@ -376,7 +376,71 @@ body{
 
 
 
-
+.pr-inner-donate{
+    padding: 20px;
+    .col-md-12{
+        padding: 0;
+    }
+    h5,h3{
+        display: inline-block;
+        margin: 0;
+        height: 40px;
+        line-height: 35px;
+        margin-bottom: 20px;
+        float: left;
+    }    
+    h5{
+        background-color: #428bca;
+        width: 20%;
+        text-align: center;
+        color: white;
+    }
+    
+    h3{
+        background-color: #f2f2f2;
+        width: 80%;
+        padding-left: 20px;
+    }
+    
+    fieldset, #dvPackageschool{
+        padding: 25px;
+    }
+      fieldset, #dvPackagestudent{
+        padding: 25px;
+    }
+    input[type=radio]{
+        margin-right: 10px;
+    }
+    
+    p{
+        padding: 25px;
+        margin: 0;
+    }
+    
+    #dvPackageschool .col-md-6{
+        height: 120px;
+    }
+    
+    #selectedforPay1{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    
+    
+    .b-left{
+        margin-bottom: 20px;
+            border: 1px solid #c5c5c5;
+    }
+    .setup-content{
+        .form-horizontal{
+            form{
+                width: 75%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
 
 
 

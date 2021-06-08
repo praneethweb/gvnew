@@ -29,6 +29,7 @@ namespace GrameenaVidya.BLL
         private string _UserPassword;
         private string _CountryName;
         private string _StateName;
+        private string _PAN;
 
         #endregion
 
@@ -132,6 +133,11 @@ namespace GrameenaVidya.BLL
         {
             get { return _UserPassword; }
             set { _UserPassword = value; }
+        }
+        public string PAN
+        {
+            get { return _PAN; }
+            set { _PAN = value; }
         }
         #endregion
 
@@ -246,7 +252,10 @@ namespace GrameenaVidya.BLL
                 userprofile.ContactNumber = (string)dr["ContactNumber"];
                 userprofile.RegisteredDate = (DateTime)dr["RegisteredDate"];
                 userprofile.CountryName = (string)dr["CountryName"];
-                userprofile.State = (string)dr["StateName"];
+                if (dr["StateName"] != DBNull.Value) {
+                    userprofile.State = (string)dr["StateName"];
+                }
+               
                 userprofile.Location = (string)dr["Location"];
                 userprofile.Address = (string)dr["Address"];
                 userprofile.Pincode = (string)dr["Pincode"];

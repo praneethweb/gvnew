@@ -25,6 +25,7 @@ namespace GrameenaVidya.Controls
 
                     UserDetails ud = new UserDetails();
                     int UserID = Convert.ToInt32(ud.UserID);
+                    hfUserIDFinal.Value = UserID.ToString();
                     if (UserID == 0)
                     {
                         LoadCountries();
@@ -129,7 +130,7 @@ namespace GrameenaVidya.Controls
             string PackageID = "";
             double PackageAmount = 0;
            
-            string UserIDLast = "1";
+            string UserIDLast = "";
             try
             {
                 UserIDLast = hfUserIDFinal.Value;
@@ -174,7 +175,8 @@ namespace GrameenaVidya.Controls
                     if (RetVal > 0)
                     {
                         Session["QueryValues"] = PackageTypeName + "~" + Package + "~" + PackageAmount + "~" + UserIDLast + "~" + RetVal;
-                        Session["DonarDetails"] = txtDonarname.Text + "~" + txtDonarEmail.Text + "~" + txtDonarMobile.Text + "~" + txtDonarAddress.Text + "~" + ddlcountry.SelectedItem.Text + "~" + ddlState1.SelectedItem.Text + "~" + txtDonarPin.Text + "~" + txtDonarLocation.Text;
+                       // Session["DonarDetails"] = txtDonarname.Text + "~" + txtDonarEmail.Text + "~" + txtDonarMobile.Text + "~" + txtDonarAddress.Text + "~" + ddlcountry.SelectedItem.Text + "~" + ddlState1.SelectedItem.Text + "~" + txtDonarPin.Text + "~" + txtDonarLocation.Text;
+                        Session["DonarDetails"] = txtDonarname.Text + "~" + txtDonarEmail.Text + "~" + txtDonarMobile.Text + "~" + txtDonarAddress.Text + "~" + ddlcountry.SelectedItem.Text + "~" + "" + "~" + txtDonarPin.Text + "~" + txtDonarLocation.Text;
 
                         lblDError.Text = "Your Donation Successfully  Submitted";
                         this.lblDError.ForeColor = Color.Green;
@@ -196,7 +198,8 @@ namespace GrameenaVidya.Controls
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, typeof(string), "Clear", "MakePayment();", true);
+             
+                // this.lblMsg.ForeColor = Color.Green;
             }
 
         }

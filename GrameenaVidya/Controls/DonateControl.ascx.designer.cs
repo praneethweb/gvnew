@@ -130,6 +130,15 @@ namespace GrameenaVidya.Controls {
         protected global::System.Web.UI.WebControls.TextBox txtDonarPin;
         
         /// <summary>
+        /// txtPAN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPAN;
+        
+        /// <summary>
         /// rbnetbanking control.
         /// </summary>
         /// <remarks>
@@ -263,5 +272,14 @@ namespace GrameenaVidya.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfDCPage1;
+        
+        /// <summary>
+        /// hfOutSideIndia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfOutSideIndia;
     }
 }
