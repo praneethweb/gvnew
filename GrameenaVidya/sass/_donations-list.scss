@@ -405,9 +405,13 @@ body{
     fieldset, #dvPackageschool{
         padding: 25px;
     }
+<<<<<<< HEAD
       fieldset, #dvPackagestudent{
         padding: 25px;
     }
+=======
+    
+>>>>>>> b68126d4129b61da6d3ac9175c22c950b4113f3d
     input[type=radio]{
         margin-right: 10px;
     }
@@ -426,7 +430,14 @@ body{
         margin: 0 auto;
     }
     
+<<<<<<< HEAD
     
+=======
+    #dvPackagestudent+fieldset{
+         width: 95%;
+        margin: 0 auto;
+    }
+>>>>>>> b68126d4129b61da6d3ac9175c22c950b4113f3d
     
     .b-left{
         margin-bottom: 20px;
@@ -440,6 +451,32 @@ body{
             }
         }
     }
+<<<<<<< HEAD
+=======
+    
+    #dvPackagestudent{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #dvPackageschool, #dvPackagestudent{
+        .col-md-6{
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 87px;
+        }
+    }
+    
+    #step-2{
+        .nextBtn{
+            margin: 30px auto;
+    float: inherit !important;
+    display: inherit;
+    padding: 10px 50px;
+    border-radius: 0;
+        }
+    }
+>>>>>>> b68126d4129b61da6d3ac9175c22c950b4113f3d
 }
 
 

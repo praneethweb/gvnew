@@ -1,15 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DonateControl.ascx.cs" Inherits="GrameenaVidya.Controls.DonateControl" %>
 
 <style>
-    .our-features .error {
-    color: #721c24;
+.our-features .error {
+color: #721c24;
 background-color: #f8d7da;
 border-color: #f5c6cb;
 width: 100%;
 margin-top: -10px;
 margin-bottom: 15px;
 padding: 5px;
-    padding-left: 5px;
+padding-left: 5px;
 padding-left: 10px;
 font-size: 13px;
 }
