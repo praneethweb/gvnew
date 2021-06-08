@@ -441,6 +441,29 @@ body{
             }
         }
     }
+    
+    #dvPackagestudent{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #dvPackageschool, #dvPackagestudent{
+        .col-md-6{
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 87px;
+        }
+    }
+    
+    #step-2{
+        .nextBtn{
+            margin: 30px auto;
+    float: inherit !important;
+    display: inherit;
+    padding: 10px 50px;
+    border-radius: 0;
+        }
+    }
 }
 
 
