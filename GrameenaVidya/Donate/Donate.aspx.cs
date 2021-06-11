@@ -10,6 +10,8 @@ using GrameenaVidya.AppCode;
 using System.Web.Services;
 using GrameenaVidya.BLL;
 using GrameenaVidya.DAL;
+using System.Configuration;
+using System.IO;
 
 namespace GrameenaVidya.Donate
 {
@@ -890,11 +892,13 @@ namespace GrameenaVidya.Donate
                 //hfUserIDFinal.Value = _UserID.ToString();
                 //lblDError.Visible = true;
                 //lblDError.Text = "Successfully  Inserted Doner";
+             //   SendPurchaseMail(_UserID);
 
                 return _UserID;
             }
         }
 
+      
         [WebMethod]
         public static SchoolDetails[] BindSchools(string Type)
         {

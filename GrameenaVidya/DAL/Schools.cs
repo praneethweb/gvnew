@@ -502,6 +502,8 @@ namespace GVSchools.DAL
             int RetVal = 0;
             RetVal = Convert.ToInt32(DataAccess.SqlHelper.ExecuteNonQuery(DataAccess.DSN.Connection("GVConnectionString"), CommandType.Text, Query));
         }
+       
+
 
         public static void InsertDonarSchoolDetails(int CountryID, int StateID, int DistrictID, int LocationID, int SchoolID2, int UserID)
         {

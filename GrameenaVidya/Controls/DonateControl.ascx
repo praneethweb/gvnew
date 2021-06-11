@@ -41,7 +41,7 @@ font-size: 13px;
     padding: 20px;
 }
 </style>
-
+  
 <section class="about">
 <div class="">
 <h1>Donate</h1>
@@ -54,7 +54,13 @@ font-size: 13px;
                 
               <div class="row" >
                    
-                    
+                    <fieldset>
+  <legend>Other : <small>( Minimum Rs. 500/-)</small></legend>
+                     
+                           <div id="dvPackagesother">
+
+                           </div>
+                    </fieldset>
                            <div class="row" id="dvPackageschool">
 
 
@@ -65,13 +71,7 @@ font-size: 13px;
 
                            </div>
 
-                <fieldset>
-  <legend>Other :</legend>
-                     
-                           <div id="dvPackagesother">
-
-                           </div>
-                    </fieldset>
+                
                 <br />
                  <div id="selectedforPay1"></div>
                
@@ -87,12 +87,72 @@ font-size: 13px;
             <div class="col-md-12">
                   <h5 class="step-heading">STEP 2 </h5>
                 <h3>Donar Contact Info</h3>
-                 <div class="row setup-content" id="step-2">
+                 <div class="row setup-content" id="step-2" style="padding-top:90px;">
                 <div class="col-xs-12">
-                    <div>
-                      
-                        <div >
-                           <div class="form-horizontal">
+                 <div class="">
+                 	<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+                        <div class="col-xs-6">
+								<a href="#" class="active" id="register-form-link">Register Donar</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#"  id="login-form-link">Login</a>
+							</div>
+							
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+                            <div style="display: none;"  id="login-form">
+ 
+
+		<div class="row login-home">
+
+  <div class="form-group col-sm-6 col-sm-offset-3">
+             
+                <asp:TextBox ID="txtUserName" runat="server" type="email" class="form-control" placeholder="Enter Email Address"
+                    AutoComplete="off" ValidationGroup="LogIn"></asp:TextBox>
+                <asp:Label ID="lblUNameEmpty" runat="server" Text="Please Enter Email Address" Style="display: none;
+                    color: Red;"></asp:Label>
+            </div>
+           <div class="form-group col-sm-6 col-sm-offset-3">
+                <asp:TextBox ID="txtPassword" runat="server" type="password" class="form-control"
+                    placeholder="Enter Password"></asp:TextBox>
+                <asp:Label ID="lblUPwdEmpty" runat="server" Text="Please Enter Password" Style="display: none;
+                    color: Red;"></asp:Label>
+            </div>
+
+            	<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+                                             <asp:Button ID="btnlogin" runat="server"  Text="Login" CssClass=" form-control btn btn-login" onclick="btnlogin_Click"   />
+												
+											</div>
+										</div>
+									</div>
+                                    	<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+                                                <a id="A6" href="~/Outlinks/ForgetPassword.aspx" runat="server" class="forgot-password hover-underline text-right">
+                            Forgot Password?</a>
+												
+												</div>
+											</div>
+										</div>
+									</div>
+         
+
+</div>
+	
+</div>      
+                        
+                                <div id="register-form">
+                                 
+                        <div class="form-horizontal">
                     <form  role="form">
                       
                           <div class="form-group">
@@ -112,6 +172,8 @@ font-size: 13px;
                     </asp:UpdatePanel>
                             </div>
                           </div>
+                             <asp:UpdatePanel ID="Updatepanel1" runat="server">
+                           <ContentTemplate>
                           <div class="form-group">
                             <label class="col-sm-3 control-label" for="card-holder-name">Name</label>
                             <div class="col-sm-9">
@@ -152,7 +214,8 @@ font-size: 13px;
                                     </div>
                                   </div>
 
-                         
+                          </ContentTemplate>
+                            </asp:UpdatePanel>
                          
                           <div class="form-group">
                             <label class="col-sm-3 control-label" for="card-number">Country</label>
@@ -203,14 +266,21 @@ font-size: 13px;
                 </div>
                   <label class="error" id="errorDonar" style="display:none">User EmailAddress Is Already Exist. Try With Other One.</label>
                            <button class="btn btn-warning nextBtn btn-lg pull-right" onclick="MakePayment()" type="button">Confirm Details</button>
-                        </div>
-                       
                     </div>
+                              
+							
+							</div>
+						</div>
+					</div>
+				</div>
+               
+              </div>
+                  </div>
                 </div>
             </div>
                 
             </div>            
-        </div>
+       
 
 
         <div class="col-md-12 b-right b-bottom b-left">
@@ -281,6 +351,25 @@ font-size: 13px;
       </div>
       </div>
       <script type="text/javascript">
+          $(function () {
+              
+              $('#login-form-link').click(function (e) {
+                  $("#login-form").delay(100).fadeIn(100);
+                  $("#register-form").fadeOut(100);
+                  $('#register-form-link').removeClass('active');
+                  $(this).addClass('active');
+                  e.preventDefault();
+              });
+              $('#register-form-link').click(function (e) {
+                  $("#register-form").delay(100).fadeIn(100);
+                  $("#login-form").fadeOut(100);
+                  $('#login-form-link').removeClass('active');
+                  $(this).addClass('active');
+                  e.preventDefault();
+              });
+
+          });
+
        
           function MakePayment() {
               var errors = 0;
@@ -381,7 +470,7 @@ font-size: 13px;
 
               }
               if (errors == 0) {
-                  if ($("#<%=hfUserIDFinal.ClientID%>").val() == "") {
+                  if ($("#<%=hfUserIDFinal.ClientID%>").val() == "" || $("#<%=hfUserIDFinal.ClientID%>").val() == "0") {
                       Donar.Name = txtDonarname;
                       Donar.EmailAddress = txtDonarEmail;
                       Donar.Address = txtDonarAddress;
@@ -390,6 +479,13 @@ font-size: 13px;
                       Donar.ContactNumber = txtDonarMobile;
                       Donar.PAN = txtPAN;
                       Donar.CountryID = $("#<%=ddlcountry.ClientID%>").val();
+                      $("#<%=hfDonarName.ClientID%>").val(txtDonarname);
+                      $("#<%=hfEmail.ClientID%>").val(txtDonarEmail);
+                      $("#<%=hfMobile.ClientID%>").val(txtDonarMobile);
+                         $("#<%=hfAddress.ClientID%>").val(txtDonarAddress);
+                         $("#<%=hfPIN.ClientID%>").val(txtDonarPin);
+                           $("#<%=hfLocation.ClientID%>").val(txtDonarLocation);
+                       
                       $.ajax({
                           type: "POST",
                           contentType: "application/json; charset=utf-8",
@@ -405,6 +501,7 @@ font-size: 13px;
                               }
                               else {
                                   $("#<%=hfUserIDFinal.ClientID%>").val(Result.d);
+                                  $("#<%=hfFlag.ClientID%>").val(1);
                                   $("#errorDonar").hide();
                                   $("#dvMakePayment").show();
 
@@ -427,15 +524,70 @@ font-size: 13px;
           $(function () {
               bindPackages(3);
 
+
+              $("#dvPackagesother").on('change', '.other', function () {
+                  var t = this.value;
+if(parseInt(t) < 500){
+$("#txtOther").val(500);
+return ;
+}
+                  if (t != "0") {
+
+                      var rows = 0;
+                      $("#tblselectedforPay tr").each(function () {
+
+                          if (this.id == "trother") {
+
+                              rows = 1;
+                          }
+                      });
+                      if (rows != 0) {
+                          var final = 0;
+if(parseInt(t)>= 500){
+ $("#tdother").html(t);
+}
+                         
+                         
+                          $('#selectedforPay1 table > tbody > tr').each(function () {
+
+                              var tt = $(this).find("td.amount").html();
+                            //  alert(tt);
+                              final = final + parseInt(tt);
+                              //                              alert(this.html());
+                              //                              if (this.id != "trhead" || this.id != "trfoot") {
+                              //                                  var lasttd = $(this).find(':last-child');
+                              //                                  debugger;
+                              //                                  final = final + parseInt(lasttd.html());
+
+                              //                              }
+
+                          });
+                          //  var total = parseInt($("#tdtotal").html());
+                           
+                          $("#tdtotal").html(final);
+                      }
+                      else {
+if(parseInt(t)>= 500){
+ $("#tdother").html(t);
+}
+                         
+
+                      }
+                      //$("#tdother").html(t);
+
+                  }
+              });
+
               $('#step-1').on('click', '.rbd', function () {
-                  debugger;
+
                   var r = this;
                   $('#selectedforPay1').html('');
                   var total = 0;
                   var i = 1;
                   var selectedPacks = "";
                   var selectedPackMain = "";
-                  var table = "<table class='table table-bordered table-striped'><thead><tr><th>SNo</th><th>Package Name</th><th>Package Amount</th></tr></thead><tbody>";
+                  var table = "<table id='tblselectedforPay' class='table table-bordered table-striped'><thead><tr id='trhead'><th>SNo</th><th>Package Name</th><th>Package Amount</th></tr></thead><tbody>";
+                  var onlyOther = true;
                   $(".rbd:checked").each(function () {
 
                       $("#errorPack").hide();
@@ -443,17 +595,20 @@ font-size: 13px;
                       var ids = this.id;
                       var id = ids.split("_");
                       selectedPacks = id[1] + "_";
+
                       selectedPackMain = $(this).attr("rbdMainPack") + "_";
                       if (chk == true) {
 
                           if (id[1] != "13") {
-                              table = table + "<tr><td>" + i + "</td><td>" + $(this).attr("rbdtext") + "</td><td>" + $(this).val() + "</td></tr>";
+                              table = table + "<tr><td>" + i + "</td><td>" + $(this).attr("rbdtext") + "</td><td class='amount'>" + $(this).val() + "</td></tr>";
                               i = i + 1;
                               total = total + parseInt($(this).val());
+                              onlyOther = false;
                           }
                           else {
-                              if ($("#txtOther").val() != "0") {
-                                  table = table + "<tr><td>" + i + "</td><td>" + $(this).attr("rbdtext") + "</td><td>" + $("#txtOther").val() + "</td></tr>";
+                              if (parseInt($("#txtOther").val()) >= 500) {
+
+                                  table = table + "<tr id='trother'><td>" + i + "</td><td>" + $(this).attr("rbdtext") + "</td><td id='tdother' class='amount'>" + $("#txtOther").val() + "</td></tr>";
                                   i = i + 1;
                                   total = total + parseInt($("#txtOther").val());
                               }
@@ -470,8 +625,13 @@ font-size: 13px;
                   //}
 
 
-                  table = table + "<tr><td></td><td>Total</td><td>" + total + "</td></tr>";
-                  table = table + "</tbody></table>";
+                  table = table + "</tbody><tfoot><tr id='trfoot'><td></td><td>Total</td><td id='tdtotal'>" + total + "</td></tr>";
+
+
+
+
+
+                  table = table + "</tfoot></table>";
 
                   $('#selectedforPay1').html(table);
                   $('#selectedforPay').html('');
@@ -483,6 +643,8 @@ font-size: 13px;
 
 
               });
+
+
           });
           function bindPackages(SelectedPackage) {
 
@@ -494,13 +656,13 @@ font-size: 13px;
                   dataType: "json",
                   success: function (Result) {
                       var tablestring = "<fieldset><legend>Adopt - a- School</legend> <div class='col-md-6'>";
-                      var tablestring1 = " <fieldset><legend>Adopt - a- Student</legend><div class='col-md-6'>";
+                      var tablestring1 = " <fieldset><legend style='padding-left:10px'>Adopt - a- Student</legend><div class='col-md-6'>";
                       var tablestring2 = "";
                       $("#dvPackagestudent").empty();
                       $("#dvPackageschool").empty();
                       $("#dvPackagesother").empty();
                       var j = 0;
-                      debugger;
+                     
                       var DCpage = window.parent.$('#<%=hfDCPage1.ClientID%>').val();
                       for (var i = 0; i < Result.d.length; i++) {
                           if (Result.d[i].PackageID == 3) {
@@ -526,7 +688,7 @@ font-size: 13px;
 
 
 
-                              tablestring2 = tablestring2 + "<input type = 'radio' class='rbd' id = 'radio_" + Result.d[i].ID + "'  name = 'group2' value = '" + Result.d[i].Money + "' rbdtext = '" + Result.d[i].Text + "' rbdMainPack='" + Result.d[i].PackageID + "' > <label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + " Amount </label><br><input type='text' id='txtOther' class='col-md-2 form - control' value='0' /><br>";
+                              tablestring2 = tablestring2 + "<input type = 'radio' class='rbd' id = 'radio_" + Result.d[i].ID + "'  name = 'group2' value = '" + Result.d[i].Money + "' rbdtext = '" + Result.d[i].Text + "' rbdMainPack='" + Result.d[i].PackageID + "' > <label for='" + Result.d[i].ID + "'> " + Result.d[i].Text + " Amount </label><br><input type='text' id='txtOther' class='col-md-2 form - control other' value='500' /><br>";
                           }
                       }
                       tablestring = tablestring + "</fieldset></div>";
@@ -542,7 +704,7 @@ font-size: 13px;
                       }
                       $("#dvPackagestudent").html(tablestring1);
                       $("#dvPackagesother").html(tablestring2);
-
+                      $("#<%=ddlcountry.ClientID%> option:selected").text('India');
                   },
                   error: function (result) {
                       alert("Error");
@@ -566,11 +728,12 @@ font-size: 13px;
                   case 41:
                       // $(".package").hide();
 
-                      $("#<%=ddlcountry.ClientID%>").val(ID);
+                      $("#<%=ddlcountry.ClientID%> option:selected").text('India');
                       $("#<%=hfOutSideIndia.ClientID%>").val(ID);
                       $("#dvPAN").show();
                       break;
                   case 1:
+                      $("#<%=ddlcountry.ClientID%> option:selected").text('United States');
                       $("#<%=hfOutSideIndia.ClientID%>").val(ID);
                       $("#dvPAN").hide();
                    //   $("#<%=ddlcountry.ClientID%>").val(ID);
@@ -589,3 +752,10 @@ font-size: 13px;
        <asp:HiddenField ID="hfStatusID" runat="server" Value="1" />
          <asp:HiddenField ID="hfDCPage1" runat="server" Value="0" />
     <asp:HiddenField ID="hfOutSideIndia" runat="server" Value="1" />
+     <asp:HiddenField ID="hfFlag" runat="server" Value="0" />
+       <asp:HiddenField ID="hfDonarName" runat="server" Value="0" />
+         <asp:HiddenField ID="hfEmail" runat="server" Value="0" />
+           <asp:HiddenField ID="hfMobile" runat="server" Value="0" />
+             <asp:HiddenField ID="hfAddress" runat="server" Value="0" />
+             <asp:HiddenField ID="hfPIN" runat="server" Value="0" />
+             <asp:HiddenField ID="hfLocation" runat="server" Value="0" />

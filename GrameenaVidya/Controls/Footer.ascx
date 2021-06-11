@@ -24,8 +24,8 @@
                     <li><a href="#" style="color:#ddd9d9 !important">Photo Gallery</a></li>
                     <li><a href="#" style="color:#ddd9d9 !important">Blog</a></li>
                      <li><a href="#" style="color:#ddd9d9 !important">Volunteers – Enrollment Form</a></li>
-                    <li><a href="Programs/NewSchoolForm.aspx" style="color:#ddd9d9 !important">School – Enrollment Form</a></li>
-                    <li><a href="Programs/NewStudentForm.aspx" style="color:#ddd9d9 !important">Student – Enrollment Form</a></li>
+                    <li><a href="../Programs/NewSchool.aspx" style="color:#ddd9d9 !important">School – Enrollment Form</a></li>
+                    <li><a href="../Programs/NewStudent.aspx" style="color:#ddd9d9 !important">Student – Enrollment Form</a></li>
                      <li><a href="#" style="color:#ddd9d9 !important">Tax Exemption Certificate for Donors</a></li>
                     
                    

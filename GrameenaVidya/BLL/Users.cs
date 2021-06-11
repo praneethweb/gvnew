@@ -208,7 +208,12 @@ namespace GrameenaVidya.BLL
                 userregister.Pincode = (string)dr["Pincode"];
                 userregister.Location = (string)dr["Location"];
                 userregister.CountryName = (string)dr["CountryName"];
-                userregister.StateName = (string)dr["StateName"];
+                if (dr["StateName"] != DBNull.Value)
+                {
+                    userregister.StateName = (string)dr["StateName"];
+                
+                }
+                
                 userregister.CountryID = (int)dr["CountryID"];
                 userregister.StateID = (int)dr["StateID"];
 
