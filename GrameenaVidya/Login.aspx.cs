@@ -54,7 +54,24 @@ namespace GrameenaVidya
             Session["UserID"] = UserID;
 
             Response.Redirect("~/UserHome/DashBoard.aspx");
-             
+
+            //FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, UserID.ToString(), DateTime.Now, DateTime.Now.AddDays(1), false,
+            //      UserID + "|" + UserName + "|" + SessionID, // User-data, in this case the roles
+            //       FormsAuthentication.FormsCookiePath);
+
+            //string hash = FormsAuthentication.Encrypt(ticket);
+            //HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, hash);
+
+            //if (ticket.IsPersistent) cookie.Expires = ticket.Expiration;
+
+            //HttpContext.Current.Response.Cookies.Add(cookie);
+
+
+            //if (Request.QueryString["return_url"] != null)
+            //    Response.Redirect("~/" + Request.QueryString["return_url"].ToString());
+            ////Response.Redirect("~/UserHome/Dashboard/?1");
+            //else
+               // Response.Redirect("~/UserHome/Dashboard/?1");
 
 
            

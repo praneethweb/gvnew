@@ -6,15 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using GrameenaVidya.AppCode;
 
-namespace GrameenaVidya.Programs
+namespace GrameenaVidya.Donate
 {
-    public partial class adopt_a_student : System.Web.UI.Page
+    public partial class Donate_ : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected override void OnPreInit(EventArgs e)
         {
             base.OnPreInit(e);
@@ -37,6 +36,5 @@ namespace GrameenaVidya.Programs
 
 
         }
-
     }
 }

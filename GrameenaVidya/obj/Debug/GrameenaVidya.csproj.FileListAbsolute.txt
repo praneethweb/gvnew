@@ -56,3 +56,8 @@ D:\dev\git2\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.dll
 D:\dev\git2\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.pdb
 D:\dev\git2\gvnew\GrameenaVidya\bin\GrameenaVidya.dll
 D:\dev\git2\gvnew\GrameenaVidya\bin\GrameenaVidya.pdb
+D:\dev\GitLatest\gvnew\GrameenaVidya\bin\GrameenaVidya.dll
+D:\dev\GitLatest\gvnew\GrameenaVidya\bin\GrameenaVidya.pdb
+D:\dev\GitLatest\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.csprojResolveAssemblyReference.cache
+D:\dev\GitLatest\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.dll
+D:\dev\GitLatest\gvnew\GrameenaVidya\obj\Debug\GrameenaVidya.pdb

@@ -61,12 +61,12 @@ namespace GrameenaVidya.Donate
                         //divSuccess.Visible = true;
                         //divError.Visible = false;
                         //lblOrderID.Text = Params["Order_Id"].ToString();
-                        //SEND MAIL
-                        //try
-                        //{
-                        //    SendPurchaseMail(Convert.ToInt32(OrderID));
-                        //}
-                        //catch (Exception ex1) { }
+                       // SEND MAIL
+                        try
+                        {
+                           // SendPurchaseMail(Convert.ToInt32(OrderID));
+                        }
+                        catch (Exception ex1) { }
 
                     }
                     else
@@ -103,5 +103,91 @@ namespace GrameenaVidya.Donate
 
             }
         }
+        private string GeneratePassword()
+        {
+            string strPwdchar = "abcdefghjkmnpqrstuvwxyz23456789ABCDEFGHJKMNPQRSTUVWXYZ";
+            string strPwd = "";
+            Random rnd = new Random();
+            for (int i = 0; i <= 5; i++)
+            {
+                int iRandom = rnd.Next(0, strPwdchar.Length - 1);
+                strPwd += strPwdchar.Substring(iRandom, 1);
+            }
+            return strPwd;
+        }
+        //private void SendPurchaseMail(long OrderID)
+        //{
+        //    try
+        //    {
+        //        GrameenaVidya.BLL.Users oUser = GrameenaVidya.BLL.Users.UserRegisterSelectRow(UserID);
+
+        //        GrameenaVidya.Common.Mailing oMailing = new GrameenaVidya.Common.Mailing();
+
+
+
+        //        //Mail to User
+
+        //        // Mailing 
+        //        oMailing.From = ConfigurationManager.AppSettings["RegistrationSender"].ToString();
+        //        oMailing.DisplayFromName = "GrameenaVidya Registration Service";
+        //        oMailing.To = oUser.EmailAddress;
+        //        oMailing.DisplayToName = oUser.Name;
+        //        oMailing.IsBodyHtml = true;
+        //        oMailing.Subject = "GrameenaVidya, Confirmation mail";
+
+        //        string body = string.Empty;
+        //        string encryptEmail = Server.UrlEncode(GrameenaVidya.Common.Cryptography.EncryptURL("ACTIVATE|" + oUser.Name));
+        //        string HostAddress = Request.Url.Scheme + "://" + Request.Url.Host + Request.ApplicationPath;
+        //        string password = GeneratePassword();
+        //        using (StreamReader reader = new StreamReader(Server.MapPath("~/Templates/PurchaseOrder.html")))
+        //        {
+        //            body = reader.ReadToEnd();
+        //        }
+        //        body = body.Replace("{Name}", oUser.Name);
+        //        body = body.Replace("{EmailAddress}", oUser.EmailAddress);
+        //        body = body.Replace("{Password}", password);
+
+        //        body = body.Replace("{SiteUrl}", HostAddress + encryptEmail);
+
+        //        oMailing.Message = body;
+
+        //        oMailing.SendMail();
+
+        //        //Mailing object to send mails to CET Eggog Admin
+        //        //   GrameenaVidya.Common.Mailing oAdminMailing = new GrameenaVidya.Common.Mailing();
+
+
+        //        //oAdminMailing.From = oUser.EmailAddress;
+        //        //oAdminMailing.DisplayFromName = "GrameenaVidya Registration Details";
+        //        //oAdminMailing.To = ConfigurationManager.AppSettings["AdminEmail"].ToString();
+        //        //oAdminMailing.DisplayToName = "GrameenaVidya Admin";
+        //        //oAdminMailing.IsBodyHtml = true;
+        //        //oAdminMailing.Subject = "GrameenaVidya  Registeration Details";
+        //        //System.Text.StringBuilder oSBAdminMessage = new System.Text.StringBuilder();
+        //        //oSBAdminMessage.Append("Dear ").Append("Admin").Append(" ").Append("<br/><br/>")
+        //        //    .Append("Please find the details of the new student registered on GrameenaVidya website below").Append("<br/><br/>")
+        //        //    .Append("Name : " + oUser.Name + "<br/>")
+        //        //    .Append("Email ID : " + oUser.EmailAddress + "<br/>")
+        //        //    .Append("Mobile No : " + oUser.ContactNumber + "<br/>")
+        //        //      .Append("Password : " + password + "<br/>")
+        //        //    .Append("<br/><br/>").Append("Thank you,<br/>GrameenaVidya Team");
+        //        //oAdminMailing.Message = oSBAdminMessage.ToString();
+        //        //oAdminMailing.SendMail();
+        //        //if (Convert.ToInt32(hdDonarUserType.Value) == 1)
+        //        //{
+        //        //    GrameenaVidya.BLL.Users.UserCredentialsInsertRow(UserID, password, DateTime.Now, DateTime.Now, false);
+        //        //}
+
+
+
+        //        //SendSMS(oUser);
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+
+        //    }
+        //}
+     
     }
 }

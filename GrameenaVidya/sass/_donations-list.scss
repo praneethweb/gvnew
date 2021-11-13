@@ -405,7 +405,13 @@ body{
     fieldset, #dvPackageschool{
         padding: 25px;
     }
+<<<<<<< HEAD
+      fieldset, #dvPackagestudent{
+        padding: 25px;
+    }
+=======
     
+>>>>>>> b68126d4129b61da6d3ac9175c22c950b4113f3d
     input[type=radio]{
         margin-right: 10px;
     }
@@ -424,10 +430,14 @@ body{
         margin: 0 auto;
     }
     
+<<<<<<< HEAD
+    
+=======
     #dvPackagestudent+fieldset{
          width: 95%;
         margin: 0 auto;
     }
+>>>>>>> b68126d4129b61da6d3ac9175c22c950b4113f3d
     
     .b-left{
         margin-bottom: 20px;
@@ -441,6 +451,8 @@ body{
             }
         }
     }
+<<<<<<< HEAD
+=======
     
     #dvPackagestudent{
         width: 95%;
@@ -464,6 +476,7 @@ body{
     border-radius: 0;
         }
     }
+>>>>>>> b68126d4129b61da6d3ac9175c22c950b4113f3d
 }
 
 

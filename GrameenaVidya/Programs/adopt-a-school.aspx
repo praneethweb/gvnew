@@ -15,7 +15,7 @@
       $(document).ready(function () {
 
           //$("#HeaderInside1_aForums").addClass("active");
-          $("#lbPrograms").addClass("activelink");
+          $("#lbSchool").addClass("activelink");
           $("#divAbout").hide();
 
       });
@@ -78,7 +78,7 @@
                       </p>
 <!-- Testimonial slides -->   
 <a name="testimonial"></a>
-<div class="container pr-testimonials">
+<div class="container pr-testimonials" style="display:none">
 	<div class="row">
 		<div class="col-sm-12">
         <h3><strong>Testimonial</strong></h3>
@@ -258,8 +258,8 @@
 
 <!-- School Data -->  
                         <a name="listofschools"></a>
-                        <h2>List of Schools</h2>
-<table class="table table-striped table-bordered">
+                        
+<table class="table table-striped table-bordered" style="display:none">
  <thead> <tr>
       <td>S.No.</td>
       <td>Student Name</td>

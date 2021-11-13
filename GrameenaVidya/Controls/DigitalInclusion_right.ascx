@@ -8,8 +8,8 @@
             <div class="col-md-12">
                 <div class="sidebar-blk pr-sidebar-blk">
                     
-                  <a href="#testimonial"><h3 class="aav">Smartphone Donation  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
-                  <a href="../Programs/NewStudent.aspx"><h3 class="aav">Laptops / Tablets Donation &nbsp; &nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
+                  <a href="../Programs/SmartphoneDonation.aspx"><h3 class="aav">Smartphone Donation  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
+                  <a href="../Programs/LaptopDonation.aspx"><h3 class="aav">Laptops / Tablets Donation &nbsp; &nbsp;<i class="fa fa-chevron-circle-right top-icon"></i></h3></a>               
                  
               </div>
              

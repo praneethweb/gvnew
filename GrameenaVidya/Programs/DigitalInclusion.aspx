@@ -2,6 +2,16 @@
 <%@ Register src="~/Controls/SocialMedia.ascx" tagname="SocialMedia" tagprefix="uc3" %>
 <%@ Register src="~/Controls/DigitalInclusion_right.ascx" tagname="DigitalInclusion_right" tagprefix="uc4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<script src="../js/jquery-1.10.2.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+
+          //$("#HeaderInside1_aForums").addClass("active");
+          $("#lbDigitalInclusion").addClass("activelink");
+          $("#divAbout").hide();
+
+      });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 

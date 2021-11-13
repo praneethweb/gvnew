@@ -34,7 +34,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<asp:ScriptManager ID="script" runat="server"></asp:ScriptManager>
+
   <asp:UpdatePanel ID="upRegister" runat="server" UpdateMode="Conditional">
         <ContentTemplate>
            <div class="row">

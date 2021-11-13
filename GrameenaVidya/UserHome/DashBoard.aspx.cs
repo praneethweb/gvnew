@@ -16,6 +16,23 @@ namespace GrameenaVidya.UserHome
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            //if (!IsPostBack)
+            //{
+            //    if (HttpContext.Current.User.Identity.IsAuthenticated)
+            //    {
+            //        UserDetails ud = new UserDetails();
+            //        if (UserID == 0)
+            //        {
+            //            MasterPageFile = "~/Master/OutSideMaster.master";
+
+            //        }
+                   
+            //    }
+            //     else
+            //        {
+            //            MasterPageFile = "~/Master/InsideMaster.master";
+            //        }
+            //}
 
             if (!IsPostBack)
             {
